@@ -1,8 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1632390889 "c:/Users/dino9/Desktop/UNI/LAUREA/Thesis_2021/Tesi.tex" "Tesi.pdf" "Tesi" 1632390897
+["pdflatex"] 1632421417 "c:/Users/dino9/Desktop/UNI/LAUREA/Thesis_2021/Tesi.tex" "Tesi.pdf" "Tesi" 1632421420
   "C:/Users/dino9/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1630926441 14064 1b26421a8f471508993adc21c393057e ""
   "C:/Users/dino9/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1630857866 9742850 dbc95b76146d8dc1bc90ce207cbc79b6 ""
-  "C:/Users/dino9/AppData/Local/MiKTeX/pdftex/config/pdftex.map" 1632329625 81088 29d6fa367ac022d1b69251d68c0742e6 ""
+  "C:/Users/dino9/AppData/Local/MiKTeX/pdftex/config/pdftex.map" 1632394816 81088 29d6fa367ac022d1b69251d68c0742e6 ""
   "C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/tcrm1200.tfm" 993062508 1444 95ffe0f19b974d50849790c8225c7ef7 ""
   "C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233955448 1004 54797486969f23fa377b128694d548df ""
   "C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233955448 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -143,15 +143,15 @@
   "C:/Users/dino9/AppData/Local/Programs/MiKTeX/tex/latex/tools/indentfirst.sty" 1622550326 1618 786b14c5a3e144c3a51452d08232d18b ""
   "C:/Users/dino9/AppData/Local/Programs/MiKTeX/tex/latex/tools/xspace.sty" 1622550326 4545 d84d0b20a11b9c36c6ecf45697be591c ""
   "C:/Users/dino9/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1623005660 55589 34128738f682d033422ca125f82e5d62 ""
-  "Tesi.aux" 1632390895 5595 9dd6cc0d0f1f8991f058291a12828de8 "pdflatex"
-  "Tesi.tex" 1632390887 64864 d390108baa8b014a33d80389a6123958 ""
-  "Tesi.toc" 1632390895 3240 85e9dad190e139af9196e07749d52d1f "pdflatex"
-  "c:/Users/dino9/Desktop/UNI/LAUREA/Thesis_2021/Tesi.tex" 1632390887 64864 d390108baa8b014a33d80389a6123958 ""
+  "Tesi.aux" 1632421420 5420 4e21bf524a6050945a1aa28e44044c1d "pdflatex"
+  "Tesi.tex" 1632421412 69692 11585692d0a4ce4d4f074c844d0756b4 ""
+  "Tesi.toc" 1632421420 3141 2f8534774c80032830553ff332707418 "pdflatex"
+  "c:/Users/dino9/Desktop/UNI/LAUREA/Thesis_2021/Tesi.tex" 1632421412 69692 11585692d0a4ce4d4f074c844d0756b4 ""
   "images//Encoder-Decoder.png" 1631639731 92646 f90a1b5be26dc030887f34c8b37a9efe ""
   "images//LSTM.jpg" 1632296810 34513 2d6e99867d4a53cc1e3dda6a00de07f4 ""
   "images//diagram_LSTM.jpg" 1632297570 36721 b27a93554c925a5f9b079051f7e8f261 ""
   (generated)
-  "Tesi.toc"
-  "Tesi.aux"
   "Tesi.pdf"
   "Tesi.log"
+  "Tesi.aux"
+  "Tesi.toc"

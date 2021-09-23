@@ -81,7 +81,7 @@ I tre modelli di apprendimento sono utilizzati in maniera differente a seconda d
 L’apprendimento supervisionato consiste nel fornire al sistema informatico della macchina una serie di nozioni specifiche e codificate, ossia di modelli ed esempi che permettono di costruire un vero e proprio database di informazioni e di esperienze. In questo modo, quando la macchina si trova di fronte ad un problema, non dovrà fare altro che attingere alle esperienze inserite nel proprio sistema, analizzarle, e decidere quale risposta dare sulla base di esperienze già codificate. Questo tipo di apprendimento è, in qualche modo, fornito già confezionato e la macchina deve essere solo in grado di scegliere quale sia la migliore risposta allo stimolo che le viene dato.\\\
 Gli algoritmi che fanno uso di apprendimento supervisionato vengono utilizzati in molti settori, da quello medico a quello di identificazione vocale: essi, infatti, hanno la capacità di effettuare ipotesi induttive, ossia ipotesi che possono essere ottenute scansionando una serie di problemi specifici per ottenere una soluzione idonea ad un problema di tipo generale.
 \\
-Apprendimento automaticoL’apprendimento non supervisionato o senza supervisione prevede invece che le informazioni inserite all’interno della macchina non siano codificate, ossia la macchina ha la possibilità di attingere a determinate informazioni senza avere alcun esempio del loro utilizzo e, quindi, senza avere conoscenza dei risultati attesi a seconda della scelta effettuata. Dovrà essere la macchina stessa, quindi, a catalogare tutte le informazioni in proprio possesso, organizzarle ed imparare il loro significato, il loro utilizzo e, soprattutto, il risultato a cui esse portano. L’apprendimento senza supervisione offre maggiore libertà di scelta alla macchina che dovrà organizzare le informazioni in maniera intelligente e imparare quali sono i risultati migliori per le differenti situazioni che si presentano.
+L’apprendimento non supervisionato o senza supervisione prevede invece che le informazioni inserite all’interno della macchina non siano codificate, ossia la macchina ha la possibilità di attingere a determinate informazioni senza avere alcun esempio del loro utilizzo e, quindi, senza avere conoscenza dei risultati attesi a seconda della scelta effettuata. Dovrà essere la macchina stessa, quindi, a catalogare tutte le informazioni in proprio possesso, organizzarle ed imparare il loro significato, il loro utilizzo e, soprattutto, il risultato a cui esse portano. L’apprendimento senza supervisione offre maggiore libertà di scelta alla macchina che dovrà organizzare le informazioni in maniera intelligente e imparare quali sono i risultati migliori per le differenti situazioni che si presentano.
 \\
 L’apprendimento per rinforzo rappresenta probabilmente il sistema di apprendimento più complesso, che prevede che la macchina sia dotata di sistemi e strumenti in grado di migliorare il proprio apprendimento e, soprattutto, di comprendere le caratteristiche dell’ambiente circostante. In questo caso, quindi, alla macchina vengono forniti una serie di elementi di supporto, quali sensori, telecamere, GPS eccetera, che permettono di rilevare quanto avviene nell’ambiente circostante ed effettuare scelte per un migliore adattamento all’ambiente intorno a loro. Questo tipo di apprendimento è tipico delle auto senza pilota, che grazie a un complesso sistema di sensori di supporto è in grado di percorrere strade cittadine e non, riconoscendo eventuali ostacoli, seguendo le indicazioni stradali e molto altro.
 
@@ -504,21 +504,30 @@ Questa fase presuppone l'integrazione dei modelli di previsione nell'uso della p
 
 
 \section{Analisi}
-In questa fase di analisi ho certo di confrontare tutti i casi che ho trovato in letteratura, sono andato ricercare quali potessero essere le invarianti e le versatilità tra loro.
+In questa fase di analisi ho cercato di confrontare alcuni casi che ho trovato in letteratura, sono andato a ricercare quali potessero essere le invarianti e le versatilità tra loro.
 Le svariate applicazioni della previsione della domanda portano anche a svariati modelli utilizzabili e svariati modi di pretrattare i dati.\\
 \\
 I diversi modi di pretrattare i dati dipendono dal tipo di modello utilizzato, se si prende in considerazione la stagionalità verrà utilizzato un determinato modello con un set di dati con una determinata struttura,
 se viene utilizzato un modello per serie temporali abbiamo bisogno che i dati abbiano un timestamp, e così via..\\
-Dipende fortemente dal caso specifico, ma molti dati che dovranno essere utilizzati per l'addestramento sono non strutturati, come per esempio la temperatura o il meteo se si tratta di previsione della domanda idrica (cazzata sui dati non strutturati), quindi verranno pretrattati in un determinato modo.\\
-Allo stesso tempo il "successo" di un modello/algoritmo dipende fortemente da come vengono pretrattati i dati.\\
+Allo stesso tempo nei problemi di classificazione, le prestazioni degli algoritmi di apprendimento dipendono principalmente dalla natura della rappresentazione dei dati [23].\\
 
-Un'altro modo per pretrattare i dati è clusterizzarli.\\
-\paragraph*{Clustering dei dati}
+Come visto in precedenza le modalità di pretrattamento dei dati sono molteplici:
+\begin{itemize}
+    \item Trasformazione dei dati (log o la trasformazione di potenza Box-Cox [66]).
+    \item Destagionalizzazione dei dati.
+    \item Detrending dei dati.
+    \item Combinazione dei tre precedenti
+\end{itemize}
+
+Si è evidenziata inoltre la necessità non solo di considerare l'uso attento dei metodi di preparazione dei dati, ma di testare attivamente più combinazioni diverse di schemi di preparazione dei dati per un dato problema al fine di scoprire cosa funziona meglio, anche nel caso dei metodi classici.\\
+\\
+Un'altro passaggio che ho trovato in letteratura è la clusterizzazione dei dati.
+\paragraph*{Clustering dei dati:}
 Identificare e separare diversi modelli nei dati e utilizzare ciascuno di essi come set di dati indipendenti. Questo è noto come clustering e può essere ottenuto utilizzando algoritmi di apprendimento automatico.
 Nell'apprendimento non supervisionato, un problema comune è identificare e classificare correttamente un certo numero di classi identiche (cluster) presenti nei dati (Bishop 2006). All'inizio, il numero di cluster, k, è solitamente sconosciuto. Trovarlo può essere ottenuto eseguendo l'algoritmo di clustering per diversi valori di k e valutando i risultati per ciascun valore.\\
 Il numero ottimale di cluster è quello che ottimizza un determinato criterio, come la varianza tra osservazioni nello stesso cluster.
 Complessivamente, il numero di cluster e il modo in cui vengono trovati, la formulazione della distanza e l'implementazione dell'algoritmo di clustering stesso sono reciprocamente influenzati e diverse combinazioni di essi produrranno risultati diversi.\\
-Qui, l'analisi di clustering può essere utilizzata per verificare la stagionalità e altre relazioni tra i dati di input.
+Qui, l'analisi di clustering può essere utilizzata per verificare la stagionalità e altre relazioni tra i dati di input.\\
 \\
 Come visto in precedenza i modelli da poter utilizzare sono molteplici:
 \begin{itemize}
@@ -530,8 +539,8 @@ Come visto in precedenza i modelli da poter utilizzare sono molteplici:
     \item Rete Neurale Ricorrente (RNN)
     \item Rete neurale di memoria a lungo termine (LSTM)
 \end{itemize}
-spiegare quali metodi sono migliori di altri e in quali contesti
 
+\paragraph*{Ensemble Learning:}
 Oltre a questi modelli discussi in precedenza c'è anche l'Ensemble Learning (EL), che è un'altra metodologia per aumentare le prestazioni del sistema.\\
 Un sistema di insieme è composto da due parti:
 \begin{itemize}
@@ -540,7 +549,7 @@ Un sistema di insieme è composto da due parti:
 \end{itemize}
 Nella parte di generazione dell'ensemble, viene generato un insieme diversificato di modelli di previsione di base utilizzando metodi o campioni diversi. Nella parte di integrazione, le previsioni di tutti i modelli vengono combinate utilizzando una strategia di integrazione.\\
 
-Mostro un algoritmo in particolare che si approccia molto a questo caso, e si tratta dell'algoritmo Stacking:\\
+Descrivo in breve un algoritmo in particolare che si approccia molto a questo caso, e si tratta dell'algoritmo Stacking:\\
 Stacking o Stacked Generalization è un algoritmo di apprendimento automatico di insieme. Utilizza un algoritmo di meta-apprendimento per apprendere come combinare al meglio le previsioni di due o più algoritmi di apprendimento automatico di base.
 Potremmo usare Stacking per combinare vari modelli e fare nuove previsioni.
 L'architettura di un modello di impilamento (stacking model) coinvolge due o più modelli di base, spesso indicati come modelli di livello 0 e un meta-modello che combina le previsioni dei modelli di base indicati come modello di livello 1:
@@ -549,27 +558,54 @@ L'architettura di un modello di impilamento (stacking model) coinvolge due o pi�
     \item Modello di Livello 1 (Meta-Modello): modello che apprende come combinare al meglio le previsioni dei modelli base.
 \end{itemize}
 Il meta-modello è addestrato sulle previsioni fatte dai modelli di base su dati fuori campione. In altre parole, i dati non utilizzati per addestrare i modelli di base vengono inviati ai modelli di base, vengono effettuate previsioni e queste previsioni, insieme agli output previsti, forniscono le coppie di input e output del set di dati di addestramento utilizzato per adattarsi al meta-modello. Gli output dei modelli di base utilizzati come input per il meta-modello possono essere valori reali in caso di regressione e valori di probabilità, valori simili alla probabilità o etichette di classe in caso di classificazione.
-La regressione a stack è una tecnica di apprendimento di insieme per combinare più modelli di regressione tramite un meta-regressore. I singoli modelli di regressione vengono addestrati in base al training set completo; quindi, il meta-regressore viene adattato in base agli output - meta-caratteristiche - dei singoli modelli di regressione nell'insieme.
-
-\subsection{Invarianti e versatilità nei dati}
--	Ci sono molti modi di pretrattare i dati e dipendente anche dal tipo di modello utilizzato (stagionalità? Serie temporali?)
+La regressione a stack è una tecnica di apprendimento di insieme per combinare più modelli di regressione tramite un meta-regressore. I singoli modelli di regressione vengono addestrati in base al training set completo; quindi, il meta-regressore viene adattato in base agli output - meta-caratteristiche - dei singoli modelli di regressione nell'insieme.\\
 \\
--	il “successo” di un modello/algoritmo dipende fortemente da come i dati vengono pretrattati\\
--	Dipende dai casi ma ci sono molti dati non strutturati che provengono anche da variabili esterne (la temperatura o il meteo se si tratta di previsione della domanda idrica)
+Dopo aver esaminato molti articoli in lettatura, gli studi fatti precedentemente forniscono importanti prove a sostegno del fatto che i metodi classici possono dominare la previsione di serie temporali, almeno sui tipi di problemi di previsione valutati.\\
+La domanda più interessante e la sfida più grande è trovare le ragioni delle loro scarse prestazioni con l'obiettivo di migliorarne la precisione e sfruttarne l'enorme potenziale. Gli algoritmi di apprendimento dell'intelligenza artificiale hanno rivoluzionato un'ampia gamma di applicazioni in diversi campi e non c'è motivo per cui lo stesso non possa essere ottenuto con i metodi ML nella previsione. Quindi, si dovrebbe trovare come essere applicati per migliorare la loro capacità di prevedere in modo più accurato.
+Gli autori di alcuni articoli fanno commenti su LSTM e RNN, che sono generalmente ritenuti l'approccio di deep learning per problemi di previsione di sequenza in generale, e in questo caso le loro prestazioni chiaramente scarse nella pratica.\\
+\\
+\emph{[...] one would expect RNN and LSTM, which are more advanced types of NNs, to be far more accurate than the ARIMA and the rest of the statistical methods utilized.}\\
+\\
+—  Makridakis S, Spiliotis E, Assimakopoulos V (2018) Statistical and Machine Learning forecasting methods: Concerns and ways forward. PLoS ONE 13(3): e0194889. https://doi.org/10.1371/journal.pone.0194889\\
+\\
+Dicendo anche che gli LSTM sembrano essere più adatti a adattare o sovradimensionare il set di dati di allenamento piuttosto che a prevederlo.\\
+\\
+\emph{Another interesting example could be the case of LSTM that compared to simpler NNs like RNN and MLP, report better model fitting but worse forecasting accuracy.}\\
+\\
+—  Makridakis S, Spiliotis E, Assimakopoulos V (2018) Statistical and Machine Learning forecasting methods: Concerns and ways forward. PLoS ONE 13(3): e0194889. https://doi.org/10.1371/journal.pone.0194889\\
+\\
 
-\subsection{Invarianti e versatilità nel modello}
--	Moltissimi modelli (ovviamente scelta in base al caso di previsione), spiegare quali metodi sono migliori di altri in determinati contesti.\\
--	Negli ultimi anni i più utilizzati sono RNN, K- nearucazz e LSTM.\\
--	I metodi statistici tradizionali sono migliori di quelli con ML.\\
--	Modello migliore = combinazione tra i diversi modelli (inserendo anche quelli tradizionali)\\
+\paragraph*{Estrazione delle caratteristiche:}
+Potrebbero esserci alcuni problemi a causa dell'enorme quantità di dati. Quando si prova ad utilizzare tutte le funzionalità di tutti i dati (es: i prodotti in ogni negozio con 155 funzionalità e 875 milioni di record), l'algoritmo di deep learning può impiegare persino giorni per completare il suo lavoro a causa della potenza di calcolo limitata. [An improved demand, page 5]\\
+Quindi per ogni algoritmo è necessario ridurre il numero di caratteristiche e il tempo di calcolo. Per superare questo problema e accelerare le fasi di clustering e modellazione, potrebbe essere utilizzato PCA (Principal Component Analysis) come algoritmo di estrazione delle caratteristiche.\\
+PCA è un algoritmo di riduzione delle dimensioni comunemente utilizzato che presenta le caratteristiche più significative. PCA trasforma ogni istanza del dato insieme di dati dallo spazio d dimensionale a un sottospazio dimensionale k in cui il nuovo insieme generato di k dimensioni è chiamato Componenti Principali (PC) [32]. Ciascuna componente principale è indirizzata a una varianza massima esclusa la varianza, contabilizzata in tutte le sue componenti precedenti. Di conseguenza, il primo componente copre la massima varianza e così via.\\
+In breve, i Componenti Principali sono rappresentati come
+\begin{equation}
+    {\displaystyle PC_i = a_1X_1 + a_2X_2 + ...}
+\end{equation}
 
-
-\chapter{Analisi tra i diversi casi studio}
+dove $PC_i$ è l'$i$-esimo componente principale, $X_j$ è la $j$-esima caratteristica originale e $a_j$ è il coefficiente numerico per la caratteristica $X_j$.
 
 \chapter{Frameworks}
+Gli strumenti di orchestrazione del machine learning vengono utilizzati per automatizzare e gestire i workflows e l'infrastruttura della pipeline, con un'interfaccia semplice e collaborativa. Insieme alla gestione e alla creazione di workflows personalizzati e delle relative pipeline, questi strumenti ci aiutano anche a tracciare e monitorare i modelli per ulteriori analisi.
+Gli strumenti di orchestrazione rendono il processo di machine learning più semplice, più efficiente e aiutano i data scientist e i team di machine learning a concentrarsi su ciò che è necessario, piuttosto che sprecare risorse cercando di identificare i problemi prioritari.\\
+Cerchiamo, quindi, quali sono quei framework che meglio si adattano ai nostri case studies.
+
+\section{MetaFlow}
+Metaflow è una libreria Python di facile utilizzo che aiuta scienziati e ingegneri a creare e gestire progetti di data science reali. Metaflow è stato originariamente sviluppato da Netflix per aumentare la produttività dei data scientist che lavorano su un'ampia varietà di progetti, dalle statistiche classiche al deep learning all'avanguardia.
+Metaflow fornisce un'API unificata allo stack dell'infrastruttura necessario per eseguire progetti di data science, dal prototipo alla produzione.
+
+\section{ZenML}
+ZenML è un framework MLOps estensibile e open source per l'utilizzo di pipeline di Machine Learning pronte per la produzione, in modo semplice. Al suo interno, ZenML organizzerà le pipeline dei tuoi esperimenti dall'acquisizione dei dati alla suddivisione, pre-elaborazione, formazione, fino alla valutazione dei risultati e persino alla pubblicazione.
+Sebbene esistano altre soluzioni di pipeline per gli esperimenti di Machine Learning, ZenML si concentra su quanto segue:
+Semplicità.
+Riproducibilità.
+Integrazioni.
+
+\section{}
 
 
-
+ 
 
 
 

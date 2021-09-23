@@ -42,7 +42,7 @@
 \contentsline {subsection}{\numberline {3.2.6}Miglioramento}{25}{}%
 \contentsline {subsection}{\numberline {3.2.7}Distribuzione}{25}{}%
 \contentsline {section}{\numberline {3.3}Analisi}{25}{}%
-\contentsline {subsection}{\numberline {3.3.1}Invarianti e versatilità nei dati}{27}{}%
-\contentsline {subsection}{\numberline {3.3.2}Invarianti e versatilità nel modello}{28}{}%
-\contentsline {chapter}{\numberline {4}Analisi tra i diversi casi studio}{29}{}%
-\contentsline {chapter}{\numberline {5}Frameworks}{30}{}%
+\contentsline {chapter}{\numberline {4}Frameworks}{30}{}%
+\contentsline {section}{\numberline {4.1}MetaFlow}{30}{}%
+\contentsline {section}{\numberline {4.2}ZenML}{30}{}%
+\contentsline {section}{\numberline {4.3}}{31}{}%
