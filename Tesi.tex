@@ -17,7 +17,7 @@
 \begin{document}
 \begin{titlepage}
 \begin{center}
-{{\Large{\textsc{Almadonna Mater Studiorum $\cdot$ Universit\`a di
+{{\Large{\textsc{Alma Mater Studiorum $\cdot$ Universit\`a di
 Bologna}}}} \rule[0.1cm]{15.8cm}{0.1mm}
 \rule[0.5cm]{15.8cm}{0.6mm}
 {\small{\bf SCUOLA DI SCIENZE\\
@@ -65,8 +65,8 @@ L'obiettivo di questa tesi è rispondere alla domanda: \emph{Si possono autogene
 Per arrivare alla risposta ho analizzato in letteratura due casi studio, al fine di tirare fuori i relativi workflow per arrivare alla generalizzazione. Infatti è stato applicato un approccio bottom-up, partendo dai casi studio specifici fino alla generalizzazione.\\
 I casi studio in questione sono:
 \begin{itemize}
-\item AI in radiology
-\item Demand forecasting
+    \item AI in radiology
+    \item Demand forecasting
 \end{itemize}
 Alla fine scopriremo che non sempre è possibile, dipende fortemente dall'applicazione del modello.
 
@@ -117,10 +117,10 @@ La \emph{raccolta} dati si riferisce al processo di raccolta di informazioni da 
 I dati possono essere dati clinici (biobanca), immagini e relativi metadati (DICOM - standard internazionale che è usato per salvare delle immagini mediche come TC e scansioni a risonanza magnetica) e/o annotazioni (referti di radiologia). Questi ultimi rappresentano annotazioni umane e caratteristiche generate dalla macchina.\\
 Analizziamo il caso specifico in cui viene utilizzata una collezione di referti di radiografie del torace, dove ad ogni referto radiologico è associata una coppia di immagini aventi visualizzazione frontale e laterale. Ogni referto di radiologia è composto da quattro sezioni, vale a dire, confronto, indicazione, risultati e impressione:
 \begin{itemize}
-\item La sezione confronto indica se l'attuale studio di imaging viene confrontato con uno qualsiasi dei precedenti studi di imaging del paziente.
-\item La sezione indicazione elenca le informazioni sul paziente come età, sesso e informazioni cliniche rilevanti, comprese eventuali malattie e sintomi esistenti.
-\item La sezione risultati indica se ciascuna area dell'immagine è normale, anormale o potenzialmente anormale.
-\item La sezione impressione riassume i risultati, l'anamnesi clinica del paziente e le indicazioni per lo studio ed è considerata la parte più indicativa e importante di un referto radiologico per il processo decisionale.
+    \item La sezione confronto indica se l'attuale studio di imaging viene confrontato con uno qualsiasi dei precedenti studi di imaging del paziente.
+    \item La sezione indicazione elenca le informazioni sul paziente come età, sesso e informazioni cliniche rilevanti, comprese eventuali malattie e sintomi esistenti.
+    \item La sezione risultati indica se ciascuna area dell'immagine è normale, anormale o potenzialmente anormale.
+    \item La sezione impressione riassume i risultati, l'anamnesi clinica del paziente e le indicazioni per lo studio ed è considerata la parte più indicativa e importante di un referto radiologico per il processo decisionale.
 \end{itemize}
 
 Il processo di raccolta e quello di cura dei dati sono i passaggi più dispendiosi in termini di tempo in un progetto di intelligenza artificiale, ma è fondamentale per qualsiasi addestramento del modello.\\
@@ -158,10 +158,8 @@ Gli algoritmi di deep learning generalmente introducono due limitazioni signific
 
 \subsubsection{Transfer learning}
 Il Transfer Learning (TL) è un problema di ricerca nell'apprendimento automatico (ML) che si concentra sulla memorizzazione delle conoscenze acquisite durante la risoluzione di un problema e l'applicazione a un problema diverso ma correlato.
-Poiché, come detto precedentemente, è difficile raccogliere dati medici annotati su larga scala a causa dell'interoperabilità, della privacy e di questioni legali, il TL svolge un ruolo fondamentale nel campo dell'imaging medico, dove è difficile accedere a set di dati di immagini etichettati. Nel TL una rete neurale viene inizializzata dai pesi del modello che è già stato addestrato su un set di dati su larga scala.
-\\\\
-DA TENERE?\\
-Per consentire il trasferimento di conoscenza per l'estrazione di incorporamenti di immagini, si inizializza la CNN con pesi pre-addestrati del modello che è stato addestrato su un set di dati di classificazione delle immagini su larga scala come ImageNet. Inoltre, dal lato del testo, utilizziamo gli incorporamenti di parole Glove con un vettore di incorporamento di 300 dimensioni per ogni parola e sono stati addestrati su un corpus di testo generico denominato Common Crawl con corpus di testo denominato Common Crawl con 42 miliardi di token, 1,9 milioni di vocaboli.
+Poiché, come detto precedentemente, è difficile raccogliere dati medici annotati su larga scala a causa dell'interoperabilità, della privacy e di questioni legali, il TL svolge un ruolo fondamentale nel campo dell'imaging medico, dove è difficile accedere a set di dati di immagini etichettati. Nel TL una rete neurale viene inizializzata dai pesi del modello che è già stato addestrato su un set di dati su larga scala.\\
+Per consentire il trasferimento di conoscenza per l'estrazione di incorporamenti di immagini, si inizializza la CNN con pesi pre-addestrati del modello che è stato addestrato su un set di dati di classificazione delle immagini su larga scala come ImageNet. Inoltre, dal lato del testo, vengono utilizzati gli incorporamenti di parole Glove con un vettore di incorporamento di 300 dimensioni per ogni parola e sono stati addestrati su un corpus di testo generico denominato Common Crawl con corpus di testo denominato Common Crawl con 42 miliardi di token, 1,9 milioni di vocaboli.\\
 Poiché la natura del testo medico è diversa dal testo generale, abbiamo anche applicato la conoscenza del dominio inizializzando LSTM con RadGlove (Radiology Glove), vettori con incorporamenti di parole a 100 dimensioni e addestrati su 4,5 milioni di rapporti di radiologia presso la Stanford University
 
 
@@ -172,8 +170,8 @@ I modelli di sottotitoli delle immagini all'avanguardia generano una breve frase
 \subsubsection{Esclusione dei dati}
 Nei referti di radiologia, due sono le sezioni più importanti:
 \begin{itemize}
-\item Risultati $\rightarrow$ evidenziano tutte le principali anomalie presenti nell'immagine
-\item Impressione $\rightarrow$ riassume i risultati evidenziando se lo studio è positivo o negativo
+    \item Risultati $\rightarrow$ evidenziano tutte le principali anomalie presenti nell'immagine
+    \item Impressione $\rightarrow$ riassume i risultati evidenziando se lo studio è positivo o negativo
 \end{itemize}
 Nel nostro caso, quindi, ci concentriamo solo sui risultati e sulle sezioni delle impressioni.
 Alcuni set di dati hanno sezioni di confronto e indicazione mancanti a causa delle quali non sono usate nello studio.\\
@@ -186,8 +184,8 @@ In questo studio, viene combiniato il testo dei risultati e le sezioni delle imp
 \subsection{Creazione del modello}
 Il processo di assistenza alla creazione di referti medici può essere suddiviso in due parti:
 \begin{itemize}
-\item Codifica dell’immagine
-\item Decodifica in referto radiologico
+    \item Codifica dell’immagine
+    \item Decodifica in referto radiologico
 \end{itemize}
 
 \begin{center}
@@ -208,7 +206,7 @@ Le reti neurali convoluzionali (CNN) sono comunemente utilizzate per le rapprese
 In questo studio, viene utilizzato il modello Inception-v3 di Google come codificatore perché ha una struttura significativamente più profonda e, grazie ai blocchi di Inception, apprende una rappresentazione semanticamente ricca delle immagini
 
 \subsubsection{Decoder}
-Le reti neurali ricorrenti (RNN) sono reti neurali specializzate che eccellono nell'apprendimento e nell'elaborazione di dati sequenziali come testo e parlato. Gli RNN sono generalmente addestrati dalla retropropagazione nel tempo, il che può portare a problemi di gradienti evanescenti ed esplosivi. Due degli RNN più popolari e importanti che superano questi problemi sono Memoria a lungo termine (LSTM) e Unità ricorrente chiusa (GR).
+Le reti neurali ricorrenti (RNN) sono reti neurali specializzate che eccellono nell'apprendimento e nell'elaborazione di dati sequenziali come testo e parlato. Gli RNN sono generalmente addestrati dalla retropropagazione nel tempo, il che può portare a problemi di gradienti evanescenti ed esplosivi. Due degli RNN più popolari e importanti che superano questi problemi sono Long-Short Term Memory (LSTM) e Gated Recurrent Unit (GRU).
 
 \subsection{Formazione del modello}
 Il framework, quindi, è costituito da un codificatore che trasforma l'immagine grezza in una rappresentazione vettoriale e un decodificatore che trasforma il vettore dell'immagine codificata in una sequenza di parole.\\
@@ -240,32 +238,42 @@ Text
 Text
 
 \section{Analisi}
-In questa fase di analisi ho cercato di confrontare alcuni casi che ho trovato in letteratura, sono andato alla ricerca di quali potessero essere le invarianti e le versatilità tra loro in modo da centrare il nostro obiettivo.
-
-\subsection{Invarianti e versatilità nei dati}
-\subsubsection{Invarianti}
-La cosa principale che è comune a tutti i tipi di modelli che vogliono portare un’immagine DICOM in un referto medico sono i set di dati.\\
-Set di dati formatosempre  da: immagine DICOM e/o annotazione.\\
-Ovviamente alcuni input devono essere scartati perché non presentano le caratteristiche di cui abbiamo bisogno.
-
-\subsubsection{Versatilità}
-La differenza principale è che in alcuni modelli, per i dati di addestramento viene eseguito un aumento. L'aumento dell'immagine sarebbe preferibile per aumentare il livello di robustezza del modello. Ovviamente, l’'aumento delle immagini si traduce in un aumento del numero di set di dati per la formazione e potrebbe esserci il rischio del problema di sovradattamento.\\
-Anche se viene esaminato lo stesso paziente, le immagini non sarebbero identiche tra gli esami a causa di lievi differenze di posizionamento. Pertanto, l'uso di immagini ruotate o spostate parallelamente renderebbe il modello robusto per lievi differenze nelle posizioni del paziente. A volte vengono utilizzate anche immagini speculari. L'uso di immagini con rumore aggiunto sarebbe utile per rendere il modello robusto per diversi gradi di rumore dell'immagine.
-Come già detto in precedenza, un modello potrebbe differire da un altro anche per le strategie di campionamento del set di dati:
+In questa fase di analisi ho cercato di confrontare alcuni casi che ho trovato in letteratura, sono andato alla ricerca di quali potessero essere le invarianti e le versatilità tra loro in modo da centrare il nostro obiettivo.\\
+\\
+La cosa principale che è comune a tutti è il la struttura dati: set di dati formato sempre  da immagine DICOM e/o annotazione.\\
+Ovviamente alcuni input devono essere scartati perché non presentano le caratteristiche di cui abbiamo bisogno.\\
+Per estrarre le caratteristiche dall’immagine viene sempre utilizzata un CNN per le sue elevate prestazioni nel riconoscimento delle immagini. La capacità delle CNN di apprendere complesse relazioni spaziali e
+imparare modelli basati su pixel sottili e intricati li rendono perfetti strumento per apprendere dalle immagini radiologiche. \\
+\\
+Per quanto riguarda l'estrazione del testo, invece, le tecniche di elaborazione del linguaggio naturale (NLP) possono essere una chiave per analizzare con successo i referti radiologici per estrarre risultati e raccomandazioni clinicamente importanti. La PNL ha già mostrato il potenziale per automatizzare il compito di classificare i report di imaging in un modo che potrebbe informare le decisioni relative all'utilizzo e all'adeguatezza dell'imaging medico [11-13, Comparative].\\
+Una classe di architetture di reti neurali, le reti neurali ricorrenti (RNN), ha recentemente attirato molta attenzione da parte dei ricercatori per la modellazione di sequenze e ha dimostrato di funzionare bene nella risoluzione di vari compiti di PNL grazie alla loro capacità di gestire input di lunghezza variabile e uscita [27].\\
+Sebbene RNN sia teoricamente un modello potente per codificare informazioni sequenziali, in pratica spesso soffre dei problemi di sfumatura/esplosione del gradiente mentre apprende le dipendenze a lungo raggio [33]. Le reti LSTM [34] e GRU [35] sono note per essere rimedi efficaci a questi problemi.\\
+Le estensioni più popolari di RNN sono, appunto, Long Short-Term Memory (LSTM) [77] e la Gated Recurrent Unit (GRU) [78]. La memoria a lungo termine utilizza blocchi di memoria per salvare lo stato temporale della rete e porte per monitorare il flusso di informazioni. D'altra parte, GRU è una forma più leggera di RNN rispetto a LSTM in termini di topologia, spese di calcolo e complessità. Al momento, i ricercatori devono scegliere tra il modello più veloce offerto da GRU che necessita di meno parametri o il modello più performante fornito da LSTM che contiene dati sufficienti e potenza di calcolo [8].\\
+\\
+In generale, lo sviluppo di algoritmi di intelligenza artificiale generalizzabili nell'imaging medico richiede set di dati statisticamente alimentati nell'ordine di centinaia di migliaia o milioni, il che è problematico, data la scarsa disponibilità
+dei dati.\\
+In alcuni modelli, proprio per questa limitazione, viene eseguito un aumento dei dati di addestramento.\\
+Una soluzione parziale per questo problema può essere l'apprendimento semisupervisionato. Sono necessari
+set di dati completamente annotati per l'apprendimento supervisionato, mentre l'apprendimento semisupervisionato
+utilizza una combinazione di immagini annotate e non annotate per addestrare un algoritmo (67,68).
+L'apprendimento semi-supervisionato può consentire un numero limitato di casi annotati; tuttavia, sono ancora 
+necessari grandi set di dati di immagini non annotate.
+Un'altra potenziale soluzione futura per aumentare la dimensione del campione di dati potrebbe essere la generazione di dati 
+sintetici attraverso reti generative avversarie (69). Le reti generative avversarie hanno il potenziale per sintetizzare un numero
+illimitato di immagini realistiche di alta qualità che possono essere aggiunte ai set di dati di addestramento per lo sviluppo di 
+algoritmi di rilevamento e classificazione. Tuttavia, sono disponibili prove limitate, specialmente quando sono presenti anomalie nelle immagini.
+L'aumento dell'immagine sarebbe preferibile per aumentare il livello di robustezza del modello. Ovviamente, l'aumento delle immagini si traduce in un aumento del numero di set di dati per la formazione e potrebbe esserci il rischio del problema di sovradattamento.\\
+Anche se viene esaminato lo stesso paziente, le immagini non sarebbero identiche tra gli esami a causa di lievi differenze di posizionamento. 
+Pertanto, l'uso di immagini ruotate o spostate parallelamente renderebbe il modello robusto per lievi differenze nelle posizioni del paziente. A volte vengono utilizzate anche immagini speculari. L'uso di immagini con rumore aggiunto sarebbe utile per rendere il modello robusto per diversi gradi di rumore dell'immagine.\\
+\\
+Come già detto precedentemente, un modello potrebbe differire da un altro anche per le strategie di campionamento del set di dati:
 \begin{itemize}
-\item Addestramento, convalida e test
-\item Convalida incrociata k-fold
+    \item Addestramento, convalida e test
+    \item Convalida incrociata k-fold
 \end{itemize}
-Anche se il primo è quello più utilizzato.
-
-\subsection{Invarianti e versatilità nel modello}
-\subsubsection{Invarianti}
-Una delle cose comuni a diversi modelli è che per estrarre le caratteristiche dall’immagine viene sempre utilizzata un CNN per le sue elevate prestazioni nel riconoscimento delle immagini.
-
-\subsubsection{Versatilità}
-Per estrarre le parole?? cosa viene usato -> RNN (LSTM)?? sempre lo stesso??
-
-È possibile trovare alcuni modelli (ex: r.AID.ologist) concepiti come modello di ragionamento basato sui casi (Case-Based Reasoning - CBR), alimentato da diversi modelli di deep learning che sono stati inclusi per migliorarne le prestazioni, oltre a fornire funzionalità aggiuntive.
+Anche se il primo è quello più utilizzato, poiché il processo di formazione richiede un'enorme quantità di calcoli.\\
+\\
+Inoltre è possibile trovare alcuni modelli (ex: nel framework r.AID.ologist) concepiti come modello di ragionamento basato sui casi (Case-Based Reasoning - CBR), alimentato da diversi modelli di deep learning che sono stati inclusi per migliorarne le prestazioni, oltre a fornire funzionalità aggiuntive.
 Sebbene CBR sia integrato come un ciclo continuo, le sue sottoparti sono progettate per essere completamente modulari, quindi possono essere facilmente sostituite per adattarsi a nuovi dati.
 
 Il ragionamento basato su casi (CBR) è il processo di risoluzione di nuovi problemi basandosi sulle soluzioni di problemi anteriori ed è stato formalizzato, per il ragionamento automatico, come un processo suddiviso in quattro fasi:
@@ -276,6 +284,7 @@ Il ragionamento basato su casi (CBR) è il processo di risoluzione di nuovi prob
 \item Conservazione: Dopo che la soluzione è stata adattata al problema attuale, memorizzare l'esperienza come nuovo caso.
 \end{enumerate}
 
+
 \chapter{Demand forecasting}
 La previsione della domanda è uno dei problemi principali delle catene di approvvigionamento. Mira ad ottimizzare le scorte, ridurre i costi e aumentare le vendite, i profitti e la fedeltà dei clienti. A tal fine, i dati storici possono essere analizzati per migliorare la previsione della domanda utilizzando vari metodi come tecniche di apprendimento automatico, analisi di serie temporali e modelli di deep learning.\\
 In questo studio viene analizzato il workflow della previsione della domanda con i relativi modelli. 
@@ -284,41 +293,35 @@ In questo studio viene analizzato il workflow della previsione della domanda con
 Poiché la concorrenza aumenta di giorno in giorno tra i rivenditori sul mercato, le aziende stanno concentrando più tecniche di analisi predittiva per ridurre i costi e aumentare la produttività e il profitto.\\
 Esistono diversi tipi di previsione della domanda:
 \begin{itemize}
-\item A breve termine (viene effettuato per un periodo più breve da 3 mesi a 12 mesi). 
-\item Da medio a lungo termine (in genere viene effettuato da più di 12 mesi a 24 mesi in anticipo (36-48 mesi in alcune attività)).
-\item Livello aziendale interno (questo tipo di previsione si occupa delle operazioni interne dell'azienda come categoria di prodotto, divisione vendite, divisione finanziaria e gruppo di produzione. Ciò include previsioni di vendita annuali, stima di COGS, margine di profitto netto, flusso di cassa, ecc.)
-\item Passivo (Si effettua per imprese stabili con piani di crescita molto conservativi. Semplici estrapolazioni di dati storici vengono effettuate con ipotesi minime.)
-\item Attivo (viene eseguito per ridimensionare e diversificare le aziende con piani di crescita aggressivi in termini di attività di marketing, espansione del portafoglio di prodotti e considerazione delle attività della concorrenza e dell'ambiente economico esterno).
+    \item A breve termine (viene effettuato per un periodo più breve da 3 mesi a 12 mesi). 
+    \item Da medio a lungo termine (in genere viene effettuato da più di 12 mesi a 24 mesi in anticipo (36-48 mesi in alcune attività)).
+    \item Livello aziendale interno (questo tipo di previsione si occupa delle operazioni interne dell'azienda come categoria di prodotto, divisione vendite, divisione finanziaria e gruppo di produzione. Ciò include previsioni di vendita annuali, stima di COGS, margine di profitto netto, flusso di cassa, ecc.)
+    \item Passivo (Si effettua per imprese stabili con piani di crescita molto conservativi. Semplici estrapolazioni di dati storici vengono effettuate con ipotesi minime.)
+    \item Attivo (viene eseguito per ridimensionare e diversificare le aziende con piani di crescita aggressivi in termini di attività di marketing, espansione del portafoglio di prodotti e considerazione delle attività della concorrenza e dell'ambiente economico esterno).
 \end{itemize}
 
 I rivenditori in diversi settori sono alla ricerca di soluzioni automatizzate di previsione della domanda e rifornimento che utilizzino big data e tecnologie di analisi predittiva [3]. \\
 I metodi di previsione tradizionali si basano su approcci di previsione basati su serie temporali. Questi approcci di previsione prevedono la domanda futura in base a dati di serie temporali storiche, ovvero una sequenza di punti dati misurati a intervalli successivi nel tempo. Questi metodi utilizzano un numero limitato di dati storici di serie temporali relativi alla domanda. Negli ultimi due decenni, I modelli di data mining e machine learning hanno attirato maggiore attenzione e sono stati applicati con successo alla previsione delle serie temporali.\\\
-I metodi di previsione dell'apprendimento automatico possono utilizzare una grande quantità di dati e funzionalità correlate alla domanda e prevedere la domanda e i modelli futuri utilizzando diversi algoritmi di apprendimento. Tra molti metodi di apprendimento automatico, i metodi di deep learning (DL) sono diventati molto popolari e sono stati recentemente applicati a molti campi come il riconoscimento di immagini e parole, l'elaborazione del linguaggio naturale e la traduzione automatica. I metodi DL hanno prodotto previsioni e risultati migliori, rispetto ai tradizionali algoritmi di apprendimento automatico in molte ricerche. L'Ensemble Learning (EL) è anche un'altra metodologia per aumentare le prestazioni del sistema.\\
-Un sistema di insieme è composto da due parti:
-\begin{itemize}
-\item generazione di insieme
-\item integrazione di insieme [4].
-\end{itemize}
-Nella parte di generazione dell'ensemble, viene generato un insieme diversificato di modelli di previsione di base utilizzando metodi o campioni diversi. Nella parte di integrazione, le previsioni di tutti i modelli vengono combinate utilizzando una strategia di integrazione.\\
-Oltre ai metodi delle serie temporali, gli approcci di intelligenza artificiale stanno diventando popolari con la crescita delle tecnologie dei big data.
-Nei problemi di classificazione, le prestazioni degli algoritmi di apprendimento dipendono principalmente dalla natura della rappresentazione dei dati [23].
+I metodi di previsione dell'apprendimento automatico possono utilizzare una grande quantità di dati e funzionalità correlate alla domanda e prevedere la domanda e i modelli futuri utilizzando diversi algoritmi di apprendimento. Tra molti metodi di apprendimento automatico, i metodi di deep learning (DL) sono diventati molto popolari e sono stati recentemente applicati a molti campi come il riconoscimento di immagini e parole, l'elaborazione del linguaggio naturale e la traduzione automatica.
+I metodi DL hanno prodotto previsioni e risultati migliori, rispetto ai tradizionali algoritmi di apprendimento automatico in molte ricerche. 
 
 \section{Workflow}
 
 \subsection{Raccolta dati}
 Il primo compito quando si avvia il progetto di previsione della domanda è fornire al cliente informazioni significative. Il processo include i seguenti passaggi:
 \begin{enumerate}
-\item Raccogli i dati disponibili
-\item Esamina brevemente la struttura dei dati, l'accuratezza e la coerenza
-\item Esegui alcuni test e progetti pilota sui dati
-\item Guarda attraverso un riepilogo statistico
+    \item Raccogliere i dati disponibili
+    \item Esaminare brevemente la struttura dei dati, l'accuratezza e la coerenza
+    \item Eseguire alcuni test e progetti pilota sui dati
+    \item Guardare attraverso un riepilogo statistico
 \end{enumerate}
+
 In questo caso studio il tipo di dato può essere molto differente in base all'obiettivo aziendale. Distinguiamo i dati in:
 \begin{itemize}
-\item Strutturati
-\item Non strutturati
+    \item Strutturati
+    \item Non strutturati
 \end{itemize}
-I seguenti dati possono essere utiizzati per costruire modelli di previsione.\\
+
 Nei dati strutturati possiamo trovare dati interni come i dati di vendita e-commerce, le transazioni di vendita, gli ordini d'acquisto, le proprie informazioni POS e dati esterni come tempo metereologico, spedizioni/ricevute del negozio del cliente, le informazioni POS cliente e dati sindacati di terze parti.\\
 Nei dati non strutturati possiamo trovare dati interni come siti web, recensioni, campagne di marketing, app, dispositivi in negozio e dati esterni come social media, stream di click, IoT, dispositivi di geolocalizzazione, video, linguaggio naturale.\\
 
@@ -328,32 +331,25 @@ Indipendentemente da ciò che vorremmo prevedere, la qualità dei dati è una co
 \subsubsection{Parametri di qualità dei dati}
 Quando si costruisce un modello di previsione, i dati vengono valutati in base ai seguenti parametri:
 \begin{itemize}
-\item Consistenza
-\item Precisione
-\item Validità
-\item Rilevanza
-\item Accessibilità
-\item Completezza
-\item Detalizzazione
+    \item Consistenza
+    \item Precisione
+    \item Validità
+    \item Rilevanza
+    \item Accessibilità
+    \item Completezza
+    \item Detalizzazione
 \end{itemize}
 
 \subsubsection{Preelaborazione dei dati}
 In realtà, i dati raccolti dalle aziende spesso non sono ideali. Questi dati di solito devono essere puliti, analizzati per lacune e anomalie, verificati per pertinenza e ripristinati.
 La preelaborazione può essere applicata in tre forme: adeguamenti stagionali, log o trasformazioni di potenza e rimozione della tendenza.
 \begin{itemize}
-\item Dati originali: non viene applicata alcuna preelaborazione.
-\item Trasformazione dei dati: Ai dati originali viene applicato il log o la trasformazione di potenza Box-Cox [66] per ottenere la stazionarietà nella varianza.
-\item Destagionalizzazione dei dati: i dati sono considerati stagionali se esiste un coefficiente di autocorrelazione significativo al lag 12. In tal caso i dati vengono destagionalizzati utilizzando il classico approccio di decomposizione moltiplicativa [39]. L'addestramento dei pesi ML, o l'ottimizzazione dei metodi statistici, viene successivamente effettuato sui dati destagionalizzati. I pronostici ottenuti vengono poi ristagionali per determinare i pronostici finali. Ciò non avviene nel caso dei metodi ETS e ARIMA poiché includono modelli stagionali, selezionati utilizzando test relativi e criteri informativi che si occupano direttamente della stagionalità e della complessità del modello.
-\item Detrending dei dati: viene eseguito un test di Cox-Stuart [67] per stabilire se sia necessario utilizzare un trend lineare deterministico, o in alternativa un primo differenziamento, per eliminare il trend dai dati e ottenere la stazionarietà nella media.
-\item Combinazione dei tre precedenti: i vantaggi delle singole tecniche di pre-elaborazione vengono applicati simultaneamente per regolare i dati originali. Al fine di accelerare i calcoli, prima determiniamo la migliore alternativa di pre-elaborazione per migliorare le prestazioni di previsione post-campione in un passo avanti del metodo MLP (il più popolare tra quelli ML) e poi applichiamo quella ai restanti modelli ML.
+    \item Dati originali: non viene applicata alcuna preelaborazione.
+    \item Trasformazione dei dati: Ai dati originali viene applicato il log o la trasformazione di potenza Box-Cox [66] per ottenere la stazionarietà nella varianza.
+    \item Destagionalizzazione dei dati: i dati sono considerati stagionali se esiste un coefficiente di autocorrelazione significativo al lag 12. In tal caso i dati vengono destagionalizzati utilizzando il classico approccio di decomposizione moltiplicativa [39]. L'addestramento dei pesi ML, o l'ottimizzazione dei metodi statistici, viene successivamente effettuato sui dati destagionalizzati. I pronostici ottenuti vengono poi ristagionali per determinare i pronostici finali. Ciò non avviene nel caso dei metodi ETS e ARIMA poiché includono modelli stagionali, selezionati utilizzando test relativi e criteri informativi che si occupano direttamente della stagionalità e della complessità del modello.
+    \item Detrending dei dati: viene eseguito un test di Cox-Stuart [67] per stabilire se sia necessario utilizzare un trend lineare deterministico, o in alternativa un primo differenziamento, per eliminare il trend dai dati e ottenere la stazionarietà nella media.
+    \item Combinazione dei tre precedenti: i vantaggi delle singole tecniche di pre-elaborazione vengono applicati simultaneamente per regolare i dati originali. Al fine di accelerare i calcoli, prima determiniamo la migliore alternativa di pre-elaborazione per migliorare le prestazioni di previsione post-campione in un passo avanti del metodo MLP (il più popolare tra quelli ML) e poi applichiamo quella ai restanti modelli ML.
 \end{itemize}
-
-\subsubsection{Clustering dei dati}
-Identificare e separare diversi modelli nei dati e utilizzare ciascuno di essi come set di dati indipendenti. Questo è noto come clustering e può essere ottenuto utilizzando algoritmi di apprendimento automatico.
-Nell'apprendimento non supervisionato, un problema comune è identificare e classificare correttamente un certo numero di classi identiche (cluster) presenti nei dati (Bishop 2006). All'inizio, il numero di cluster, k, è solitamente sconosciuto. Trovarlo può essere ottenuto eseguendo l'algoritmo di clustering per diversi valori di k e valutando i risultati per ciascun valore.\\
-Il numero ottimale di cluster è quello che ottimizza un determinato criterio, come la varianza tra osservazioni nello stesso cluster.
-Complessivamente, il numero di cluster e il modo in cui vengono trovati, la formulazione della distanza e l'implementazione dell'algoritmo di clustering stesso sono reciprocamente influenzati e diverse combinazioni di essi produrranno risultati diversi.\\
-Qui, l'analisi di clustering può essere utilizzata per verificare la stagionalità e altre relazioni tra i dati di input.
 
 Una volta che i dati sono stati puliti, generati e verificati per pertinenza, vengono strutturati in un modulo completo.\\
 La comprensione dei dati è il compito successivo una volta completate la preparazione e la strutturazione. Non è ancora un modello, ma è un modo eccellente per comprendere i dati tramite la visualizzazione. 
@@ -455,7 +451,7 @@ La regressione del vettore di supporto (Scholkopf e Smola, 2001; Smola e Scholko
 equation-one
 \end{equation}
 
-dove $w$ è il vettore del peso, $b$ è il bias e $x$ è il vettore di input. Sia $x_m$ e $y_m$ denotano, rispettivamente, l’ m-esimo vettore di input di addestramento e output di destinazione, $m = 1, …, M$. La funzione di errore è data da 
+dove $w$ è il vettore del peso, $b$ è il bias e $x$ è il vettore di input. Sia $x_m$ e $y_m$ denotano, rispettivamente, l' m-esimo vettore di input di addestramento e output di destinazione, $m = 1, …, M$. La funzione di errore è data da 
 
 \begin{equation}
 equation-two
@@ -492,19 +488,6 @@ In questo studio il modello utilizzato per implementare la RNN è quello sequenz
 La rete LSTM è simile alla RNN discussa sopra ed è stata proposta per evitare il problema della dipendenza a lungo termine. Il vantaggio delle unità LSTM rispetto alle normali unità RNN è la loro capacità di conservare le informazioni per periodi di tempo più lunghi grazie alla loro architettura complessa che consiste in diverse porte con il potere di rimuovere o aggiungere informazioni allo stato dell'unità.
 Simile a RNN, il modello utilizzato per implementare la rete LSTM è quello sequenziale composto da uno strato nascosto e uno di output. Allo stesso modo, a causa dell'elevato tempo di calcolo, l'architettura del modello è costituita da tre nodi di input, sei unità LSTM che formano lo strato nascosto e un singolo nodo lineare nello strato di output. La funzione di attivazione lineare viene utilizzata prima dell'uscita di tutte le unità e quella del sigmoide rigido per il passo ricorrente. 
 
-
-\subsubsection{Stacking (Insieme)}
-Stacking o Stacked Generalization è un algoritmo di apprendimento automatico di insieme. Utilizza un algoritmo di meta-apprendimento per apprendere come combinare al meglio le previsioni di due o più algoritmi di apprendimento automatico di base.
-Potremmo usare Stacking per combinare vari modelli e fare nuove previsioni.
-L'architettura di un modello di impilamento (stacking model) coinvolge due o più modelli di base, spesso indicati come modelli di livello 0 e un meta-modello che combina le previsioni dei modelli di base indicati come modello di livello 1:
-\begin{itemize}
-\item Modelli di livello 0 (modelli base): i modelli si adattano ai dati di addestramento e le cui previsioni vengono compilate.
-\item Modello di Livello 1 (Meta-Modello): modello che apprende come combinare al meglio le previsioni dei modelli base.
-\end{itemize}
-Il meta-modello è addestrato sulle previsioni fatte dai modelli di base su dati fuori campione. In altre parole, i dati non utilizzati per addestrare i modelli di base vengono inviati ai modelli di base, vengono effettuate previsioni e queste previsioni, insieme agli output previsti, forniscono le coppie di input e output del set di dati di addestramento utilizzato per adattarsi al meta-modello. Gli output dei modelli di base utilizzati come input per il meta-modello possono essere valori reali in caso di regressione e valori di probabilità, valori simili alla probabilità o etichette di classe in caso di classificazione.
-La regressione a stack è una tecnica di apprendimento di insieme per combinare più modelli di regressione tramite un meta-regressore. I singoli modelli di regressione vengono addestrati in base al training set completo; quindi, il meta-regressore viene adattato in base agli output - meta-caratteristiche - dei singoli modelli di regressione nell'insieme.
-
-
 \subsection{Formazione del modello}
 Una volta sviluppati i modelli di previsione, è il momento di iniziare il processo di formazione. Quando si addestrano i modelli di previsione, i data scientist di solito utilizzano dati storici. Elaborando questi dati, gli algoritmi forniscono modelli addestrati pronti per l'uso.
 
@@ -522,12 +505,57 @@ Questa fase presuppone l'integrazione dei modelli di previsione nell'uso della p
 
 \section{Analisi}
 In questa fase di analisi ho certo di confrontare tutti i casi che ho trovato in letteratura, sono andato ricercare quali potessero essere le invarianti e le versatilità tra loro.
+Le svariate applicazioni della previsione della domanda portano anche a svariati modelli utilizzabili e svariati modi di pretrattare i dati.\\
+\\
+I diversi modi di pretrattare i dati dipendono dal tipo di modello utilizzato, se si prende in considerazione la stagionalità verrà utilizzato un determinato modello con un set di dati con una determinata struttura,
+se viene utilizzato un modello per serie temporali abbiamo bisogno che i dati abbiano un timestamp, e così via..\\
+Dipende fortemente dal caso specifico, ma molti dati che dovranno essere utilizzati per l'addestramento sono non strutturati, come per esempio la temperatura o il meteo se si tratta di previsione della domanda idrica (cazzata sui dati non strutturati), quindi verranno pretrattati in un determinato modo.\\
+Allo stesso tempo il "successo" di un modello/algoritmo dipende fortemente da come vengono pretrattati i dati.\\
+
+Un'altro modo per pretrattare i dati è clusterizzarli.\\
+\paragraph*{Clustering dei dati}
+Identificare e separare diversi modelli nei dati e utilizzare ciascuno di essi come set di dati indipendenti. Questo è noto come clustering e può essere ottenuto utilizzando algoritmi di apprendimento automatico.
+Nell'apprendimento non supervisionato, un problema comune è identificare e classificare correttamente un certo numero di classi identiche (cluster) presenti nei dati (Bishop 2006). All'inizio, il numero di cluster, k, è solitamente sconosciuto. Trovarlo può essere ottenuto eseguendo l'algoritmo di clustering per diversi valori di k e valutando i risultati per ciascun valore.\\
+Il numero ottimale di cluster è quello che ottimizza un determinato criterio, come la varianza tra osservazioni nello stesso cluster.
+Complessivamente, il numero di cluster e il modo in cui vengono trovati, la formulazione della distanza e l'implementazione dell'algoritmo di clustering stesso sono reciprocamente influenzati e diverse combinazioni di essi produrranno risultati diversi.\\
+Qui, l'analisi di clustering può essere utilizzata per verificare la stagionalità e altre relazioni tra i dati di input.
+\\
+Come visto in precedenza i modelli da poter utilizzare sono molteplici:
+\begin{itemize}
+    \item Perceptor multistrato (MLP)
+    \item Rete neurale bayesiana (BNN)
+    \item Reti neurali di regressione generalizzata (GRNN)
+    \item Regressione K-Nearest Neighbor (KNN)
+    \item Regressione del vettore di supporto (SVR)
+    \item Rete Neurale Ricorrente (RNN)
+    \item Rete neurale di memoria a lungo termine (LSTM)
+\end{itemize}
+spiegare quali metodi sono migliori di altri e in quali contesti
+
+Oltre a questi modelli discussi in precedenza c'è anche l'Ensemble Learning (EL), che è un'altra metodologia per aumentare le prestazioni del sistema.\\
+Un sistema di insieme è composto da due parti:
+\begin{itemize}
+    \item generazione di insieme
+    \item integrazione di insieme [4].
+\end{itemize}
+Nella parte di generazione dell'ensemble, viene generato un insieme diversificato di modelli di previsione di base utilizzando metodi o campioni diversi. Nella parte di integrazione, le previsioni di tutti i modelli vengono combinate utilizzando una strategia di integrazione.\\
+
+Mostro un algoritmo in particolare che si approccia molto a questo caso, e si tratta dell'algoritmo Stacking:\\
+Stacking o Stacked Generalization è un algoritmo di apprendimento automatico di insieme. Utilizza un algoritmo di meta-apprendimento per apprendere come combinare al meglio le previsioni di due o più algoritmi di apprendimento automatico di base.
+Potremmo usare Stacking per combinare vari modelli e fare nuove previsioni.
+L'architettura di un modello di impilamento (stacking model) coinvolge due o più modelli di base, spesso indicati come modelli di livello 0 e un meta-modello che combina le previsioni dei modelli di base indicati come modello di livello 1:
+\begin{itemize}
+    \item Modelli di livello 0 (modelli base): i modelli si adattano ai dati di addestramento e le cui previsioni vengono compilate.
+    \item Modello di Livello 1 (Meta-Modello): modello che apprende come combinare al meglio le previsioni dei modelli base.
+\end{itemize}
+Il meta-modello è addestrato sulle previsioni fatte dai modelli di base su dati fuori campione. In altre parole, i dati non utilizzati per addestrare i modelli di base vengono inviati ai modelli di base, vengono effettuate previsioni e queste previsioni, insieme agli output previsti, forniscono le coppie di input e output del set di dati di addestramento utilizzato per adattarsi al meta-modello. Gli output dei modelli di base utilizzati come input per il meta-modello possono essere valori reali in caso di regressione e valori di probabilità, valori simili alla probabilità o etichette di classe in caso di classificazione.
+La regressione a stack è una tecnica di apprendimento di insieme per combinare più modelli di regressione tramite un meta-regressore. I singoli modelli di regressione vengono addestrati in base al training set completo; quindi, il meta-regressore viene adattato in base agli output - meta-caratteristiche - dei singoli modelli di regressione nell'insieme.
 
 \subsection{Invarianti e versatilità nei dati}
 -	Ci sono molti modi di pretrattare i dati e dipendente anche dal tipo di modello utilizzato (stagionalità? Serie temporali?)
 \\
 -	il “successo” di un modello/algoritmo dipende fortemente da come i dati vengono pretrattati\\
--	Dipende dai casi ma ci sono molti dati non strutturati che provengono anche da variabili esterne (la temperatura o il meteo se si tratta di previsione della domanda dell’acqua)
+-	Dipende dai casi ma ci sono molti dati non strutturati che provengono anche da variabili esterne (la temperatura o il meteo se si tratta di previsione della domanda idrica)
 
 \subsection{Invarianti e versatilità nel modello}
 -	Moltissimi modelli (ovviamente scelta in base al caso di previsione), spiegare quali metodi sono migliori di altri in determinati contesti.\\
