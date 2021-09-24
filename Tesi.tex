@@ -12,6 +12,27 @@
 \usepackage{indentfirst}
 \graphicspath{ {./images/} }
 
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=fullflexible,
+  basicstyle={\small\ttfamily},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=1
+}
 \setlength\parindent{0pt}
 
 \begin{document}
@@ -115,7 +136,8 @@ Questo passaggio, insieme al successivo (cura dei dati), vengono eseguiti per st
 
 La \emph{raccolta} dati si riferisce al processo di raccolta di informazioni da una o più fonti per variabili predefinite per testare ipotesi di ricerca e valutare i risultati. È un prerequisito per la formazione di modelli di deep learning. 
 I dati possono essere dati clinici (biobanca), immagini e relativi metadati (DICOM - standard internazionale che è usato per salvare delle immagini mediche come TC e scansioni a risonanza magnetica) e/o annotazioni (referti di radiologia). Questi ultimi rappresentano annotazioni umane e caratteristiche generate dalla macchina.\\
-Analizziamo il caso specifico in cui viene utilizzata una collezione di referti di radiografie del torace, dove ad ogni referto radiologico è associata una coppia di immagini aventi visualizzazione frontale e laterale. Ogni referto di radiologia è composto da quattro sezioni, vale a dire, confronto, indicazione, risultati e impressione:
+Analizziamo il caso specifico in cui viene utilizzata una collezione di referti di radiografie del torace, dove ad ogni referto radiologico è associata una coppia di immagini aventi visualizzazione frontale e laterale.\\
+Ogni referto di radiologia è composto da quattro sezioni, vale a dire, confronto, indicazione, risultati e impressione:
 \begin{itemize}
     \item La sezione confronto indica se l'attuale studio di imaging viene confrontato con uno qualsiasi dei precedenti studi di imaging del paziente.
     \item La sezione indicazione elenca le informazioni sul paziente come età, sesso e informazioni cliniche rilevanti, comprese eventuali malattie e sintomi esistenti.
@@ -149,6 +171,19 @@ La fase di esplorazione dei dati consiste nel valutare le proprietà qualitative
 I radiologi in genere eseguono misurazioni, disegnano regioni di interesse e commentano le immagini con annotazioni. Il markup si riferisce a "simboli grafici posizionati su un'immagine per rappresentare un'annotazione", mentre l'annotazione si riferisce a informazioni esplicative o descrittive relative al significato di un'immagine generata da un osservatore umano.
 Dopo la selezione delle immagini appropriate, l'etichettatura dei dati può richiedere la delineazione delle lesioni, tramite riquadri di delimitazione o maschere di segmentazione accompagnate da annotazioni sul tipo di lesioni e sulla loro posizione.
 
+\subsubsection{Esclusione dei dati}
+Nei referti di radiologia, due sono le sezioni più importanti:
+\begin{itemize}
+    \item Risultati $\rightarrow$ evidenziano tutte le principali anomalie presenti nell'immagine
+    \item Impressione $\rightarrow$ riassume i risultati evidenziando se lo studio è positivo o negativo
+\end{itemize}
+Nel nostro caso, quindi, ci concentriamo solo sui risultati e sulle sezioni delle impressioni.\\
+Nel set di dati, ci sono anche referti radiologici in cui mancano reperti e sezioni di impressione, quindi escludiamo tutti i referti di radiologia e le relative immagini mediche in cui mancano sia i risultati che le sezioni di impressione.
+Questo riduce il set di dati.\\
+Poiché la sezione di impressione è la più indicativa se una scansione è positiva o negativa e non è presente un set di dati etichettato, viene applicata l'elaborazione del testo basata su regole per classificare un referto radiologico in Normale (Negativo) o Anormale (Positivo).
+In questo studio, viene combiniato il testo dei risultati e le sezioni delle impressioni per formulare la didascalia finale per un'immagine medica.
+
+
 \subsubsection{Strategie di campionamento dei set di dati}
 Il campionamento dei dati si riferisce alla selezione di sottoinsiemi di dati a scopo di formazione. La capacità di un algoritmo di eseguire un compito specifico su dati non visti è chiamata generalizzazione. Per ottimizzare e misurare queste prestazioni, l'intero set di dati disponibile deve essere suddiviso in diversi set. I campioni in tutti i set dovrebbero condividere lo stesso processo di generazione dei dati, pur essendo indipendenti l'uno dall'altro e distribuiti in modo identico.
 La strategia di campionamento più frequente nel deep learning è dividere il set di dati in set di addestramento, convalida e test.
@@ -159,26 +194,8 @@ Gli algoritmi di deep learning generalmente introducono due limitazioni signific
 \subsubsection{Transfer learning}
 Il Transfer Learning (TL) è un problema di ricerca nell'apprendimento automatico (ML) che si concentra sulla memorizzazione delle conoscenze acquisite durante la risoluzione di un problema e l'applicazione a un problema diverso ma correlato.
 Poiché, come detto precedentemente, è difficile raccogliere dati medici annotati su larga scala a causa dell'interoperabilità, della privacy e di questioni legali, il TL svolge un ruolo fondamentale nel campo dell'imaging medico, dove è difficile accedere a set di dati di immagini etichettati. Nel TL una rete neurale viene inizializzata dai pesi del modello che è già stato addestrato su un set di dati su larga scala.\\
-Per consentire il trasferimento di conoscenza per l'estrazione di incorporamenti di immagini, si inizializza la CNN con pesi pre-addestrati del modello che è stato addestrato su un set di dati di classificazione delle immagini su larga scala come ImageNet. Inoltre, dal lato del testo, vengono utilizzati gli incorporamenti di parole Glove con un vettore di incorporamento di 300 dimensioni per ogni parola e sono stati addestrati su un corpus di testo generico denominato Common Crawl con corpus di testo denominato Common Crawl con 42 miliardi di token, 1,9 milioni di vocaboli.\\
-Poiché la natura del testo medico è diversa dal testo generale, abbiamo anche applicato la conoscenza del dominio inizializzando LSTM con RadGlove (Radiology Glove), vettori con incorporamenti di parole a 100 dimensioni e addestrati su 4,5 milioni di rapporti di radiologia presso la Stanford University
-
-
-\subsubsection{Analisi del linguaggio}
-Per comprendere la natura del compito, confrontiamo un set di dati generico di sottotitoli di immagini con il nostro. Sebbene il compito della generazione del referto radiologico sembri simile al compito di didascalia delle immagini, ad es. data un'immagine di input, generare una descrizione testuale del suo contenuto. Tuttavia, il compito di generare report è molto più complesso rispetto alla generazione di didascalie per immagini generiche.
-I modelli di sottotitoli delle immagini all'avanguardia generano una breve frase con una lunghezza media di 11.78 parole, mentre per la generazione di report il modello deve generare tipicamente da 5 a 6 frasi. Inoltre, i referti radiologici hanno una media di 36.66 parole mentre una didascalia generica di un'immagine ha una media di 11.78 parole per descrizione. Sulla base di ulteriori analisi in cui vengono riportati i referti di radiologia normale e anormale, abbiamo scoperto che la generazione di referti per immagini anormali è più impegnativa rispetto alla loro controparte normale, dato che i referti anormali sono più lunghi del referto normale poiché i radiologi forniscono una descrizione dettagliata di tutte le anomalie e delle loro regioni salienti.
-
-\subsubsection{Esclusione dei dati}
-Nei referti di radiologia, due sono le sezioni più importanti:
-\begin{itemize}
-    \item Risultati $\rightarrow$ evidenziano tutte le principali anomalie presenti nell'immagine
-    \item Impressione $\rightarrow$ riassume i risultati evidenziando se lo studio è positivo o negativo
-\end{itemize}
-Nel nostro caso, quindi, ci concentriamo solo sui risultati e sulle sezioni delle impressioni.
-Alcuni set di dati hanno sezioni di confronto e indicazione mancanti a causa delle quali non sono usate nello studio.\\
-Nel set di dati, ci sono anche referti radiologici in cui mancano reperti e sezioni di impressione, quindi escludiamo tutti i referti di radiologia e le relative immagini mediche in cui mancano sia i risultati che le sezioni di impressione.
-Questo riduce il set di dati.\\
-Poiché la sezione di impressione è la più indicativa se una scansione è positiva o negativa e non è presente un set di dati etichettato, viene applicata l'elaborazione del testo basata su regole per classificare un referto radiologico in Normale (Negativo) o Anormale (Positivo).
-In questo studio, viene combiniato il testo dei risultati e le sezioni delle impressioni per formulare la didascalia finale per un'immagine medica.
+Per consentire il trasferimento di conoscenza per l'estrazione di incorporamenti di immagini, si inizializza la CNN (Convolutional neural network), che vedremo successivamente, con pesi pre-addestrati del modello che è stato addestrato su un set di dati di classificazione delle immagini su larga scala come ImageNet. Inoltre, dal lato del testo, vengono utilizzati gli incorporamenti di parole Glove con un vettore di incorporamento di 300 dimensioni per ogni parola e sono stati addestrati su un corpus di testo generico denominato Common Crawl con corpus di testo denominato Common Crawl con 42 miliardi di token, 1,9 milioni di vocaboli.[inserire articolo]\\
+Poiché la natura del testo medico è diversa dal testo generale, abbiamo anche applicato la conoscenza del dominio inizializzando LSTM (Long-Short Term Memory) con RadGlove (Radiology Glove), vettori con incorporamenti di parole a 100 dimensioni e addestrati su 4,5 milioni di rapporti di radiologia presso la Stanford University
 
 
 \subsection{Creazione del modello}
@@ -195,7 +212,7 @@ Il processo di assistenza alla creazione di referti medici può essere suddiviso
 Il codificatore ha la forma di una rete neurale convoluzionale (CNN) che codifica le immagini DICOM, mentre il decodificatore è una rete neurale ricorrente a più stadi (RNN) che traduce le caratteristiche dell'immagine medica in un referto radiologico.\\
 In questo caso andiamo quindi a creare un framework codificatore-decodificatore, le caratteristiche dell'immagine globale vengono prima estratte utilizzando la CNN e quindi inserite in un LSTM (Long short-term memory che è un'architettura di rete neurale ricorrente artificiale utilizzata nel campo dell'apprendimento profondo) per generare una sequenza di parole. Quando si applica la struttura del codificatore-decodificatore alla generazione di referti di radiologia, l'attività può essere considerata come la traduzione di immagini mediche in referti di radiologia.\\
 La figura seguente mostra il diagramma del nostro approccio alla generazione di report da immagini mediche. Per generare referti radiologici da immagini mediche, ci viene fornita un'immagine di inputi $I$ e il modello dovrebbe generare una sequenza di parole $y = (y_1, y_2, . . . ,y_N)$, dove $y$ denota la descrizione sotto forma di referto radiologico e $y_1 . . .y_N$ denotano le parole nella relazione.\\
-Dato un set di allenamento $D = (I, y)$ che consiste in $(I, y)$ coppie, dove $I$ rappresenta una data immagine medica e $y$ rappresenta un referto radiologico accompagnato per l'immagine sotto di $y = (y_1, y_2, . . . ,y_N)$, addestriamo il modello rispetto ai suoi parametri 0 al fine di massimizzare un modello probabilistico $p_0(y_1, y_2, . . . , y_N|I)$
+Dato un set di allenamento $D = (I, y)$ che consiste in $(I, y)$ coppie, dove $I$ rappresenta una data immagine medica e $y$ rappresenta un referto radiologico accompagnato per l'immagine sotto di $y = (y_1, y_2, . . . ,y_N)$, addestriamo il modello rispetto ai suoi parametri $\theta$ al fine di massimizzare un modello probabilistico $p_{\theta}(y_1, y_2, . . . , y_N|I)$
 
 \begin{center}
 \includegraphics[width=7cm,height=7cm,keepaspectratio]{LSTM}
@@ -245,7 +262,7 @@ Ovviamente alcuni input devono essere scartati perché non presentano le caratte
 Per estrarre le caratteristiche dall’immagine viene sempre utilizzata un CNN per le sue elevate prestazioni nel riconoscimento delle immagini. La capacità delle CNN di apprendere complesse relazioni spaziali e
 imparare modelli basati su pixel sottili e intricati li rendono perfetti strumento per apprendere dalle immagini radiologiche. \\
 \\
-Per quanto riguarda l'estrazione del testo, invece, le tecniche di elaborazione del linguaggio naturale (NLP) possono essere una chiave per analizzare con successo i referti radiologici per estrarre risultati e raccomandazioni clinicamente importanti. La PNL ha già mostrato il potenziale per automatizzare il compito di classificare i report di imaging in un modo che potrebbe informare le decisioni relative all'utilizzo e all'adeguatezza dell'imaging medico [11-13, Comparative].\\
+Per quanto riguarda l'estrazione del testo, invece, le tecniche di elaborazione del linguaggio naturale (NLP) possono essere una chiave per analizzare con successo i referti radiologici per estrarre risultati e raccomandazioni clinicamente importanti. La programmazione neuro-linguistica (PNL) ha già mostrato il potenziale per automatizzare il compito di classificare i report di imaging in un modo che potrebbe informare le decisioni relative all'utilizzo e all'adeguatezza dell'imaging medico [11-13, Comparative].\\
 Una classe di architetture di reti neurali, le reti neurali ricorrenti (RNN), ha recentemente attirato molta attenzione da parte dei ricercatori per la modellazione di sequenze e ha dimostrato di funzionare bene nella risoluzione di vari compiti di PNL grazie alla loro capacità di gestire input di lunghezza variabile e uscita [27].\\
 Sebbene RNN sia teoricamente un modello potente per codificare informazioni sequenziali, in pratica spesso soffre dei problemi di sfumatura/esplosione del gradiente mentre apprende le dipendenze a lungo raggio [33]. Le reti LSTM [34] e GRU [35] sono note per essere rimedi efficaci a questi problemi.\\
 Le estensioni più popolari di RNN sono, appunto, Long Short-Term Memory (LSTM) [77] e la Gated Recurrent Unit (GRU) [78]. La memoria a lungo termine utilizza blocchi di memoria per salvare lo stato temporale della rete e porte per monitorare il flusso di informazioni. D'altra parte, GRU è una forma più leggera di RNN rispetto a LSTM in termini di topologia, spese di calcolo e complessità. Al momento, i ricercatori devono scegliere tra il modello più veloce offerto da GRU che necessita di meno parametri o il modello più performante fornito da LSTM che contiene dati sufficienti e potenza di calcolo [8].\\
@@ -500,7 +517,7 @@ Questo passaggio richiede l'ottimizzazione dei parametri del modello di previsio
 Quando si ricercano le migliori soluzioni aziendali, gli scienziati dei dati di solito sviluppano diversi modelli di apprendimento automatico. Poiché i modelli mostrano diversi livelli di accuratezza, gli scienziati scelgono quelli che soddisfano meglio le loro esigenze aziendali. La fase di miglioramento prevede l'ottimizzazione dei risultati analitici. Ad esempio, utilizzando tecniche di insieme di modelli, è possibile ottenere una previsione più accurata. In tal caso, l'accuratezza viene calcolata combinando i risultati di più modelli di previsione.
 
 \subsection{Distribuzione}
-Questa fase presuppone l'integrazione dei modelli di previsione nell'uso della produzione. Ti consigliamo inoltre di impostare una pipeline per aggregare nuovi dati da utilizzare per le tue prossime funzionalità di intelligenza artificiale. Ciò può farti risparmiare molto lavoro di preparazione dei dati in progetti futuri. In questo modo aumenta anche la precisione e la varietà di ciò che potresti essere in grado di prevedere.
+Questa fase presuppone l'integrazione dei modelli di previsione nell'uso della produzione. Si consiglia inoltre di impostare una pipeline per aggregare nuovi dati da utilizzare per le tue prossime funzionalità di intelligenza artificiale. Ciò può far risparmiare molto lavoro di preparazione dei dati in progetti futuri. In questo modo aumenta anche la precisione e la varietà di ciò che potresti essere in grado di prevedere.
 
 
 \section{Analisi}
@@ -592,17 +609,111 @@ Gli strumenti di orchestrazione rendono il processo di machine learning più sem
 Cerchiamo, quindi, quali sono quei framework che meglio si adattano ai nostri case studies.
 
 \section{MetaFlow}
-Metaflow è una libreria Python di facile utilizzo che aiuta scienziati e ingegneri a creare e gestire progetti di data science reali. Metaflow è stato originariamente sviluppato da Netflix per aumentare la produttività dei data scientist che lavorano su un'ampia varietà di progetti, dalle statistiche classiche al deep learning all'avanguardia.
-Metaflow fornisce un'API unificata allo stack dell'infrastruttura necessario per eseguire progetti di data science, dal prototipo alla produzione.
+Metaflow è una libreria Python di facile utilizzo che aiuta scienziati e ingegneri a creare e gestire progetti di data science reali, come nel caso della radiologia. Metaflow è stato originariamente sviluppato da Netflix per aumentare la produttività dei data scientist che lavorano su un'ampia varietà di progetti, dalle statistiche classiche al deep learning all'avanguardia.
+Metaflow fornisce un'API unificata allo stack dell'infrastruttura necessario per eseguire progetti di data science, dal prototipo alla produzione, ma non presenta un'interfaccia grafica per visualizzare e gestire i flussi di lavoro.
+
+\begin{center}
+    \includegraphics[width=7cm,height=7cm,keepaspectratio]{MetaFlow}
+\end{center}
+
+I data scientists possono strutturare il proprio flusso di lavoro come un grafico aciclico diretto di passaggi, come illustrato sopra. I passaggi possono essere codice Python arbitrario. In questo esempio ipotetico, il flusso addestra due versioni di un modello in parallelo e sceglie quella con il punteggio più alto. Anche per questo motivo si appresta al nostro caso. Per fare una predizione accurata, sarebbe conveniente addestrare varie versioni di un modello, o addiritura modelli differenti e scegliere il migliore.\\
+In superficie, questo non sembra molto. Esistono molti framework esistenti, come Apache Airflow o Luigi, che consentono l'esecuzione di DAG costituiti da codice Python arbitrario. Il "problema" è nei molti dettagli accuratamente progettati di Metaflow: ad esempio, nota come nell'esempio sopra i dati e i modelli sono memorizzati come normali variabili di istanza Python. Funzionano anche se il codice viene eseguito su una piattaforma di calcolo distribuita, supportata da Metaflow per impostazione predefinita, grazie all'archivio di artefatti indirizzato al contenuto integrato di Metaflow. In molti altri framework, il caricamento e l'archiviazione degli artefatti è lasciato come esercizio per l'utente, che lo costringe a decidere cosa dovrebbe e non dovrebbe essere mantenuto. Metaflow rimuove questo sovraccarico cognitivo.
+Metaflow è ricco di dettagli incentrati sull'uomo come questo, che mirano tutti ad aumentare la produttività dei data scientist.\\
+\\
+Metaflow segue il dataflow paradigm che modella un programma come un grafo diretto di operazioni. Questo è un paradigma naturale per esprimere le pipeline di elaborazione dei dati, in particolare l'apprendimento automatico.
+Chiamiamo il grafico delle operazioni un flusso. Definisci le operazioni, chiamate passaggi, che sono nodi del grafico e contengono le transizioni ai passaggi successivi, che fungono da archi.\\
+Metaflow imposta alcuni vincoli sulla struttura del grafico. Per cominciare, ogni flusso ha bisogno di un passaggio chiamato \emph{inizio} e un passaggio chiamato \emph{fine}. Un'esecuzione del flusso, che chiamiamo esecuzione, inizia all'\emph{inizio}. L'esecuzione ha esito positivo se il passaggio finale \emph{fine} termina correttamente.
+Quello che succede tra l'\emph{inizio} e la \emph{fine} dipende da te.\\
+Puoi costruire il grafico intermedio utilizzando una combinazione arbitraria dei seguenti tre tipi di transizioni supportati da Metaflow:
+\begin{itemize}
+    \item Linear 
+    \item Branch
+    \item Foreach
+\end{itemize}
+
+Questo framework si sposa molto bene con il nostro obiettivo perché:
+\begin{itemize}
+    \item Fornisce un'API altamente utilizzabile per strutturare il codice come flusso di lavoro, ovvero come grafico diretto dei passaggi (usabilità).
+    \item Mantiene un'istantanea immutabile di dati, codice e dipendenze esterne necessarie per eseguire ogni passaggio (riproducibilità).
+    \item Facilita l'esecuzione delle fasi in vari ambienti, dallo sviluppo alla produzione (scalabilità, prontezza alla produzione).
+    \item Registra i metadati sulle precedenti esecuzioni e rendili facilmente accessibili (usabilità, riproducibilità).
+\end{itemize}
 
 \section{ZenML}
 ZenML è un framework MLOps estensibile e open source per l'utilizzo di pipeline di Machine Learning pronte per la produzione, in modo semplice. Al suo interno, ZenML organizzerà le pipeline dei tuoi esperimenti dall'acquisizione dei dati alla suddivisione, pre-elaborazione, formazione, fino alla valutazione dei risultati e persino alla pubblicazione.
 Sebbene esistano altre soluzioni di pipeline per gli esperimenti di Machine Learning, ZenML si concentra su quanto segue:
-Semplicità.
-Riproducibilità.
-Integrazioni.
+\begin{itemize}
+    \item Semplicità.
+    \item Riproducibilità.
+    \item Integrazioni.
+\end{itemize}
 
-\section{}
+\subsection{Problemi risolti da ZenML}
+ZenML risolve il problema di portare in produzione l'apprendimento automatico nei modelli. Dovresti usare ZenML se lotti con:
+\begin{itemize}
+    \item Riproduzione dei risultati della formazione in produzione.
+    \item Gestione dei metadati ML, inclusi dati, codice e versionamento del modello.
+    \item Ottenere (e mantenere) i modelli ML in produzione.
+    \item Riutilizzare codici/dati e ridurre gli sprechi.
+    \item Mantenimento della comparabilità tra i modelli ML.
+    \item Ridimensionamento dell'addestramento/inferenza ML a set di dati di grandi dimensioni.
+    \item Mantenimento della qualità del codice insieme alla velocità di sviluppo.
+    \item Tenere il passo con il panorama degli strumenti ML in modo coerente.
+\end{itemize}
+
+Da aggiustare:\\
+Nel caso del demand forecasting, come già detto in precedenza, potrebbe esserci la possibilità di ridurre il set di dati al fine di ridurre anche il tempo di addestramento. Questo framework consente un'ottimio ridimensionamento del set di dati.
+
+Nel caso dell'AI in radiology, il riutilizzo del codice è fondamentale. Come abbiamo visto precedentemente per estrarre le caratteristiche da un immagine viene sempre utilizzata una CNN, a questo punto quel modulo potrà essere quasi sempre riutilizzato in tutti i casi di estrazione delle caratteristiche da un immagine.
+
+\section{MLRun}
+MLRun è un framework MLOps open source che offre un approccio integrativo alla gestione delle pipeline di machine learning dallo sviluppo iniziale allo sviluppo del modello fino alla distribuzione completa della pipeline in produzione. MLRun offre un comodo livello di astrazione per un'ampia varietà di stack tecnologici, consentendo ai data engineer e ai data scientist di definire la funzionalità e i modelli.\\
+L'architettura MLRun
+\begin{center}
+    \includegraphics[width=7cm,height=7cm,keepaspectratio]{MLRun}
+\end{center}
+
+\subsection{Vantaggi chiave}
+MLRun offre i seguenti vantaggi chiave:
+
+\begin{itemize}
+    \item Implementazione rapida del codice nelle pipeline di produzione
+    \item Ridimensionamento elastico di carichi di lavoro batch e in tempo reale
+    \item Gestione delle funzionalità: acquisizione, preparazione e monitoraggio
+    \item Funziona ovunque: il tuo IDE locale, multi-cloud o on-premise
+\end{itemize}
+
+
+Per garantire efficienza e scalabilità, è necessario implementare il parallelismo quando possibile. MLRun supporta questo utilizzando due meccanismi:
+
+\begin{enumerate}
+    \item Clustering: eseguire il codice su un motore di elaborazione distribuito (come Dask, Spark o Horovod).
+    \item Bilanciamento del carico/partizionamento: dividere (partizionare) il lavoro tra più lavoratori.
+\end{enumerate}
+
+Le funzioni e le attività MLRun possono accettare iperparametri o elenchi di parametri, distribuire molti worker paralleli e suddividere il lavoro tra i worker distribuiti. L'implementazione del parallelismo è lasciata al runtime. Ogni runtime può avere il proprio metodo di esecuzione delle attività simultanee.\\
+MLRun supporta il parallelismo. Ad esempio, il codice seguente mostra come utilizzare gli iperparametri per eseguire l'attività di addestramento del modello XGBoost dall'esempio nella sezione precedente (xgb\_train) con diverse combinazioni di parametri:
+
+\begin{lstlisting}
+parameters = {
+    "eta":       [0.05, 0.10, 0.20, 0.30],
+    "max_depth": [3, 4, 5, 6, 8, 10],
+    "gamma":     [0.0, 0.1, 0.2, 0.3],
+    }
+
+task = NewTask(handler=xgb_train, out_path='/User/mlrun/data').with_hyper_params(parameters, 'max.accuracy')
+run = run_local(task)
+\end{lstlisting}
+
+Questo codice mostra come indicare a MLRun di eseguire la stessa attività mentre si scelgono i parametri da più elenchi (ricerca a griglia). MLRun quindi registra tutte le esecuzioni, ma contrassegna solo l'esecuzione con perdita minima come risultato selezionato.\\
+Ed è proprio per questo che è un ottimo candidato per il nostro scopo. Data la mole di dati, per quanto riguarda il demand forecasting, il parallelismo rappresenta un ottima soluzione al problema di allenare una rete con tantissimi dati, altrimenti ci vorrebbero addiritura giorni.\\
+\\
+MLRun ha anche un'interfaccia utente grafica (MLRun Dashbord) per lavorare e visualizzare i dati
+\begin{center}
+    \includegraphics[width=15cm,height=15cm,keepaspectratio]{MLRun Dashbord}
+\end{center}
+
+\chapter{Conclusioni}
 
 
  

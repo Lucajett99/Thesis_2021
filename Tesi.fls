@@ -478,6 +478,10 @@ INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex\latex\tools\indentfirst.s
 INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex\latex\tools\indentfirst.sty
 INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex\latex\tools\indentfirst.sty
 INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex\latex\tools\indentfirst.sty
+INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang1.sty
+INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang1.sty
+INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang1.sty
+INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang1.sty
 INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
@@ -591,6 +595,25 @@ INPUT .\images\\diagram_LSTM.jpg
 INPUT .\images\\diagram_LSTM.jpg
 INPUT .\images\\diagram_LSTM.jpg
 INPUT .\images\\diagram_LSTM.jpg
+INPUT .\images\\MetaFlow.png
+INPUT images\\MetaFlow.png
+INPUT .\images\\MetaFlow.png
+INPUT .\images\\MetaFlow.png
+INPUT .\images\\MetaFlow.png
+INPUT .\images\\MetaFlow.png
+INPUT .\images\\MLRun.png
+INPUT images\\MLRun.png
+INPUT .\images\\MLRun.png
+INPUT .\images\\MLRun.png
+INPUT .\images\\MLRun.png
+INPUT .\images\\MLRun.png
+INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt10.tfm
+INPUT .\images\\MLRun Dashbord.png
+INPUT images\\MLRun Dashbord.png
+INPUT .\images\\MLRun Dashbord.png
+INPUT .\images\\MLRun Dashbord.png
+INPUT .\images\\MLRun Dashbord.png
+INPUT .\images\\MLRun Dashbord.png
 INPUT Tesi.aux
 INPUT C:\Users\dino9\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
 INPUT C:\Users\dino9\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
@@ -620,3 +643,5 @@ INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\c
 INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
 INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmti12.pfb
 INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmti12.pfb
+INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt10.pfb
+INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt10.pfb
