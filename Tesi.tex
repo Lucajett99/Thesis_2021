@@ -82,14 +82,13 @@ Anno Accademico 2020/2021}}%inserire l'anno accademico a cui si è iscritti
 Il Machine Learning è un sottoinsieme dell'intelligenza artificiale (AI) che si occupa di creare sistemi che apprendono o migliorano le performance in base ai dati che utilizzano. Intelligenza artificiale è un termine generico e si riferisce a sistemi o macchine che imitano l'intelligenza umana.\\
 Definire in maniera semplice le caratteristiche e le applicazioni del machine learning non è sempre possibile, visto che questo ramo è molto vasto e prevede differenti modalità, tecniche e strumenti per essere realizzato. Inoltre, le differenti tecniche di apprendimento e sviluppo degli algoritmi danno vita ad altrettante possibilità di utilizzo che allargano il campo di applicazione dell’apprendimento automatico rendendone difficile una definizione specifica. Si può tuttavia dire che quando si parla di machine learning si parla di differenti meccanismi che permettono a una macchina intelligente di migliorare le proprie capacità e prestazioni nel tempo. La macchina, quindi, sarà in grado di imparare a svolgere determinati compiti migliorando, tramite l’esperienza, le proprie capacità, le proprie risposte e funzioni.\\
 Alla base dell’apprendimento automatico ci sono una serie di differenti algoritmi che, partendo da nozioni primitive, sapranno prendere una specifica decisione piuttosto che un’altra o effettuare azioni apprese nel tempo.\\
-L'obiettivo di questa tesi è rispondere alla domanda: \emph{Si possono autogenerare dei modelli?}\\
-Per arrivare alla risposta ho analizzato in letteratura due casi studio, al fine di tirare fuori i relativi workflow per arrivare alla generalizzazione. Infatti è stato applicato un approccio bottom-up, partendo dai casi studio specifici fino alla generalizzazione.\\
+L'obiettivo di questa tesi è analizzare due Case Study per cercare quali potessero essere le invarianti e le differenze presenti nello stesso tipo di modelli trovati in letteratura al fine di cercare di valutare la possibilità di generalizzare i Case Study per il riutilizzo dei moduli architetturali.\\
+Infatti è stata applicato un approccio bottom-up, analizzando, quindi, i due casi studio, al fine di tirare fuori i relativi workflow per arrivare alla generalizzazione.\\
 I casi studio in questione sono:
 \begin{itemize}
     \item AI in radiology
     \item Demand forecasting
 \end{itemize}
-Alla fine scopriremo che non sempre è possibile, dipende fortemente dall'applicazione del modello.
 
 \tableofcontents
 
@@ -439,13 +438,14 @@ Nadaraya e Watson hanno sviluppato questo modello (Nadaraya, 1964; Watson, 1964)
 È comunemente chiamato stimatore Nadaraya-Watson o stimatore di regressione del kernel. Nella comunità del machine learning, viene in genere utilizzato il termine rete neurale di regressione generalizzata (o GRNN). Useremo quest'ultimo termine. Il modello GRNN è un modello non parametrico in cui la previsione per un dato punto dati $x$ è data dalla media degli output target dei punti dati di addestramento nelle vicinanze del dato punto $x$ (Hardle, 1990). La media locale è costruita pesando i punti in base alla loro distanza da $x$, usando alcune funzioni del kernel. La stima è solo la somma ponderata delle risposte osservate (o output target) data da
 
 \begin{equation}
-equation-one
+    { \displaystyle \hat{y} = \sum\limits_{m=1}^{M} w_my_m},
 \end{equation}
 
 dove i pesi $w_m$ sono dati da
 
+
 \begin{equation}
-equation-two
+    { \displaystyle w_m = \frac{K(\frac{\Vert x-x_m \Vert}{h})}{\sum_{m'=1}^{M}K(\frac{\Vert x-x_{m'} \Vert}{h})}},
 \end{equation}
 
 dove $y_m$ è l'output di destinazione per il punto dati di training $x_m$ e $K$ è la funzione del kernel. Abbiamo usato il tipico kernel gaussiano $formula$.
@@ -455,7 +455,7 @@ Il parametro $h$, chiamato larghezza di banda, è un parametro importante in qua
 KNN è un metodo non parametrico che basa la sua previsione sugli output di destinazione dei $K$ vicini più vicini del dato punto di interrogazione (vedi Hastie et al., 2001). Nello specifico, dato un punto dati, calcoliamo la distanza euclidea tra quel punto e tutti i punti del training set. Quindi selezioniamo i punti dati di allenamento $K$ più vicini e impostiamo la previsione come media dei valori di output target per questi K punti. Quantitativamente parlando, sia $I(x)$ l'insieme di $K$ vicini più prossimi del punto $x$. Allora la previsione è data da
 
 \begin{equation}
-{\displaystyle \hat{y} = \frac{1}{K} \sum\limits_{m \in I(x)} y_m}
+    {\displaystyle \hat{y} = \frac{1}{K} \sum\limits_{m \in I(x)} y_m}
 \end{equation}
 
 dove di nuovo $y_m$ è l'output di destinazione per il punto dati di training $x_m$.
@@ -465,31 +465,31 @@ Naturalmente $K$ è un parametro chiave in questo metodo e deve essere seleziona
 La regressione del vettore di supporto (Scholkopf e Smola, 2001; Smola e Scholkopf, 2003) è un metodo di successo basato sull'utilizzo di uno spazio di caratteristiche ad alta dimensione (formato trasformando le variabili originali) e penalizzando la conseguente complessità utilizzando un termine di penalità aggiunto alla funzione di errore. Consideriamo prima per l'illustrazione un modello lineare. Quindi, la previsione è data da
 
 \begin{equation}
-equation-one
+    {\displaystyle f(x) = w^Tx + b}
 \end{equation}
 
 dove $w$ è il vettore del peso, $b$ è il bias e $x$ è il vettore di input. Sia $x_m$ e $y_m$ denotano, rispettivamente, l' m-esimo vettore di input di addestramento e output di destinazione, $m = 1, …, M$. La funzione di errore è data da 
 
 \begin{equation}
-equation-two
+    {\displaystyle J = \frac{1}{2}\Vert w \Vert^2 + C\sum\limits_{m=1}^M\vert y_m - f(x_m) \vert_{\epsilon^{\centerdot}} }
 \end{equation}
 
 Il primo termine nella funzione di errore è un termine che penalizza la complessità del modello. Il secondo termine è la funzione di perdita $\epsilon-insesitive$, definita come
 
 \begin{equation}
-equation-three
+    {\displaystyle \vert y_m - f(x_m) \vert_{\epsilon} = max\{0,|y_m - f(x_m)|-\epsilon\}}
 \end{equation}
 
 Non penalizza gli errori sottostanti, consentendo un po' di spazio di manovra per lo spostamento dei parametri per ridurre la complessità del modello. Si può dimostrare che la soluzione che minimizza la funzione di errore è data da
 
 \begin{equation}
-equation-four
+    {\displaystyle f(x) = \sum\limits_{m=1}^{M}(\alpha^*_m - \alpha_m)x_m^Tx + b},
 \end{equation}
 
 dove $\alpha_m$ e $\alpha_m^\ast$ sono moltiplicatori di Lagrange. I vettori di addestramento che forniscono moltiplicatori di Lagrange diversi da zero sono chiamati vettori di supporto e questo è un concetto chiave nella teoria SVR. I vettori non di supporto non contribuiscono direttamente alla soluzione e il numero di vettori di supporto è una misura della complessità del modello (vedi Chalimourda et al., 2004; Cherkassky e Ma, 2004). Questo modello viene esteso al caso non lineare attraverso il concetto di kernel $K$, dando una soluzione
 
 \begin{equation}
-equation-five
+    {\displaystyle f(x) = \sum\limits_{m=1}^{M}(\alpha^*_m - \alpha_m)L(x_m^Tx) + b}.
 \end{equation}
 
 Un kernel comune è il kernel gaussiano. Assumiamo che la sua larghezza sia $\sigma K$ (la deviazione standard della funzione gaussiana).

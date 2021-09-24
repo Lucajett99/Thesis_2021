@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.9.5)  24 SEP 2021 19:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.9.5)  24 SEP 2021 21:46
 entering extended mode
 **c:/Users/dino9/Desktop/UNI/LAUREA/Thesis_2021/Tesi.tex
 (c:/Users/dino9/Desktop/UNI/LAUREA/Thesis_2021/Tesi.tex
@@ -459,12 +459,12 @@ Capitolo 2.
 [6
 
 ] [7]
-Underfull \hbox (badness 10000) in paragraph at lines 148--152
+Underfull \hbox (badness 10000) in paragraph at lines 147--151
 
  []
 
 [8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 188--193
+Underfull \hbox (badness 10000) in paragraph at lines 187--192
 
  []
 
@@ -472,45 +472,45 @@ Underfull \hbox (badness 10000) in paragraph at lines 188--193
 <./images//Encoder-Decoder.png, id=46, 401.70074pt x 96.96225pt>
 File: ./images//Encoder-Decoder.png Graphic file (type png)
 <use ./images//Encoder-Decoder.png>
-Package pdftex.def Info: ./images//Encoder-Decoder.png  used on input line 209.
+Package pdftex.def Info: ./images//Encoder-Decoder.png  used on input line 208.
 (pdftex.def)             Requested size: 199.1704pt x 48.0756pt.
  [11 <./images//Encoder-Decoder.png>]
 <./images//LSTM.jpg, id=50, 366.168pt x 302.3295pt>
 File: ./images//LSTM.jpg Graphic file (type jpg)
 <use ./images//LSTM.jpg>
-Package pdftex.def Info: ./images//LSTM.jpg  used on input line 218.
+Package pdftex.def Info: ./images//LSTM.jpg  used on input line 217.
 (pdftex.def)             Requested size: 199.17487pt x 164.4503pt.
  [12 <./images//LSTM.jpg>]
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 237.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 236.
 
 <./images//diagram_LSTM.jpg, id=58, 372.1905pt x 296.90926pt>
 File: ./images//diagram_LSTM.jpg Graphic file (type jpg)
 <use ./images//diagram_LSTM.jpg>
-Package pdftex.def Info: ./images//diagram_LSTM.jpg  used on input line 247.
+Package pdftex.def Info: ./images//diagram_LSTM.jpg  used on input line 246.
 (pdftex.def)             Requested size: 199.16821pt x 158.88338pt.
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 258--287
+Underfull \hbox (badness 10000) in paragraph at lines 257--286
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 258--287
+Underfull \hbox (badness 10000) in paragraph at lines 257--286
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 258--287
+Underfull \hbox (badness 10000) in paragraph at lines 257--286
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 258--287
+Underfull \hbox (badness 10000) in paragraph at lines 257--286
 
  []
 
 [14 <./images//diagram_LSTM.jpg>] [15]
-Underfull \hbox (badness 10000) in paragraph at lines 291--295
+Underfull \hbox (badness 10000) in paragraph at lines 290--294
 
  []
 
@@ -519,12 +519,12 @@ Capitolo 3.
 [17
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 342--344
+Underfull \hbox (badness 10000) in paragraph at lines 341--343
 
  []
 
 [18] [19]
-Overfull \hbox (4.39389pt too wide) in paragraph at lines 368--369
+Overfull \hbox (4.39389pt too wide) in paragraph at lines 367--368
 []\OT1/cmr/m/n/12 Combinazione dei tre pre-ce-den-ti: i van-tag-gi del-le sin-go-le tec-ni-che di pre-elaborazione
  []
 
@@ -599,7 +599,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 577--594
 
 [28] [29] [30]
 Capitolo 4.
-<./images//MetaFlow.png, id=120, 1537.745pt x 891.33pt>
+<./images//MetaFlow.png, id=122, 1537.745pt x 891.33pt>
 File: ./images//MetaFlow.png Graphic file (type png)
 <use ./images//MetaFlow.png>
 Package pdftex.def Info: ./images//MetaFlow.png  used on input line 616.
@@ -612,7 +612,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 619--628
  []
 
 [32 <./images//MetaFlow.png (PNG copy)>] [33]
-<./images//MLRun.png, id=130, 943.27406pt x 328.97906pt>
+<./images//MLRun.png, id=132, 943.27406pt x 328.97906pt>
 File: ./images//MLRun.png Graphic file (type png)
 <use ./images//MLRun.png>
 Package pdftex.def Info: ./images//MLRun.png  used on input line 673.
@@ -622,7 +622,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 708--712
 
  []
 
-<./images//MLRun Dashbord.png, id=136, 1432.60219pt x 726.46407pt>
+<./images//MLRun Dashbord.png, id=138, 1432.60219pt x 726.46407pt>
 File: ./images//MLRun Dashbord.png Graphic file (type png)
 <use ./images//MLRun Dashbord.png>
 Package pdftex.def Info: ./images//MLRun Dashbord.png  used on input line 713.
@@ -640,10 +640,10 @@ Here is how much of TeX's memory you used:
  414751 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,6n,108p,1587b,1184s stack positions out of 5000i,500n,10000p,200000b,80000s
- <C:\Users\dino9\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Tesi.pdf (38 pages, 664430 bytes).
+ <C:\Users\dino9\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam7.pfb>
+Output written on Tesi.pdf (38 pages, 684415 bytes).
 PDF statistics:
- 213 PDF objects out of 1000 (max. 8388607)
+ 223 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  43 words of extra memory for PDF output out of 10000 (max. 10000000)
 

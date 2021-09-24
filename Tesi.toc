@@ -36,7 +36,7 @@
 \contentsline {subsubsection}{Regressione del vettore di supporto (SVR)}{24}{}%
 \contentsline {subsubsection}{Rete Neurale Ricorrente (RNN)}{25}{}%
 \contentsline {subsubsection}{Rete neurale di memoria a lungo termine (LSTM)}{25}{}%
-\contentsline {subsection}{\numberline {3.2.4}Formazione del modello}{25}{}%
+\contentsline {subsection}{\numberline {3.2.4}Formazione del modello}{26}{}%
 \contentsline {subsection}{\numberline {3.2.5}Validazione del modelllo}{26}{}%
 \contentsline {subsection}{\numberline {3.2.6}Miglioramento}{26}{}%
 \contentsline {subsection}{\numberline {3.2.7}Distribuzione}{26}{}%
