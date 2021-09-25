@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.9.5)  24 SEP 2021 21:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.9.5)  25 SEP 2021 17:06
 entering extended mode
 **c:/Users/dino9/Desktop/UNI/LAUREA/Thesis_2021/Tesi.tex
 (c:/Users/dino9/Desktop/UNI/LAUREA/Thesis_2021/Tesi.tex
@@ -365,31 +365,47 @@ File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 ) (C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex/latex/tools\indentfirst.sty
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+) (C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+ (C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen261
+\captionmargin@=\dimen262
+\captionwidth=\dimen263
+\caption@tempdima=\dimen264
+\caption@indent=\dimen265
+\caption@parindent=\dimen266
+\caption@hangindent=\dimen267
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count304
+\c@continuedfloat=\count305
+Package caption Info: listings package is loaded.
 ) (C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) (C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-05-07 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count304
+\l__color_backend_stack_int=\count306
 \l__pdf_internal_box=\box65
 ) (Tesi.aux)
 \openout1 = `Tesi.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Info: Redefining \it@ocap on input line 38.
-LaTeX Info: Redefining \it@ccap on input line 38.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Info: Redefining \it@ocap on input line 39.
+LaTeX Info: Redefining \it@ccap on input line 39.
 
 
 File italian.ldf warning: 
@@ -397,20 +413,20 @@ italian.ldf    With OT1 encoding guillemets are poorly faked
 italian.ldf    Use T1 encoding
 italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting 
-italian.ldf    on input line 38.
+italian.ldf    on input line 39.
 
 (C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count305
-\scratchdimen=\dimen261
+\scratchcounter=\count307
+\scratchdimen=\dimen268
 \scratchbox=\box66
-\nofMPsegments=\count306
-\nofMParguments=\count307
+\nofMPsegments=\count308
+\nofMParguments=\count309
 \everyMPshowfont=\toks41
-\MPscratchCnt=\count308
-\MPscratchDim=\dimen262
-\MPnumerator=\count309
-\makeMPintoPDFobject=\count310
+\MPscratchCnt=\count310
+\MPscratchDim=\dimen269
+\MPnumerator=\count311
+\makeMPintoPDFobject=\count312
 \everyMPtoPDFconversion=\toks42
 ) (C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -418,232 +434,250 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-\c@lstlisting=\count311
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 42.
+\c@lstlisting=\count313
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 43.
  (C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex/latex/base\ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 42.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 43.
  (C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 42.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 43.
  (C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 58--67
+Underfull \hbox (badness 10000) in paragraph at lines 59--68
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--67
+Underfull \hbox (badness 10000) in paragraph at lines 59--68
 
  []
 
 [1
 
-{C:/Users/dino9/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [1
-
-] (Tesi.toc [2
+{C:/Users/dino9/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] (Tesi.toc [1
 
 ])
 \tf@toc=\write4
 \openout4 = `Tesi.toc'.
 
- [3]
+ [2]
 Capitolo 1.
+[3
+
+]
+Capitolo 2.
 [4
 
 ] [5]
-Capitolo 2.
-[6
-
-] [7]
-Underfull \hbox (badness 10000) in paragraph at lines 147--151
+Underfull \hbox (badness 10000) in paragraph at lines 130--134
 
  []
 
-[8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 187--192
+[6] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 170--176
 
  []
 
-[10]
-<./images//Encoder-Decoder.png, id=46, 401.70074pt x 96.96225pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 170--176
+
+ []
+
+[8]
+<./images//Encoder-Decoder.png, id=40, 401.70074pt x 96.96225pt>
 File: ./images//Encoder-Decoder.png Graphic file (type png)
 <use ./images//Encoder-Decoder.png>
-Package pdftex.def Info: ./images//Encoder-Decoder.png  used on input line 208.
-(pdftex.def)             Requested size: 199.1704pt x 48.0756pt.
- [11 <./images//Encoder-Decoder.png>]
-<./images//LSTM.jpg, id=50, 366.168pt x 302.3295pt>
+Package pdftex.def Info: ./images//Encoder-Decoder.png  used on input line 192.
+(pdftex.def)             Requested size: 284.53528pt x 68.68092pt.
+ [9 <./images//Encoder-Decoder.png>]
+<./images//LSTM.jpg, id=44, 366.168pt x 302.3295pt>
 File: ./images//LSTM.jpg Graphic file (type jpg)
 <use ./images//LSTM.jpg>
-Package pdftex.def Info: ./images//LSTM.jpg  used on input line 217.
-(pdftex.def)             Requested size: 199.17487pt x 164.4503pt.
- [12 <./images//LSTM.jpg>]
+Package pdftex.def Info: ./images//LSTM.jpg  used on input line 207.
+(pdftex.def)             Requested size: 284.53154pt x 234.9257pt.
+ [10 <./images//LSTM.jpg>]
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 236.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 230.
 
-<./images//diagram_LSTM.jpg, id=58, 372.1905pt x 296.90926pt>
+<./images//diagram_LSTM.jpg, id=51, 372.1905pt x 296.90926pt>
 File: ./images//diagram_LSTM.jpg Graphic file (type jpg)
 <use ./images//diagram_LSTM.jpg>
-Package pdftex.def Info: ./images//diagram_LSTM.jpg  used on input line 246.
+Package pdftex.def Info: ./images//diagram_LSTM.jpg  used on input line 240.
 (pdftex.def)             Requested size: 199.16821pt x 158.88338pt.
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 257--286
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 254--283
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 257--286
+Underfull \hbox (badness 10000) in paragraph at lines 254--283
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 257--286
+Underfull \hbox (badness 10000) in paragraph at lines 254--283
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 257--286
+Underfull \hbox (badness 10000) in paragraph at lines 254--283
 
  []
 
-[14 <./images//diagram_LSTM.jpg>] [15]
-Underfull \hbox (badness 10000) in paragraph at lines 290--294
+[12 <./images//diagram_LSTM.jpg>] [13]
+Underfull \hbox (badness 10000) in paragraph at lines 287--288
 
  []
 
-[16]
+<./images//Data_radiology.jpg, id=64, 684.75826pt x 360.74776pt>
+File: ./images//Data_radiology.jpg Graphic file (type jpg)
+<use ./images//Data_radiology.jpg>
+Package pdftex.def Info: ./images//Data_radiology.jpg  used on input line 291.
+(pdftex.def)             Requested size: 284.52463pt x 149.89467pt.
+[14 <./images//Data_radiology.jpg>] [15]
 Capitolo 3.
-[17
+[16
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 341--343
+Underfull \hbox (badness 10000) in paragraph at lines 350--352
 
  []
 
-[18] [19]
-Overfull \hbox (4.39389pt too wide) in paragraph at lines 367--368
+[17] [18]
+Overfull \hbox (4.39389pt too wide) in paragraph at lines 376--377
 []\OT1/cmr/m/n/12 Combinazione dei tre pre-ce-den-ti: i van-tag-gi del-le sin-go-le tec-ni-che di pre-elaborazione
  []
 
-[20] [21] [22] [23]
+[19] [20] [21] [22]
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 471.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 480.
 
-[24] [25]
-Underfull \hbox (badness 10000) in paragraph at lines 524--530
+[23] [24]
+Underfull \hbox (badness 10000) in paragraph at lines 533--539
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 524--530
+Underfull \hbox (badness 10000) in paragraph at lines 533--539
+
+ []
+
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 548--551
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 552--559
 
  []
 
 [26]
-Underfull \hbox (badness 10000) in paragraph at lines 539--542
+Underfull \hbox (badness 10000) in paragraph at lines 576--577
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 543--550
-
- []
-
-[27]
-Underfull \hbox (badness 10000) in paragraph at lines 567--568
+Underfull \hbox (badness 10000) in paragraph at lines 586--603
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 577--594
+Underfull \hbox (badness 10000) in paragraph at lines 586--603
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 577--594
+Underfull \hbox (badness 10000) in paragraph at lines 586--603
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 577--594
+Underfull \hbox (badness 10000) in paragraph at lines 586--603
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 577--594
+Underfull \hbox (badness 10000) in paragraph at lines 586--603
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 577--594
+Underfull \hbox (badness 10000) in paragraph at lines 586--603
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 577--594
+Underfull \hbox (badness 10000) in paragraph at lines 586--603
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 577--594
+Underfull \hbox (badness 10000) in paragraph at lines 586--603
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 577--594
-
- []
-
-[28] [29] [30]
+[27] [28] [29]
 Capitolo 4.
-<./images//MetaFlow.png, id=122, 1537.745pt x 891.33pt>
+<./images//MetaFlow.png, id=119, 1537.745pt x 891.33pt>
 File: ./images//MetaFlow.png Graphic file (type png)
 <use ./images//MetaFlow.png>
-Package pdftex.def Info: ./images//MetaFlow.png  used on input line 616.
+Package pdftex.def Info: ./images//MetaFlow.png  used on input line 625.
 (pdftex.def)             Requested size: 199.16301pt x 115.44174pt.
-[31
+[30
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 619--628
+Underfull \hbox (badness 10000) in paragraph at lines 628--637
 
  []
 
-[32 <./images//MetaFlow.png (PNG copy)>] [33]
-<./images//MLRun.png, id=132, 943.27406pt x 328.97906pt>
+[31 <./images//MetaFlow.png (PNG copy)>] [32]
+<./images//MLRun.png, id=130, 943.27406pt x 328.97906pt>
 File: ./images//MLRun.png Graphic file (type png)
 <use ./images//MLRun.png>
-Package pdftex.def Info: ./images//MLRun.png  used on input line 673.
+Package pdftex.def Info: ./images//MLRun.png  used on input line 682.
 (pdftex.def)             Requested size: 199.1585pt x 69.4591pt.
- [34 <./images//MLRun.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 708--712
+ [33 <./images//MLRun.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 717--721
 
  []
 
-<./images//MLRun Dashbord.png, id=138, 1432.60219pt x 726.46407pt>
+<./images//MLRun Dashbord.png, id=136, 1432.60219pt x 726.46407pt>
 File: ./images//MLRun Dashbord.png Graphic file (type png)
 <use ./images//MLRun Dashbord.png>
-Package pdftex.def Info: ./images//MLRun Dashbord.png  used on input line 713.
+Package pdftex.def Info: ./images//MLRun Dashbord.png  used on input line 722.
 (pdftex.def)             Requested size: 426.7892pt x 216.42226pt.
-[35] [36 <./images//MLRun Dashbord.png>]
+[34] [35 <./images//MLRun Dashbord.png>]
 Capitolo 5.
-[37
+[36
+
+] [37
+
+] [38] (Tesi.bbl) [39
+
 
 ] (Tesi.aux) ) 
 Here is how much of TeX's memory you used:
- 15876 strings out of 478864
- 299774 string characters out of 2848661
- 790909 words of memory out of 3000000
- 33509 multiletter control sequences out of 15000+600000
+ 17140 strings out of 478864
+ 324459 string characters out of 2848661
+ 813083 words of memory out of 3000000
+ 34764 multiletter control sequences out of 15000+600000
  414751 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,6n,108p,1587b,1184s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 102i,6n,108p,1178b,1186s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\dino9\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on Tesi.pdf (38 pages, 684415 bytes).
+Output written on Tesi.pdf (40 pages, 765603 bytes).
 PDF statistics:
- 223 PDF objects out of 1000 (max. 8388607)
+ 231 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 43 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 48 words of extra memory for PDF output out of 10000 (max. 10000000)
 

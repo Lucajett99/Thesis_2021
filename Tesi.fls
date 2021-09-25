@@ -478,6 +478,29 @@ INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex\latex\tools\indentfirst.s
 INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex\latex\tools\indentfirst.sty
 INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex\latex\tools\indentfirst.sty
 INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex\latex\tools\indentfirst.sty
+INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption.sty
+INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption.sty
+INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption.sty
+INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption.sty
+INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption.sty
+INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption.sty
+INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption.sty
+INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption.sty
+INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption.sty
+INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption.sty
+INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption.sty
+INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.sty
+INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.sty
+INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.sty
+INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.sty
+INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.sty
+INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.sty
+INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.sty
+INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.sty
+INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.sty
+INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.sty
+INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.sty
+INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex\latex\graphics\keyval.sty
 INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang1.sty
 INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang1.sty
 INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang1.sty
@@ -555,7 +578,6 @@ OUTPUT Tesi.pdf
 INPUT C:\Users\dino9\AppData\Local\MiKTeX\pdftex\config\pdftex.map
 INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr17.tfm
 INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
-INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1200.tfm
 INPUT .\Tesi.toc
 INPUT Tesi.toc
 INPUT Tesi.toc
@@ -575,6 +597,7 @@ INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\sym
 INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 OUTPUT Tesi.toc
+INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1200.tfm
 INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\dino9\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti12.tfm
 INPUT .\images\\Encoder-Decoder.png
@@ -595,6 +618,12 @@ INPUT .\images\\diagram_LSTM.jpg
 INPUT .\images\\diagram_LSTM.jpg
 INPUT .\images\\diagram_LSTM.jpg
 INPUT .\images\\diagram_LSTM.jpg
+INPUT .\images\\Data_radiology.jpg
+INPUT images\\Data_radiology.jpg
+INPUT .\images\\Data_radiology.jpg
+INPUT .\images\\Data_radiology.jpg
+INPUT .\images\\Data_radiology.jpg
+INPUT .\images\\Data_radiology.jpg
 INPUT .\images\\MetaFlow.png
 INPUT images\\MetaFlow.png
 INPUT .\images\\MetaFlow.png
@@ -614,6 +643,10 @@ INPUT .\images\\MLRun Dashbord.png
 INPUT .\images\\MLRun Dashbord.png
 INPUT .\images\\MLRun Dashbord.png
 INPUT .\images\\MLRun Dashbord.png
+INPUT .\Tesi.bbl
+INPUT Tesi.bbl
+INPUT .\Tesi.bbl
+INPUT Tesi.bbl
 INPUT Tesi.aux
 INPUT C:\Users\dino9\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
 INPUT C:\Users\dino9\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk

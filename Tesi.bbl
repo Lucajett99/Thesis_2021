@@ -1,0 +1,16 @@
+\begin{thebibliography}{1}
+
+\bibitem{montagnon2020deep}
+Emmanuel Montagnon, Milena Cerny, Alexandre Cadrin-Ch{\^e}nevert, Vincent
+  Hamilton, Thomas Derennes, Andr{\'e} Ilinca, Franck Vandenbroucke-Menu, Simon
+  Turcotte, Samuel Kadoury, and An~Tang.
+\newblock Deep learning workflow in radiology: a primer.
+\newblock {\em Insights into imaging}, 11(1):1--15, 2020.
+
+\bibitem{pennington2014glove}
+Jeffrey Pennington, Richard Socher, and Christopher~D Manning.
+\newblock Glove: Global vectors for word representation.
+\newblock In {\em Proceedings of the 2014 conference on empirical methods in
+  natural language processing (EMNLP)}, pages 1532--1543, 2014.
+
+\end{thebibliography}
