@@ -10,6 +10,7 @@
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{toc}{\contentsline {section}{\numberline {2.1}Overview}{4}{}\protected@file@percent }
+\citation{singh2019chest}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1.1}Deep Learning}{5}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {2.2}Workflow}{5}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}Raccolta dei dati}{5}{}\protected@file@percent }
@@ -31,49 +32,58 @@
 \@writefile{toc}{\contentsline {subsubsection}{Encoder}{10}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{Decoder}{11}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.4}Formazione del modello}{11}{}\protected@file@percent }
+\citation{montagnon2020deep}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Schema schematico di una cella LSTM\relax }}{12}{}\protected@file@percent }
 \newlabel{fig:LSTM-schema}{{2.3}{12}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.5}Analisi e metriche}{12}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.6}Distribuzione}{12}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {2.3}Analisi}{12}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces Divisione del set di dati in set di dati di addestramento, convalida e test. Si consiglia di eseguire la suddivisione all'inizio del flusso di lavoro, mantenendo i dati di test nascosti al modello fino alla valutazione finale delle prestazioni\relax }}{14}{}\protected@file@percent }
-\newlabel{fig:data-sampling}{{2.4}{14}}
-\citation{montagnon2020deep}
-\@writefile{toc}{\contentsline {chapter}{\numberline {3}Demand forecasting}{16}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Analisi e conclusioni}{13}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}Tipi di apprendimento}{14}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces Tipi di apprendimento. Con l'apprendimento supervisionato, il numero di input (immagini TC in questo esempio) è uguale al numero di obiettivi (stato di malignità di una lesione qui). Con semi-supervisionato, il numero di input è maggiore del numero di obiettivi (il set di dati include campioni non etichettati). Con l'apprendimento non supervisionato, nessuno degli input viene etichettato (ad esempio, clustering, apprendimento multiplo, macchine di Boltzmann limitate). N.A. indica informazioni non disponibili\relax }}{15}{}\protected@file@percent }
+\newlabel{fig:type-of-learning}{{2.4}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces Divisione del set di dati in set di dati di addestramento, convalida e test. Si consiglia di eseguire la suddivisione all'inizio del flusso di lavoro, mantenendo i dati di test nascosti al modello fino alla valutazione finale delle prestazioni\relax }}{16}{}\protected@file@percent }
+\newlabel{fig:data-sampling}{{2.5}{16}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Conclusioni}{17}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Demand forecasting}{18}{}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {3.1}Overview}{16}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.2}Workflow}{17}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Raccolta dati}{17}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Comprensione e preelaborazione dei dati}{18}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Parametri di qualità dei dati}{18}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Preelaborazione dei dati}{18}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}Costruzione del modello}{19}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Perceptron multistrato (MLP)}{20}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Rete neurale bayesiana (BNN)}{21}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Reti neurali di regressione generalizzata (GRNN)}{22}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Regressione K-Nearest Neighbor (KNN)}{22}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Regressione del vettore di supporto (SVR)}{23}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Rete Neurale Ricorrente (RNN)}{24}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Rete neurale di memoria a lungo termine (LSTM)}{24}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.4}Formazione del modello}{25}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.5}Validazione del modelllo}{25}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.6}Miglioramento}{25}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.7}Distribuzione}{25}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.3}Analisi}{25}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Frameworks}{30}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Overview}{18}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Workflow}{19}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Raccolta dati}{19}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Comprensione e preelaborazione dei dati}{20}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Parametri di qualità dei dati}{20}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Preelaborazione dei dati}{20}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}Costruzione del modello}{21}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Perceptron multistrato (MLP)}{22}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Rete neurale bayesiana (BNN)}{23}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Reti neurali di regressione generalizzata (GRNN)}{24}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Regressione K-Nearest Neighbor (KNN)}{24}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Regressione del vettore di supporto (SVR)}{25}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Rete Neurale Ricorrente (RNN)}{26}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Rete neurale di memoria a lungo termine (LSTM)}{26}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.4}Formazione del modello}{27}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.5}Validazione del modelllo}{27}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.6}Miglioramento}{27}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.7}Distribuzione}{27}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Analisi}{27}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Frameworks}{32}{}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}MetaFlow}{30}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}ZenML}{32}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Problemi risolti da ZenML}{32}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}MLRun}{33}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Vantaggi chiave}{33}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Conclusioni}{36}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}MetaFlow}{32}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}ZenML}{34}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Problemi risolti da ZenML}{34}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}MLRun}{35}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Vantaggi chiave}{35}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Conclusioni}{38}{}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
+\citation{itwiki:123095653}
+\citation{itwiki:119581182}
 \bibstyle{plain}
 \bibdata{Bibliography}
 \bibcite{montagnon2020deep}{1}
 \bibcite{pennington2014glove}{2}
-\gdef \@abspage@last{40}
+\bibcite{singh2019chest}{3}
+\bibcite{itwiki:123095653}{4}
+\bibcite{itwiki:119581182}{5}
+\gdef \@abspage@last{42}

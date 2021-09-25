@@ -13,4 +13,21 @@ Jeffrey Pennington, Richard Socher, and Christopher~D Manning.
 \newblock In {\em Proceedings of the 2014 conference on empirical methods in
   natural language processing (EMNLP)}, pages 1532--1543, 2014.
 
+\bibitem{singh2019chest}
+Sonit Singh, Sarvnaz Karimi, Kevin Ho-Shon, and Len Hamey.
+\newblock From chest x-rays to radiology reports: a multimodal machine learning
+  approach.
+\newblock In {\em 2019 Digital Image Computing: Techniques and Applications
+  (DICTA)}, pages 1--8. IEEE, 2019.
+
+\bibitem{itwiki:123095653}
+Wikipedia.
+\newblock Docker --- wikipedia{,} l'enciclopedia libera, 2021.
+\newblock [Online; in data 25-settembre-2021].
+
+\bibitem{itwiki:119581182}
+Wikipedia.
+\newblock Kubernetes --- wikipedia{,} l'enciclopedia libera, 2021.
+\newblock [Online; in data 25-settembre-2021].
+
 \end{thebibliography}

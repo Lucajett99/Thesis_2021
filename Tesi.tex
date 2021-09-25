@@ -11,6 +11,7 @@
 \usepackage{xspace}
 \usepackage{indentfirst}
 \usepackage[]{caption}
+\usepackage{url}
 
 \graphicspath{ {./images/} }
 
@@ -112,7 +113,7 @@ Per creare un modello di classificazione che mi permette di partire da dati in i
 
 
 \section{Workflow}
-Mi sono concentrato principalmente sul processo di assistenza alla creazione di referti medici, analizzando un framework in particolare [articolo], e di seguito mostro il workflow che sono riuscito a tirarne fuori
+Mi sono concentrato principalmente sul processo di assistenza alla creazione di referti medici, analizzando un framework in particolare \cite{singh2019chest}, e di seguito mostro il workflow che sono riuscito a tirarne fuori
 
 \subsection{Raccolta dei dati}
 Questo passaggio, insieme al successivo (cura dei dati), vengono eseguiti per standardizzare e migliorare qualità del set di dati per le successive deep neural network training.\\
@@ -248,13 +249,19 @@ Quando si addestra un algoritmo per un progetto di ricerca per la pratica clinic
 Il compito di classificazione è strettamente correlato al comune compito interpretativo radiologico di fornire una diagnosi dalle immagini. Di conseguenza, per questa attività, le metriche di apprendimento automatico sono molto simili alle consuete metriche dei test diagnostici riportate in radiologia diagnostica.
 
 \subsection{Distribuzione}
-Text
+L'implementazione si riferisce qui all'esecuzione di un progetto di deep learning precedentemente stabilito. Nel contesto attuale, comprende la costruzione e la cura del set di dati, la scelta di un insieme di architetture di reti neurali, l'addestramento delle reti e la messa a punto degli iperparametri utilizzando metriche selezionate.\\
+Deployment si riferisce all'implementazione di una soluzione sviluppata localmente su una scala più ampia, ad esempio a livello di istituto o all'interno di una rete sanitaria. Questo processo richiede una chiara definizione delle specifiche del modello, in termini di prestazioni o di ingegneria del software (ad esempio, configurazioni, versioni, test di unità o requisiti istituzionali specifici).\\
+A seconda dell'evoluzione delle metriche delle prestazioni e della valutazione visiva nel tempo, un modello può essere riaddestrato utilizzando dati aggiuntivi per aggiornare dinamicamente le sue prestazioni.
+Inoltre, viene consigliato di memorizzare i pesi ottenuti dopo l'allenamento separatamente dall'architettura di rete ai normali checkpoint. Ciò consente aggiornamenti e versioni più semplici, purché l'architettura di rete rimanga identica.\\
+Da un punto di vista pratico, l'integrazione dei modelli nelle procedure di routine può essere impegnativa in termini di portabilità, accessibilità dei dati e pre-elaborazione. È quindi necessario definire se la soluzione sviluppata è destinata ad essere integrata in un'infrastruttura esistente o utilizzata come applicazione standalone. Durante la prima fase di implementazione, è possibile adottare un approccio containerizzato come quello proposto da Docker [77,78 primer - appendice] o Kubernetes [appendice] e applicazioni web-based (REST-API) per l'implementazione successiva.\\
+Per soddisfare al meglio queste sfide di integrazione, stanno rapidamente emergendo i mercati delle applicazioni di intelligenza artificiale che offrono un'ampia varietà di strumenti con un'interfaccia utente unificata per i radiologi e un'interfaccia di programmazione delle applicazioni (API) generica per gli sviluppatori. Questo livello commerciale tra i fornitori PACS e le applicazioni di intelligenza artificiale può potenzialmente consentire un'implementazione clinica, una convalida e un'usabilità più rapide.\cite{montagnon2020deep}
 
-\section{Analisi}
+\section{Analisi e conclusioni}
 In questa fase di analisi ho cercato di confrontare alcuni casi che ho trovato in letteratura, sono andato alla ricerca di quali potessero essere le invarianti e le versatilità tra loro in modo da centrare il nostro obiettivo.\\
 \\
 La cosa principale che è comune a tutti è il la struttura dati: set di dati formato sempre  da immagine DICOM e/o annotazione.\\
 Ovviamente alcuni input devono essere scartati perché non presentano le caratteristiche di cui abbiamo bisogno.\\
+Per superare i problemi di privacy sulla violazione dei dati, una potenziale soluzione potrebbe essere quella di eseguire la formazione locale di più modelli e condividere i pesi, una strategia nota come apprendimento federato o distribuito.
 Per estrarre le caratteristiche dall’immagine viene sempre utilizzata un CNN per le sue elevate prestazioni nel riconoscimento delle immagini. La capacità delle CNN di apprendere complesse relazioni spaziali e
 imparare modelli basati su pixel sottili e intricati li rendono perfetti strumento per apprendere dalle immagini radiologiche. \\
 \\
@@ -262,6 +269,25 @@ Per quanto riguarda l'estrazione del testo, invece, le tecniche di elaborazione 
 Una classe di architetture di reti neurali, le reti neurali ricorrenti (RNN), ha recentemente attirato molta attenzione da parte dei ricercatori per la modellazione di sequenze e ha dimostrato di funzionare bene nella risoluzione di vari compiti di PNL grazie alla loro capacità di gestire input di lunghezza variabile e uscita [27].\\
 Sebbene RNN sia teoricamente un modello potente per codificare informazioni sequenziali, in pratica spesso soffre dei problemi di sfumatura/esplosione del gradiente mentre apprende le dipendenze a lungo raggio [33]. Le reti LSTM [34] e GRU [35] sono note per essere rimedi efficaci a questi problemi.\\
 Le estensioni più popolari di RNN sono, appunto, Long Short-Term Memory (LSTM) [77] e la Gated Recurrent Unit (GRU) [78]. La memoria a lungo termine utilizza blocchi di memoria per salvare lo stato temporale della rete e porte per monitorare il flusso di informazioni. D'altra parte, GRU è una forma più leggera di RNN rispetto a LSTM in termini di topologia, spese di calcolo e complessità. Al momento, i ricercatori devono scegliere tra il modello più veloce offerto da GRU che necessita di meno parametri o il modello più performante fornito da LSTM che contiene dati sufficienti e potenza di calcolo [8].\\
+
+\begin{subsection}{Tipi di apprendimento}
+La Figura 2.4 illustra i tipi di apprendimento: apprendimento supervisionato, semi-supervisionato e non supervisionato.\\
+Per l'apprendimento supervisionato, deve essere disponibile uno standard di riferimento per tutti i casi.\\
+\\
+Per l'apprendimento semi-supervisionato, è disponibile uno standard di riferimento solo per un sottoinsieme di materie. L'apprendimento semi-supervisionato che si basa su una combinazione di dati etichettati e non etichettati generalmente ottiene risultati migliori rispetto all'apprendimento supervisionato che si basa solo sul sottoinsieme di dati etichettati [51]. Questo processo di apprendimento combina tecniche non supervisionate e supervisionate.\\
+\\
+Per l'apprendimento non supervisionato, non è disponibile uno standard di riferimento. In questo contesto, gli algoritmi non supervisionati hanno lo scopo di stabilire una rappresentazione efficiente del set di dati iniziale (ad esempio, clustering attraverso proprietà statistiche, densità o distanze del set di dati) [52-54]. Tale nuova rappresentazione può costituire un primo passo prima della formazione del modello supervisionato, consentendo prestazioni migliori.
+
+\begin{figure}[h!]
+    \begin{center}
+        \includegraphics[width=12cm,height=12cm,keepaspectratio]{Type-of-learning}
+    \end{center}
+    \caption{Tipi di apprendimento. Con l'apprendimento supervisionato, il numero di input (immagini TC in questo esempio) è uguale al numero di obiettivi (stato di malignità di una lesione qui). Con semi-supervisionato, il numero di input è maggiore del numero di obiettivi (il set di dati include campioni non etichettati). Con l'apprendimento non supervisionato, nessuno degli input viene etichettato (ad esempio, clustering, apprendimento multiplo, macchine di Boltzmann limitate). N.A. indica informazioni non disponibili}
+    \label{fig:type-of-learning}
+\end{figure}
+
+La creazione di grandi set di dati medici di alta qualità è impegnativa e costosa, a causa delle risorse necessarie per la raccolta dei dati e del tempo necessario per l'annotazione. Per affrontare queste limitazioni, sono state proposte alcune strategie di formazione specifiche o architetture di modelli, come l'etichettatura debole [55, 56] o l'apprendimento a pochi colpi [57].
+Una volta completati i passaggi sopra descritti, la visualizzazione del set di dati basata sull'estrazione di caratteristiche radiomiche [13] e con etichette appropriate può essere eseguita prima dell'addestramento con modelli di deep learning (Fig. 5).
 \\
 In generale, lo sviluppo di algoritmi di intelligenza artificiale generalizzabili nell'imaging medico richiede set di dati statisticamente alimentati nell'ordine di centinaia di migliaia o milioni, il che è problematico, data la scarsa disponibilità
 dei dati.\\
@@ -278,7 +304,8 @@ algoritmi di rilevamento e classificazione. Tuttavia, sono disponibili prove lim
 L'aumento dell'immagine sarebbe preferibile per aumentare il livello di robustezza del modello. Ovviamente, l'aumento delle immagini si traduce in un aumento del numero di set di dati per la formazione e potrebbe esserci il rischio del problema di sovradattamento.\\
 Anche se viene esaminato lo stesso paziente, le immagini non sarebbero identiche tra gli esami a causa di lievi differenze di posizionamento. 
 Pertanto, l'uso di immagini ruotate o spostate parallelamente renderebbe il modello robusto per lievi differenze nelle posizioni del paziente. A volte vengono utilizzate anche immagini speculari. L'uso di immagini con rumore aggiunto sarebbe utile per rendere il modello robusto per diversi gradi di rumore dell'immagine.\\
-\\
+\end{subsection}
+
 Come già detto precedentemente, un modello potrebbe differire da un altro anche per le strategie di campionamento del set di dati:
 \begin{itemize}
     \item Addestramento, convalida e test
@@ -307,8 +334,11 @@ Il ragionamento basato su casi (CBR) è il processo di risoluzione di nuovi prob
 \item Conservazione: Dopo che la soluzione è stata adattata al problema attuale, memorizzare l'esperienza come nuovo caso.
 \end{enumerate}
 
-Da un punto di vista pratico, l'integrazione dei modelli nelle procedure di routine può essere impegnativa in termini di portabilità, accessibilità dei dati e pre-elaborazione. È quindi necessario definire se la soluzione sviluppata è destinata ad essere integrata in un'infrastruttura esistente o utilizzata come applicazione standalone. Durante la prima fase di implementazione, è possibile adottare un approccio containerizzato come quello proposto da Docker [dire cos'è] o Kubernetes [dire cos'è] e applicazioni web-based (REST-API) per l'implementazione successiva.
-Per soddisfare al meglio queste sfide di integrazione, stanno rapidamente emergendo i mercati delle applicazioni di intelligenza artificiale che offrono un'ampia varietà di strumenti con un'interfaccia utente unificata per i radiologi e un'interfaccia di programmazione delle applicazioni (API) generica per gli sviluppatori. Questo livello commerciale tra i fornitori PACS e le applicazioni di intelligenza artificiale può potenzialmente consentire un'implementazione clinica, una convalida e un'usabilità più rapide. \cite{montagnon2020deep}
+\subsection{Conclusioni}
+L'apprendimento profondo mostra grandi promesse in radiologia, come dimostrato dalla diversità delle applicazioni [10] e dalle prestazioni riportate in una varietà di compiti di visione artificiale [3-radiology primer].\\
+Poiché le applicazioni mediche sono numerose e le soluzioni tecniche sono facilmente accessibili, la parte che richiede più tempo è la creazione di set di dati (raccolta e cura di dati strutturati o non strutturati di dati Montagnon et al. Insights into Imaging (2020) 11:22 Pagina 12 di 15), seguito dalla messa a punto del modello attraverso l'ottimizzazione degli iperparametri.\\
+Su scala multi-istituzionale, la grande quantità di dati condivisi disponibili costituisce una grande opportunità per la formazione di modelli complessi. I limiti principali sono la disponibilità di annotazioni esperte, il raggruppamento di dati su più siti e la necessità di una cura dei dati per ottenere un set di dati di alta qualità. 
+
 
 \chapter{Demand forecasting}
 La previsione della domanda è uno dei problemi principali delle catene di approvvigionamento. Mira ad ottimizzare le scorte, ridurre i costi e aumentare le vendite, i profitti e la fedeltà dei clienti. A tal fine, i dati storici possono essere analizzati per migliorare la previsione della domanda utilizzando vari metodi come tecniche di apprendimento automatico, analisi di serie temporali e modelli di deep learning.\\
@@ -734,12 +764,17 @@ Nell'apprendimento automatico, una rete neurale convoluzionale (CNN o ConvNet da
 \section*{Long-Short Term Memory}
 La memoria a lungo termine (LSTM) è un'architettura di rete neurale ricorrente artificiale (RNN)[1] utilizzata nel campo dell'apprendimento profondo. A differenza delle reti neurali feedforward standard, LSTM ha connessioni di feedback. Può elaborare non solo singoli punti dati (come immagini), ma anche intere sequenze di dati (come voce o video). Ad esempio, LSTM è applicabile ad attività come il riconoscimento della scrittura non segmentato e connesso,[2] il riconoscimento vocale[3][4] e il rilevamento di anomalie nel traffico di rete o IDS (sistemi di rilevamento delle intrusioni).
 
+\section*{Docker}
+Docker è un progetto open-source che automatizza il processo di deployment di applicazioni all'interno di contenitori software, fornendo un'astrazione aggiuntiva grazie alla virtualizzazione a livello di sistema operativo di Linux.\cite{itwiki:123095653}
+
+\section*{Kubernetes}
+Kubernetes (abbreviato K8s) è un sistema open-source di orchestrazione e gestione di container.[1] Inizialmente sviluppato da Google, adesso è mantenuto da Cloud Native Computing Foundation. Funziona con molti sistemi di containerizzazione, compreso Docker.\cite{itwiki:119581182}
 
 \clearpage
 
 \bibliographystyle{plain}
 \bibliography{Bibliography}
- 
+
 
 
 
