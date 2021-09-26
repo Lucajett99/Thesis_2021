@@ -1,5 +1,11 @@
 \begin{thebibliography}{1}
 
+\bibitem{makridakis2018statistical}
+Spyros Makridakis, Evangelos Spiliotis, and Vassilios Assimakopoulos.
+\newblock Statistical and machine learning forecasting methods: Concerns and
+  ways forward.
+\newblock {\em PloS one}, 13(3):e0194889, 2018.
+
 \bibitem{montagnon2020deep}
 Emmanuel Montagnon, Milena Cerny, Alexandre Cadrin-Ch{\^e}nevert, Vincent
   Hamilton, Thomas Derennes, Andr{\'e} Ilinca, Franck Vandenbroucke-Menu, Simon

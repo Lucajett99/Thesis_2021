@@ -1,15 +1,15 @@
 # Fdb version 3
-["bibtex Tesi"] 1632592840 "Tesi.aux" "Tesi.bbl" "Tesi" 1632592845
-  "Bibliography.bib" 1632589396 1816 e57644c6f0452472ec0e6485ccfe2410 ""
+["bibtex Tesi"] 1632658049 "Tesi.aux" "Tesi.bbl" "Tesi" 1632658056
+  "Bibliography.bib" 1632657200 2193 6b98c1bd6c96dcbc4d5ec0064dee3c58 ""
   "C:/Users/dino9/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/plain.bst" 1291868336 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "Tesi.aux" 1632592844 8108 0f557a84088b17dd4360ba1f265c5856 "pdflatex"
+  "Tesi.aux" 1632658054 10230 ab48a901c97d1e9b25668ba7e87cf1fe "pdflatex"
   (generated)
-  "Tesi.bbl"
   "Tesi.blg"
-["pdflatex"] 1632592841 "c:/Users/dino9/Desktop/UNI/LAUREA/Thesis_2021/Tesi.tex" "Tesi.pdf" "Tesi" 1632592845
+  "Tesi.bbl"
+["pdflatex"] 1632658049 "c:/Users/dino9/Desktop/UNI/LAUREA/Thesis_2021/Tesi.tex" "Tesi.pdf" "Tesi" 1632658056
   "C:/Users/dino9/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1630926441 14064 1b26421a8f471508993adc21c393057e ""
   "C:/Users/dino9/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1630857866 9742850 dbc95b76146d8dc1bc90ce207cbc79b6 ""
-  "C:/Users/dino9/AppData/Local/MiKTeX/pdftex/config/pdftex.map" 1632589791 81088 29d6fa367ac022d1b69251d68c0742e6 ""
+  "C:/Users/dino9/AppData/Local/MiKTeX/pdftex/config/pdftex.map" 1632657443 81088 29d6fa367ac022d1b69251d68c0742e6 ""
   "C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/tcrm1200.tfm" 993062508 1444 95ffe0f19b974d50849790c8225c7ef7 ""
   "C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233955448 1004 54797486969f23fa377b128694d548df ""
   "C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233955448 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -121,6 +121,7 @@
   "C:/Users/dino9/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsmath.sty" 1622999197 87375 a806706bbc32b3e8482f6d87aeffbf76 ""
   "C:/Users/dino9/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsopn.sty" 1622999197 4128 c11da5c2df397f39d5783fc9307689d0 ""
   "C:/Users/dino9/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amstext.sty" 1622999197 2444 b015525572ea0d0165d6ce81ba5e5259 ""
+  "C:/Users/dino9/AppData/Local/Programs/MiKTeX/tex/latex/appendix/appendix.sty" 1581248268 9184 d9f65b39ca82f1d70030390eca653b1c ""
   "C:/Users/dino9/AppData/Local/Programs/MiKTeX/tex/latex/arabi/bblopts.cfg" 1139965200 902 c30e5c373bc58bde21f8f63a3091626f ""
   "C:/Users/dino9/AppData/Local/Programs/MiKTeX/tex/latex/babel-italian/italian.ldf" 1590253316 11706 c338c4a47651f95dee3fc5c3dbc21081 ""
   "C:/Users/dino9/AppData/Local/Programs/MiKTeX/tex/latex/base/latexsym.sty" 1622623408 2853 064bc688b5f0914f6c46857908d3b04a ""
@@ -158,11 +159,12 @@
   "C:/Users/dino9/AppData/Local/Programs/MiKTeX/tex/latex/tools/xspace.sty" 1622550326 4545 d84d0b20a11b9c36c6ecf45697be591c ""
   "C:/Users/dino9/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388494052 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/dino9/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1623005660 55589 34128738f682d033422ca125f82e5d62 ""
-  "Tesi.aux" 1632592844 8108 0f557a84088b17dd4360ba1f265c5856 "pdflatex"
-  "Tesi.bbl" 1632592841 1305 9e89202dbdafa4e3f137b350b88f75fa "bibtex Tesi"
-  "Tesi.tex" 1632592834 82900 b9477298a6a8bd8843d2f934a10e2e60 ""
-  "Tesi.toc" 1632592844 3429 9439f977c14c811aab755b90206b5d69 "pdflatex"
-  "c:/Users/dino9/Desktop/UNI/LAUREA/Thesis_2021/Tesi.tex" 1632592834 82900 b9477298a6a8bd8843d2f934a10e2e60 ""
+  "Tesi.aux" 1632658054 10230 ab48a901c97d1e9b25668ba7e87cf1fe "pdflatex"
+  "Tesi.bbl" 1632658049 1559 520dcd223dac8565c2377f8d413c9d80 "bibtex Tesi"
+  "Tesi.tex" 1632658043 88821 a106ce9f6530294ff061c92663780b0e ""
+  "Tesi.toc" 1632658054 4347 685d879e8cc1b4156361d6dbf162bf37 "pdflatex"
+  "c:/Users/dino9/Desktop/UNI/LAUREA/Thesis_2021/Tesi.tex" 1632658043 88821 a106ce9f6530294ff061c92663780b0e ""
+  "images//Data_forecast.jpg" 1632654607 38509 ab117cc0975e3b285cda6e3d0e96cdcb ""
   "images//Data_radiology.jpg" 1632577904 76771 9787de96d123a7c59a17544780b47d98 ""
   "images//Encoder-Decoder.png" 1631639731 92646 f90a1b5be26dc030887f34c8b37a9efe ""
   "images//LSTM.jpg" 1632296810 34513 2d6e99867d4a53cc1e3dda6a00de07f4 ""
@@ -172,7 +174,7 @@
   "images//Type-of-learning.jpg" 1632591436 61461 ded7dd18cdf03175ad5c1d61864124e4 ""
   "images//diagram_LSTM.jpg" 1632297570 36721 b27a93554c925a5f9b079051f7e8f261 ""
   (generated)
-  "Tesi.log"
   "Tesi.pdf"
+  "Tesi.log"
   "Tesi.toc"
   "Tesi.aux"
