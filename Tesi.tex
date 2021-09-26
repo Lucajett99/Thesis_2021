@@ -87,28 +87,25 @@ Anno Accademico 2020/2021}}%inserire l'anno accademico a cui si è iscritti
 Il Machine Learning è un sottoinsieme dell'intelligenza artificiale (AI) che si occupa di creare sistemi che apprendono o migliorano le performance in base ai dati che utilizzano. Intelligenza artificiale è un termine generico e si riferisce a sistemi o macchine che imitano l'intelligenza umana.\\
 Definire in maniera semplice le caratteristiche e le applicazioni del machine learning non è sempre possibile, visto che questo ramo è molto vasto e prevede differenti modalità, tecniche e strumenti per essere realizzato. Inoltre, le differenti tecniche di apprendimento e sviluppo degli algoritmi danno vita ad altrettante possibilità di utilizzo che allargano il campo di applicazione dell’apprendimento automatico rendendone difficile una definizione specifica. Si può tuttavia dire che quando si parla di machine learning si parla di differenti meccanismi che permettono a una macchina intelligente di migliorare le proprie capacità e prestazioni nel tempo. La macchina, quindi, sarà in grado di imparare a svolgere determinati compiti migliorando, tramite l’esperienza, le proprie capacità, le proprie risposte e funzioni.\\
 Alla base dell’apprendimento automatico ci sono una serie di differenti algoritmi che, partendo da nozioni primitive, sapranno prendere una specifica decisione piuttosto che un’altra o effettuare azioni apprese nel tempo.\\
-L'obiettivo di questa tesi è analizzare due Case Study per cercare quali possano essere le invarianti e le differenze presenti nello stesso tipo di modelli trovati in letteratura al fine di cercare di valutare la possibilità di generalizzare i Case Study per il riutilizzo dei moduli architetturali.\\
-Infatti è stata applicato un approccio bottom-up, analizzando, quindi, i due casi studio, al fine di tirare fuori i relativi workflow per arrivare alla generalizzazione.\\
+L'obiettivo di questa tesi è analizzare due case study per cercare quali possano essere le invarianti e le differenze presenti nello stesso tipo di modelli trovati in letteratura al fine di valutare la possibilità di generazione automatica di pipeline di Machine Learing.\\
+Infatti è stata applicato un approccio bottom-up, analizzando, quindi, i due casi studio, al fine di tirare fuori i relativi workflow per eseguire l'analisi.\\
 I casi studio in questione sono:
 \begin{itemize}
     \item AI in radiology
     \item Demand forecasting
 \end{itemize}
 
-
-
-
 \chapter{AI in Radiology}
 Interpretare immagini mediche e riassumerle sotto forma di referti radiologici è un compito impegnativo, noioso e complesso. Un radiologo fornisce una descrizione completa di un'immagine medica sotto forma di referto radiologico descrivendo reperti normali o anormali e fornendo un riepilogo per il processo decisionale. La ricerca mostra che la pratica della radiologia è soggetta a errori a causa del numero limitato di esperti, dell'aumento del volume dei pazienti e della natura soggettiva della percezione umana. Per ridurre il numero di errori diagnostici e per alleviare il compito dei radiologi, è necessario un sistema di generazione di referti computerizzato in grado di generare automaticamente un referto radiologico per una determinata immagine medica.
 
 \section{Overview}
-L’ imaging medico è la fonte di dati più grande e in più rapida crescita nel settore sanitario che rappresenta circa 90\% di tutti i dati medici [1]. 
-I radiologi interpretano abitualmente le immagini mediche e raccontano i loro risultati sotto forma di referti radiologici. A causa della natura soggettiva della percezione umana, i radiologi possono non rilevare sottili scoperte che portano a errori diagnostici La ricerca mostra che questi errori diagnostici possono raggiungere il 30\%, il che rappresenta un gran numero di casi gravi [3], [4].
+L’ imaging medico è la fonte di dati più grande nel settore sanitario. 
+I radiologi interpretano abitualmente le immagini mediche e raccontano i loro risultati sotto forma di referti radiologici. A causa della natura soggettiva della percezione umana, i radiologi possono non rilevare sottili scoperte che portano a errori diagnostici.
 Per alleviare il ruolo dei radiologi e ridurre l'onere della stesura dei referti, è necessario un sistema di generazione di referti di radiologia assistita da computer in grado di redigere un referto di radiologia data un'immagine medica in modo che un radiologo possa rivederlo, modificarlo se necessario eventuali modifiche.
 L'apprendimento automatico fornisce un modo efficace per automatizzare l'analisi e la diagnosi per le immagini mediche. Può potenzialmente ridurre l'onere per i radiologi nella pratica della radiologia.\\
-Le applicazioni dell'apprendimento automatico in radiologia includono la segmentazione di immagini mediche (ad es. cervello, colonna vertebrale, polmone, fegato, rene, colon); registrazione di immagini mediche (ad es. registrazione di immagini di organi da diverse modalità o serie temporali); sistemi di rilevamento e diagnosi computerizzati per immagini TC o RM (ad es. mammografia, colongrafia TC e CAD nodulo polmonare TC); analisi della funzione o dell'attività cerebrale e diagnosi di malattie neurologiche da immagini fMR; sistemi di recupero di immagini basati sul contenuto per immagini TC o RM; e analisi del testo dei referti di radiologia utilizzando l'elaborazione del linguaggio naturale (NLP) e la comprensione del linguaggio naturale (NLU).
+Le applicazioni dell'apprendimento automatico in radiologia includono la segmentazione di immagini mediche (ad es. cervello, colonna vertebrale, polmone, fegato, rene, colon), registrazione di immagini mediche (ad es. registrazione di immagini di organi da diverse modalità o serie temporali), sistemi di rilevamento e diagnosi computerizzati per immagini TC o RM (ad es. mammografia, colongrafia TC e CAD nodulo polmonare TC) e analisi del testo dei referti di radiologia utilizzando l'elaborazione del linguaggio naturale (NLP) e la comprensione del linguaggio naturale (NLU).
 
-\subsection{Deep Learning}
+\paragraph*{Deep Learning:}
 Come si può vedere le applicazioni del machine learning in radiologia sono molte. Ma c’è una cosa in comune con tutte le applicazioni: il fulcro è l’imaging diagnostico per arrivare ad una diagnosi.\\
 Per creare un modello di classificazione che mi permette di partire da dati in input (immagini DICOM) fino ad avere un referto medico attendibile bisogna lavorare molto sui dati e nel contesto dell'assistenza sanitaria, il deep learning mostra grandi promesse per l'analisi di dati strutturati (ad es. database, tabelle) e non strutturati (ad es. immagini, testo).
 
@@ -173,14 +170,14 @@ Il campionamento dei dati si riferisce alla selezione di sottoinsiemi di dati a 
 La strategia di campionamento più frequente nel deep learning è dividere il set di dati in set di addestramento, convalida e test.
 Il rapporto ottimale di campioni distribuiti in ciascuno set varia per ogni problema. Ma come regola empirica, viene comunemente utilizzata una suddivisione dell'80\% di formazione, del 10\% di convalida e del 10\% di divisione del test. Questa divisione consente a più corsi di formazione che utilizzano lo stesso set di formazione per cercare gli iperparametri ottimali per massimizzare le prestazioni sul set di convalida. Quando si ottengono le migliori prestazioni sul set di convalida, l'algoritmo viene infine utilizzato una volta sul set di test per misurare e confermare la prestazione finale.\\
 \\
-Per set di dati più piccoli, la strategia di campionamento più comunemente utilizzata è la convalida incrociata k-fold. Il set di dati è diviso equamente in k pieghe. Per ogni addestramento, l'algoritmo viene addestrato su quasi tutte le pieghe ma testato su una singola piega di controllo dei dati. L'allenamento viene ripetuto k volte utilizzando pieghe di controllo variabili. La prestazione finale è la media delle k prestazioni misurate.
+Per set di dati più piccoli, la strategia di campionamento più comunemente utilizzata è la k-fold cross-validation (appendice). Il set di dati è diviso equamente in k pieghe. Per ogni addestramento, l'algoritmo viene addestrato su quasi tutte le pieghe ma testato su una singola piega di controllo dei dati. L'allenamento viene ripetuto k volte utilizzando pieghe di controllo variabili. La prestazione finale è la media delle k prestazioni misurate.
 Gli algoritmi di deep learning generalmente introducono due limitazioni significative per utilizzare sistematicamente la convalida incrociata k-fold. In primo luogo, l'addestramento di algoritmi di deep learning su grandi set di dati di solito implica un carico computazionale intenso che impedisce in pratica un numero elevato di iterazioni di addestramento con risorse limitate. In secondo luogo, l'addestramento delle reti neurali profonde dipende da molti più iperparametri rispetto agli algoritmi di apprendimento automatico meno profondi.\\
 
 \subsubsection{Transfer learning}
-Il Transfer Learning (TL) è un problema di ricerca nell'apprendimento automatico (ML) che si concentra sulla memorizzazione delle conoscenze acquisite durante la risoluzione di un problema e l'applicazione a un problema diverso ma correlato.
+Il Transfer Learning (TL)\cite{singh2019chest} è un problema di ricerca nell'apprendimento automatico (ML) che si concentra sulla memorizzazione delle conoscenze acquisite durante la risoluzione di un problema e l'applicazione a un problema diverso ma correlato.
 Poiché, come detto precedentemente, è difficile raccogliere dati medici annotati su larga scala a causa dell'interoperabilità, della privacy e di questioni legali, il TL svolge un ruolo fondamentale nel campo dell'imaging medico, dove è difficile accedere a set di dati di immagini etichettati. Nel TL una rete neurale viene inizializzata dai pesi del modello che è già stato addestrato su un set di dati su larga scala.\\
 Per consentire il trasferimento di conoscenza per l'estrazione di incorporamenti di immagini, si inizializza la CNN (Convolutional neural network), che vedremo successivamente, con pesi pre-addestrati del modello che è stato addestrato su un set di dati di classificazione delle immagini su larga scala come ImageNet. Inoltre, dal lato del testo, vengono usati i word embedding Glove \cite{pennington2014glove} con un vettore di incorporamento di 300 dimensioni per ogni parola e addestrato su un corpus di testo generico chiamato Common Crawl con 42M token, 1.9M vocab.\\
-Poiché la natura del testo medico è diversa dal testo generale, è stata anche applicata la conoscenza del dominio inizializzando LSTM (Long-Short Term Memory) con RadGlove (Radiology Glove).
+Poiché la natura del testo medico è diversa dal testo generale, è stata anche applicata la conoscenza del dominio inizializzando LSTM (Long-Short Term Memory - appendice \ref{appendix:LSTM}) con RadGlove (Radiology Glove).
 
 \subsection{Creazione del modello}
 Il processo di assistenza alla creazione di referti medici può essere suddiviso in due parti:
@@ -289,14 +286,14 @@ Come già detto precedentemente, un modello potrebbe differire da un altro anche
     \item Addestramento, convalida e test
     \item Convalida incrociata k-fold
 \end{itemize}
-Anche se il primo è quello più utilizzato, poiché il processo di formazione richiede un'enorme quantità di calcoli.\\
+Anche se il primo (Figura \ref{fig:data-sampling-radiology}) è quello più utilizzato, poiché il processo di formazione richiede un'enorme quantità di calcoli.\\
 
 \begin{figure}[h!]
     \begin{center}
         \includegraphics[width=10cm,height=10cm,keepaspectratio]{Data_radiology}
     \end{center}
     \caption{Divisione del set di dati in set di dati di addestramento, convalida e test. Si consiglia di eseguire la suddivisione all'inizio del flusso di lavoro, mantenendo i dati di test nascosti al modello fino alla valutazione finale delle prestazioni}
-    \label{fig:data-sampling}
+    \label{fig:data-sampling-radiology}
 \end{figure}
 
 \subsection{Il modello}
@@ -561,10 +558,19 @@ Una volta sviluppati i modelli di previsione, è il momento di iniziare il proce
 
 \subsection{Validazione del modelllo}
 Questo passaggio richiede l'ottimizzazione dei parametri del modello di previsione per ottenere prestazioni elevate. Utilizzando un metodo di ottimizzazione della convalida incrociata in cui il set di dati di training è suddiviso in dieci parti uguali. I data scientist addestrano modelli di previsione con diversi set di iperparametri. L'obiettivo di questo metodo è capire quale modello ha la previsione più accurata.
+Anche se l'obiettivo principale degli algoritmi di apprendimento automatico è simile in questo lavoro - imitare un sistema reale - ci sono più criteri di prestazione. Mentre alcuni metodi sono migliori per trovare lo schema generale, ignorando i picchi occasionali, altri possono fornire una migliore comprensione degli eventi sporadici. Quando si misurano le prestazioni di un esperimento statistico come una previsione della domanda, ci sono due dimensioni principali:
+\begin{enumerate}
+    \item Come descrive la tendenza generale del fenomeno
+    \item Come si comporta quando incontra possibili valori anomali casuali e rumore
+\end{enumerate}
+
+Nell'apprendimento automatico, la definizione del modello e dei suoi parametri/pesi dipende dai criteri di prestazione scelti per la fase di formazione. Criteri diversi determinano pesi del modello diversi.
+Le prestazioni dei modelli sono, di solito, valutate utilizzando le metriche statistiche standard $RMSE^{[\ref{appendix:RMSD}]}$ e $MAPE^{[\ref{appendix:MAPE}]}$. Tuttavia, altre metriche possono essere utili. L'errore medio (ME), chiamato anche bias medio, può dare un'idea se le previsioni sono al di sopra o al di sotto dell'obiettivo. Il coefficiente di determinazione R2 è una misura di come la differenza tra le osservazioni e le previsioni si rapporta alla differenza tra le osservazioni e la loro media. Può essere interpretato come la probabilità che nuovi valori vengano previsti correttamente.
 
 
 \subsection{Miglioramento}
 Quando si ricercano le migliori soluzioni aziendali, gli scienziati dei dati di solito sviluppano diversi modelli di apprendimento automatico. Poiché i modelli mostrano diversi livelli di accuratezza, gli scienziati scelgono quelli che soddisfano meglio le loro esigenze aziendali. La fase di miglioramento prevede l'ottimizzazione dei risultati analitici. Ad esempio, utilizzando tecniche di insieme di modelli, è possibile ottenere una previsione più accurata. In tal caso, l'accuratezza viene calcolata combinando i risultati di più modelli di previsione.
+
 
 \subsection{Distribuzione}
 Questa fase presuppone l'integrazione dei modelli di previsione nell'uso della produzione. Si consiglia inoltre di impostare una pipeline per aggregare nuovi dati da utilizzare per le prossime funzionalità di intelligenza artificiale. Ciò può far risparmiare molto lavoro di preparazione dei dati in progetti futuri. In questo modo aumenta anche la precisione e la varietà di ciò che potresti essere in grado di prevedere.
@@ -608,7 +614,6 @@ Quando si parla di stagionalità, essa può essere implementata nell'algoritmo i
 \end{enumerate}
 
 \paragraph*{Clustering dei dati:}
-Identificare e separare diversi modelli nei dati e utilizzare ciascuno di essi come set di dati indipendenti. Questo è noto come clustering e può essere ottenuto utilizzando algoritmi di apprendimento automatico.
 Nell'apprendimento non supervisionato, un problema comune è identificare e classificare correttamente un certo numero di classi identiche (cluster) presenti nei dati (Bishop 2006). All'inizio, il numero di cluster, k, è solitamente sconosciuto. Trovarlo può essere ottenuto eseguendo l'algoritmo di clustering per diversi valori di k e valutando i risultati per ciascun valore.\\
 Il numero ottimale di cluster è quello che ottimizza un determinato criterio, come la varianza tra osservazioni nello stesso cluster.
 Complessivamente, il numero di cluster e il modo in cui vengono trovati, la formulazione della distanza e l'implementazione dell'algoritmo di clustering stesso sono reciprocamente influenzati e diverse combinazioni di essi produrranno risultati diversi.\\
@@ -626,6 +631,9 @@ Come visto in precedenza i modelli da poter utilizzare sono molteplici:
     \item Rete Neurale Ricorrente (RNN)
     \item Rete neurale di memoria a lungo termine (LSTM)
 \end{itemize}
+
+Come mostrato in letteratura, tecniche diverse sono più adatte a sistemi diversi. Per questo motivo, non ci si aspetta di trovare una soluzione che si adatti perfettamente a tutti i set di dati o di trovare la soluzione perfetta per ciascuna metodologia. Tuttavia, si prevede di scoprire quali configurazioni del modello testate presentano i migliori risultati.
+Inoltre i vantaggi di ciascuna tecnica possono essere combinati attraverso una strategia ibrida di metodi paralleli, diluendo gli svantaggi.
 
 \paragraph*{Ensemble Learning:}
 Oltre a questi modelli discussi in precedenza c'è anche l'Ensemble Learning (EL), che è un'altra metodologia per aumentare le prestazioni del sistema.\\
@@ -664,32 +672,29 @@ Dicendo anche che gli LSTM sembrano essere più adatti a adattare o sovradimensi
 \chapter{Frameworks}
 Gli strumenti di orchestrazione del machine learning vengono utilizzati per automatizzare e gestire i workflows e l'infrastruttura della pipeline, con un'interfaccia semplice e collaborativa. Insieme alla gestione e alla creazione di workflows personalizzati e delle relative pipeline, questi strumenti ci aiutano anche a tracciare e monitorare i modelli per ulteriori analisi.
 Gli strumenti di orchestrazione rendono il processo di machine learning più semplice, più efficiente e aiutano i data scientist e i team di machine learning a concentrarsi su ciò che è necessario, piuttosto che sprecare risorse cercando di identificare i problemi prioritari.\\
-Cerchiamo, quindi, quali sono quei framework che meglio si adattano ai nostri case studies.
+Cerchiamo, quindi, quali sono quei framework che meglio si adattano ai nostri case study.
 
 \section{MetaFlow}
-Metaflow è una libreria Python di facile utilizzo che aiuta scienziati e ingegneri a creare e gestire progetti di data science reali, come nel caso della radiologia. Metaflow è stato originariamente sviluppato da Netflix per aumentare la produttività dei data scientist che lavorano su un'ampia varietà di progetti, dalle statistiche classiche al deep learning all'avanguardia.
+Metaflow è una libreria Python di facile utilizzo che aiuta scienziati e ingegneri a creare e gestire progetti di data science reali. Metaflow è stato originariamente sviluppato da Netflix per aumentare la produttività dei data scientist che lavorano su un'ampia varietà di progetti, dalle statistiche classiche al deep learning all'avanguardia.
 Metaflow fornisce un'API unificata allo stack dell'infrastruttura necessario per eseguire progetti di data science, dal prototipo alla produzione, ma non presenta un'interfaccia grafica per visualizzare e gestire i flussi di lavoro.
+Purtoppo però MetaFlow non offre una UI per visualizzare e gestire il workflow.\\
 
-\begin{center}
-    \includegraphics[width=7cm,height=7cm,keepaspectratio]{MetaFlow}
-\end{center}
+\begin{figure}[h!]
+    \begin{center}
+        \includegraphics[width=10cm,height=10cm,keepaspectratio]{MetaFlow}
+    \end{center}
+    \caption{Esempio di addestramento di due versioni di un modello in parallelo e scelta di quella con il punteggio più alto}
+    \label{fig:ex-MetaFlow}
+\end{figure}
 
-I data scientists possono strutturare il proprio flusso di lavoro come un grafico aciclico diretto di passaggi, come illustrato sopra. I passaggi possono essere codice Python arbitrario. In questo esempio ipotetico, il flusso addestra due versioni di un modello in parallelo e sceglie quella con il punteggio più alto. Anche per questo motivo si appresta al nostro caso. Per fare una predizione accurata, sarebbe conveniente addestrare varie versioni di un modello, o addiritura modelli differenti e scegliere il migliore.\\
+Con questo framework, i data scientists possono strutturare il proprio flusso di lavoro come un grafico aciclico diretto di passaggi, come illustrato sopra. I passaggi possono essere codice Python arbitrario. In questo esempio ipotetico, il flusso addestra due versioni di un modello in parallelo e sceglie quella con il punteggio più alto. Anche per questo motivo si appresta al nostro caso.\\
+Per fare una predizione accurata della domanda, come già detto precedentemente, è conveniente addestrare varie versioni di un modello per scoprire quali configurazioni del modello testate presentano i migliori risultati, o addiritura addestrare in parallelo vari tipi di modello.\\
 In superficie, questo non sembra molto. Esistono molti framework esistenti, come Apache Airflow o Luigi, che consentono l'esecuzione di DAG costituiti da codice Python arbitrario. Il "problema" è nei molti dettagli accuratamente progettati di Metaflow: ad esempio, nota come nell'esempio sopra i dati e i modelli sono memorizzati come normali variabili di istanza Python. Funzionano anche se il codice viene eseguito su una piattaforma di calcolo distribuita, supportata da Metaflow per impostazione predefinita, grazie all'archivio di artefatti indirizzato al contenuto integrato di Metaflow. In molti altri framework, il caricamento e l'archiviazione degli artefatti è lasciato come esercizio per l'utente, che lo costringe a decidere cosa dovrebbe e non dovrebbe essere mantenuto. Metaflow rimuove questo sovraccarico cognitivo.
 Metaflow è ricco di dettagli incentrati sull'uomo come questo, che mirano tutti ad aumentare la produttività dei data scientist.\\
-\\
-Metaflow segue il dataflow paradigm che modella un programma come un grafo diretto di operazioni. Questo è un paradigma naturale per esprimere le pipeline di elaborazione dei dati, in particolare l'apprendimento automatico.
-Chiamiamo il grafico delle operazioni un flusso. Definisci le operazioni, chiamate passaggi, che sono nodi del grafico e contengono le transizioni ai passaggi successivi, che fungono da archi.\\
-Metaflow imposta alcuni vincoli sulla struttura del grafico. Per cominciare, ogni flusso ha bisogno di un passaggio chiamato \emph{inizio} e un passaggio chiamato \emph{fine}. Un'esecuzione del flusso, che chiamiamo esecuzione, inizia all'\emph{inizio}. L'esecuzione ha esito positivo se il passaggio finale \emph{fine} termina correttamente.
-Quello che succede tra l'\emph{inizio} e la \emph{fine} dipende da te.\\
-Puoi costruire il grafico intermedio utilizzando una combinazione arbitraria dei seguenti tre tipi di transizioni supportati da Metaflow:
-\begin{itemize}
-    \item Linear 
-    \item Branch
-    \item Foreach
-\end{itemize}
 
-Questo framework si sposa molto bene con il nostro obiettivo perché:
+\subsection{Vantaggi}
+Metaflow segue il dataflow paradigm che modella un programma come un grafo diretto di operazioni. Questo è un paradigma naturale per esprimere le pipeline di elaborazione dei dati, in particolare l'apprendimento automatico.\\
+I vantaggi principali di questo framework sono:
 \begin{itemize}
     \item Fornisce un'API altamente utilizzabile per strutturare il codice come flusso di lavoro, ovvero come grafico diretto dei passaggi (usabilità).
     \item Mantiene un'istantanea immutabile di dati, codice e dipendenze esterne necessarie per eseguire ogni passaggio (riproducibilità).
@@ -697,8 +702,9 @@ Questo framework si sposa molto bene con il nostro obiettivo perché:
     \item Registra i metadati sulle precedenti esecuzioni e rendili facilmente accessibili (usabilità, riproducibilità).
 \end{itemize}
 
+
 \section{ZenML}
-ZenML è un framework MLOps estensibile e open source per l'utilizzo di pipeline di Machine Learning pronte per la produzione, in modo semplice. Al suo interno, ZenML organizzerà le pipeline dei tuoi esperimenti dall'acquisizione dei dati alla suddivisione, pre-elaborazione, formazione, fino alla valutazione dei risultati e persino alla pubblicazione.
+ZenML è un framework MLOps estensibile e open source per l'utilizzo di pipeline di Machine Learning pronte per la produzione, in modo semplice. Al suo interno, ZenML organizzerà le pipeline dei tuoi esperimenti dall'acquisizione dei dati alla suddivisione, pre-elaborazione, formazione, fino alla valutazione dei risultati e persino alla pubblicazione, tutto grazie anche ad una UI che permette la visualizzazione e la gestione del workflow.
 Sebbene esistano altre soluzioni di pipeline per gli esperimenti di Machine Learning, ZenML si concentra su quanto segue:
 \begin{itemize}
     \item Semplicità.
@@ -706,8 +712,16 @@ Sebbene esistano altre soluzioni di pipeline per gli esperimenti di Machine Lear
     \item Integrazioni.
 \end{itemize}
 
+\begin{figure}[h!]
+    \begin{center}
+        \includegraphics[width=8cm,height=8cm,keepaspectratio]{ZenML-schema}
+    \end{center}
+    \caption{Pipeline con ZenML}
+    \label{fig:ZenML-schema}
+\end{figure}
+
 \subsection{Problemi risolti da ZenML}
-ZenML risolve il problema di portare in produzione l'apprendimento automatico nei modelli. Dovresti usare ZenML se lotti con:
+ZenML risolve il problema di portare in produzione l'apprendimento automatico nei modelli. è conveniente usare ZenML se si lotta con:
 \begin{itemize}
     \item Riproduzione dei risultati della formazione in produzione.
     \item Gestione dei metadati ML, inclusi dati, codice e versionamento del modello.
@@ -719,19 +733,41 @@ ZenML risolve il problema di portare in produzione l'apprendimento automatico ne
     \item Tenere il passo con il panorama degli strumenti ML in modo coerente.
 \end{itemize}
 
-Da aggiustare:\\
-Nel caso del demand forecasting, come già detto in precedenza, potrebbe esserci la possibilità di ridurre il set di dati al fine di ridurre anche il tempo di addestramento. Questo framework consente un'ottimio ridimensionamento del set di dati.
+Molto importante per noi è la riutilizzazione del codice e il ridimensionamento del set di dati.\\
+Nel caso del demand forecasting, come già detto in precedenza, potrebbe esserci la possibilità di ridurre il set di dati al fine di ridurre anche il tempo di addestramento.\\
+Nel caso dell'AI in radiology, il riutilizzo del codice è fondamentale. Come abbiamo visto precedentemente per estrarre le caratteristiche da un immagine viene sempre utilizzata una CNN, a questo punto quel modulo potrà essere quasi sempre riutilizzato in tutti i casi di estrazione delle caratteristiche da un immagine.\\
 
-Nel caso dell'AI in radiology, il riutilizzo del codice è fondamentale. Come abbiamo visto precedentemente per estrarre le caratteristiche da un immagine viene sempre utilizzata una CNN, a questo punto quel modulo potrà essere quasi sempre riutilizzato in tutti i casi di estrazione delle caratteristiche da un immagine.
+\subsection{Vantaggi}
+Elenco di seguito i vantaggi, di ZenML, a cui siamo interessati:
+\begin{itemize}
+    \item Riproducibilità garantita degli esperimenti di addestramento tramite:
+    \begin{itemize}
+        \item Dati versione, codice e modelli
+        \item Esperimenti monitorati automaticamente
+        \item Configurazioni dichiarative della pipeline
+    \end{itemize}
+    \item Possibilità di passare rapidamente dall'ambiente locale a quello cloud (ad es. orchestrazione di pipeline su kubernetes)
+    \item Astrazioni integrate ed estensibili per:
+    \begin{itemize}
+        \item Pre-elaborazione distribuita su grandi set di dati
+        \item Lavori di formazione basati su cloud        
+        \item Servizio modello
+    \end{itemize}
+\end{itemize}
+
 
 \section{MLRun}
 MLRun è un framework MLOps open source che offre un approccio integrativo alla gestione delle pipeline di machine learning dallo sviluppo iniziale allo sviluppo del modello fino alla distribuzione completa della pipeline in produzione. MLRun offre un comodo livello di astrazione per un'ampia varietà di stack tecnologici, consentendo ai data engineer e ai data scientist di definire la funzionalità e i modelli.\\
-L'architettura MLRun
-\begin{center}
-    \includegraphics[width=7cm,height=7cm,keepaspectratio]{MLRun}
-\end{center}
 
-\subsection{Vantaggi chiave}
+\begin{figure}[h!]
+    \begin{center}
+        \includegraphics[width=12cm,height=12cm,keepaspectratio]{MLRun}
+    \end{center}
+    \caption{architettura di MLRun}
+    \label{fig:MLRun}
+\end{figure}
+
+\subsection{Vantaggi}
 MLRun offre i seguenti vantaggi chiave:
 
 \begin{itemize}
@@ -764,14 +800,33 @@ run = run_local(task)
 \end{lstlisting}
 
 Questo codice mostra come indicare a MLRun di eseguire la stessa attività mentre si scelgono i parametri da più elenchi (ricerca a griglia). MLRun quindi registra tutte le esecuzioni, ma contrassegna solo l'esecuzione con perdita minima come risultato selezionato.\\
-Ed è proprio per questo che è un ottimo candidato per il nostro scopo. Data la mole di dati, per quanto riguarda il demand forecasting, il parallelismo rappresenta un ottima soluzione al problema di allenare una rete con tantissimi dati, altrimenti ci vorrebbero addiritura giorni.\\
+Ed è proprio per questo che è un ottimo candidato per il nostro scopo. Data la mole di dati, per quanto riguarda il demand forecasting, il parallelismo rappresenta un ottima soluzione al problema di allenare una rete con tantissimi dati, altrimenti ci potrebbero volere addiritura giorni.\\
 \\
 MLRun ha anche un'interfaccia utente grafica (MLRun Dashbord) per lavorare e visualizzare i dati
-\begin{center}
-    \includegraphics[width=15cm,height=15cm,keepaspectratio]{MLRun Dashbord}
-\end{center}
+\begin{figure}[h!]
+    \begin{center}
+        \includegraphics[width=10cm,height=10cm,keepaspectratio]{MLRun Dashbord}
+    \end{center}
+    \caption{MLRun Dashbord}
+    \label{fig:MLRun}
+\end{figure}
 
 \chapter{Conclusioni}
+In questo lavoro di tesi abbiamo cercato di capire se fosse possibile la generazione automatica di pipeline di Machine Learing.\\
+Abbiamo utilizzato un approccio bottom-up, cercando due case study a piacimento. Dopo aver visionato differenti articoli ed estrapolato un workflow per ogni caso, siamo andati ad analizzare le versatilità e le invarianti tra i vari approcci proposti in letteratura.
+Abbiamo notato come il focus dei diversi modelli trovati può essere differente. Ci sono modelli che si focalizzano sui dati, ovvero raccolta e pretrattamento, ce ne altri invece che si focalizzano sulla parte del modello, ovvero costruzione, addestramento e testing.
+Nel primo caso (AI in radiology) i dati hanno sempre la stessa struttura e c'è anche la possibilità che venga eseguito un aumento del set di dati per la poca disponibilità, ma c'è un grande lavoro di pretrattamento da fare, dato che la qualità delle immagini è fondamentale in questo campo. Il modello è poco versatile, abbiamo sempre trovato una CNN per l'estrazione delle caratteristiche da un immagine e quasi sempre l'utilizzo di un RNN (preferibilmente una LSTM) per l'estrazione delle parole dalle caratteristiche.\\
+Nel secondo caso (Demand forecasting) i dati sono principalmente dati storici e possono avere strutture totalmente differenti (anche strutturati e non), soprattutto in base all'obiettivo della predizione e al tipo di modello utilizzato, con pochissimo pretrattamento dei dati se non riduzione del set di dati. Il modello è molto versatile, come abbiamo già visto ci sono svariati modelli che possono essere utilizzati, nell'ultimo periodo il deep learning sta prendendo sempre più piede.\\
+Siamo andati poi alla ricerca di qualche framework per capire se era possibile implementare la nostra pipeline, per caso study, con tutte le invarianti e versatilità dei vari modelli.\\
+Abbiamo selezionato tre framework molto simili tra loro ma con qualche piccola differenza:
+\begin{itemize}
+    \item MetaFlow
+    \item ZenML
+    \item MLRun
+\end{itemize}
+
+Abbiamo selezionato questi invece che altri perché rispecchiavano di più quelli che erano i punti chiave delle pipeline, ovvero: riutilizzo del codice, ridimensionamento dell'addestramento/inferenza ML a set di dati di grandi dimensioni e parallelismo.
+
 
 \begin{appendices}
 \section{Recurrent neural network}
@@ -818,6 +873,19 @@ Un modello ARIMA è caratterizzato da 3 termini: p, d, q dove,
 \end{itemize}
 
 Se una serie temporale ha modelli stagionali, è necessario aggiungere termini stagionali e diventa SARIMA, abbreviazione di "Seasonal ARIMA". Più su quello una volta che finiamo ARIMA. Come modello precedente, costruirò un modello separato per ogni coppia di articoli del negozio. Quindi l'idea principale è trovare i parametri giusti per i nostri modelli.
+
+\section{Root-mean-square deviation (RMSD)}
+\label{appendix:RMSD}
+La deviazione quadratica media (RMSD) o errore quadratico medio (RMSE) è una misura utilizzata di frequente delle differenze tra i valori (campioni o valori della popolazione) previsti da un modello o da uno stimatore e i valori osservati. L'RMSD rappresenta la radice quadrata del secondo momento campionario delle differenze tra valori previsti e valori osservati o la media quadratica di queste differenze. Queste deviazioni sono chiamate residui quando i calcoli vengono eseguiti sul campione di dati utilizzato per la stima e sono chiamate errori (o errori di previsione) quando vengono calcolati fuori campione. L'RMSD serve ad aggregare le grandezze degli errori nelle previsioni per vari punti dati in un'unica misura del potere predittivo. RMSD è una misura di accuratezza, per confrontare gli errori di previsione di diversi modelli per un particolare set di dati e non tra set di dati, poiché dipende dalla scala.[1]
+
+\section{Mean absolute percentage error (MAPE)}
+\label{appendix:MAPE}
+L'errore percentuale medio assoluto (MAPE), noto anche come deviazione percentuale media assoluta (MAPD), è una misura dell'accuratezza della previsione di un metodo di previsione nelle statistiche. Di solito esprime l'accuratezza come un rapporto definito dalla formula:
+\begin{equation}
+    {\displaystyle MAPE = \frac{100}{n} \sum\limits_{t=1}^{n} \vert \frac{A_t - F_t}{A_t} \vert}
+\end{equation}
+
+dove $A_t$ è il valore effettivo e $F_t$ è il valore previsto. La loro differenza viene divisa per il valore effettivo $A_t$. Il valore assoluto in questo rapporto viene sommato per ogni momento previsto e diviso per il numero di punti montati $n$.
 
 \end{appendices}
 

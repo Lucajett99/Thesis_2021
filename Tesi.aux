@@ -11,7 +11,6 @@
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{toc}{\contentsline {section}{\numberline {2.1}Overview}{4}{}\protected@file@percent }
 \citation{singh2019chest}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.1}Deep Learning}{5}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {2.2}Workflow}{5}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}Raccolta dei dati}{5}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{Approvazione istituzionale}{6}{}\protected@file@percent }
@@ -20,9 +19,10 @@
 \@writefile{toc}{\contentsline {subsubsection}{Esplorazione dei dati e controllo qualità}{7}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{Etichettatura dei dati per l'addestramento}{7}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{Esclusione dei dati}{7}{}\protected@file@percent }
+\citation{singh2019chest}
 \citation{pennington2014glove}
 \@writefile{toc}{\contentsline {subsubsection}{Strategie di campionamento dei set di dati}{8}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Transfer learning}{9}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Transfer learning}{8}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.3}Creazione del modello}{9}{}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Schema a blocchi di un framework encoder-decoder\relax }}{9}{}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
@@ -30,18 +30,18 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Un framework Encoder-Decoder per la generazione di referti radiologici da immagini edical. t = 0, · · · , t = N rappresenta le iterazioni della ricorrenza LSTM.\relax }}{10}{}\protected@file@percent }
 \newlabel{fig:LSTM}{{2.2}{10}}
 \@writefile{toc}{\contentsline {subsubsection}{Encoder}{10}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Decoder}{11}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Decoder}{10}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.4}Formazione del modello}{11}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.5}Analisi e metriche}{11}{}\protected@file@percent }
 \citation{montagnon2020deep}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Schema schematico di una cella LSTM\relax }}{12}{}\protected@file@percent }
 \newlabel{fig:LSTM-schema}{{2.3}{12}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.5}Analisi e metriche}{12}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.6}Distribuzione}{12}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {2.3}Analisi e conclusioni}{13}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}I dati}{13}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Il modello}{14}{}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces Divisione del set di dati in set di dati di addestramento, convalida e test. Si consiglia di eseguire la suddivisione all'inizio del flusso di lavoro, mantenendo i dati di test nascosti al modello fino alla valutazione finale delle prestazioni\relax }}{15}{}\protected@file@percent }
-\newlabel{fig:data-sampling}{{2.4}{15}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Il modello}{15}{}\protected@file@percent }
+\newlabel{fig:data-sampling-radiology}{{2.4}{15}}
 \@writefile{toc}{\contentsline {subsubsection}{Tipi di apprendimento}{16}{}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces Tipi di apprendimento. Con l'apprendimento supervisionato, il numero di input (immagini TC in questo esempio) è uguale al numero di obiettivi (stato di malignità di una lesione qui). Con semi-supervisionato, il numero di input è maggiore del numero di obiettivi (il set di dati include campioni non etichettati). Con l'apprendimento non supervisionato, nessuno degli input viene etichettato (ad esempio, clustering, apprendimento multiplo, macchine di Boltzmann limitate). N.A. indica informazioni non disponibili\relax }}{17}{}\protected@file@percent }
 \newlabel{fig:type-of-learning}{{2.5}{17}}
@@ -67,51 +67,65 @@
 \@writefile{toc}{\contentsline {subsubsection}{Rete neurale di memoria a lungo termine (LSTM)}{27}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.4}Formazione del modello}{28}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.5}Validazione del modelllo}{28}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.6}Miglioramento}{28}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.7}Distribuzione}{28}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.6}Miglioramento}{29}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.7}Distribuzione}{29}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {3.3}Analisi e conclusioni}{29}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}I dati}{29}{}\protected@file@percent }
 \citation{makridakis2018statistical}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Il modello}{31}{}\protected@file@percent }
 \citation{makridakis2018statistical}
 \citation{makridakis2018statistical}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}Conclusioni}{32}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}Conclusioni}{33}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {chapter}{\numberline {4}Frameworks}{34}{}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{toc}{\contentsline {section}{\numberline {4.1}MetaFlow}{34}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Esempio di addestramento di due versioni di un modello in parallelo e scelta di quella con il punteggio più alto\relax }}{35}{}\protected@file@percent }
+\newlabel{fig:ex-MetaFlow}{{4.1}{35}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Vantaggi}{35}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {4.2}ZenML}{36}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Problemi risolti da ZenML}{36}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}MLRun}{37}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Vantaggi chiave}{37}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Conclusioni}{40}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Pipeline con ZenML\relax }}{37}{}\protected@file@percent }
+\newlabel{fig:ZenML-schema}{{4.2}{37}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Vantaggi}{37}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}MLRun}{38}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces architettura di MLRun\relax }}{38}{}\protected@file@percent }
+\newlabel{fig:MLRun}{{4.3}{38}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Vantaggi}{38}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces MLRun Dashbord\relax }}{40}{}\protected@file@percent }
+\newlabel{fig:MLRun}{{4.4}{40}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Conclusioni}{41}{}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{Appendices}{41}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {.1}Recurrent neural network}{42}{}\protected@file@percent }
-\newlabel{appendix:RNN}{{.1}{42}}
-\@writefile{toc}{\contentsline {section}{\numberline {.2}Convolutional neural network}{42}{}\protected@file@percent }
-\newlabel{appendix:CNN}{{.2}{42}}
-\@writefile{toc}{\contentsline {section}{\numberline {.3}Long-Short Term Memory}{42}{}\protected@file@percent }
-\newlabel{appendix:LSTM}{{.3}{42}}
+\@writefile{toc}{\contentsline {chapter}{Appendices}{43}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {.1}Recurrent neural network}{44}{}\protected@file@percent }
+\newlabel{appendix:RNN}{{.1}{44}}
+\@writefile{toc}{\contentsline {section}{\numberline {.2}Convolutional neural network}{44}{}\protected@file@percent }
+\newlabel{appendix:CNN}{{.2}{44}}
+\@writefile{toc}{\contentsline {section}{\numberline {.3}Long-Short Term Memory}{44}{}\protected@file@percent }
+\newlabel{appendix:LSTM}{{.3}{44}}
 \citation{itwiki:123095653}
 \citation{itwiki:119581182}
-\@writefile{toc}{\contentsline {section}{\numberline {.4}Power Trasformation (Box-Cox)}{43}{}\protected@file@percent }
-\newlabel{appendix:Box-Cox}{{.4}{43}}
-\@writefile{toc}{\contentsline {section}{\numberline {.5}Docker}{43}{}\protected@file@percent }
-\newlabel{appendix:Docker}{{.5}{43}}
-\@writefile{toc}{\contentsline {section}{\numberline {.6}Kubernetes}{43}{}\protected@file@percent }
-\newlabel{appendix:Kubernetes}{{.6}{43}}
-\@writefile{toc}{\contentsline {section}{\numberline {.7}Exponential Smoothing di Holt Winter}{43}{}\protected@file@percent }
-\newlabel{appendix:ETS}{{.7}{43}}
+\@writefile{toc}{\contentsline {section}{\numberline {.4}Power Trasformation (Box-Cox)}{45}{}\protected@file@percent }
+\newlabel{appendix:Box-Cox}{{.4}{45}}
+\@writefile{toc}{\contentsline {section}{\numberline {.5}Docker}{45}{}\protected@file@percent }
+\newlabel{appendix:Docker}{{.5}{45}}
+\@writefile{toc}{\contentsline {section}{\numberline {.6}Kubernetes}{45}{}\protected@file@percent }
+\newlabel{appendix:Kubernetes}{{.6}{45}}
+\@writefile{toc}{\contentsline {section}{\numberline {.7}Exponential Smoothing di Holt Winter}{45}{}\protected@file@percent }
+\newlabel{appendix:ETS}{{.7}{45}}
+\@writefile{toc}{\contentsline {section}{\numberline {.8}ARIMA/SARIMA}{46}{}\protected@file@percent }
+\newlabel{appendix:ARIMA}{{.8}{46}}
+\@writefile{toc}{\contentsline {section}{\numberline {.9}Root-mean-square deviation (RMSD)}{46}{}\protected@file@percent }
+\newlabel{appendix:RMSD}{{.9}{46}}
 \bibstyle{plain}
 \bibdata{Bibliography}
-\@writefile{toc}{\contentsline {section}{\numberline {.8}ARIMA/SARIMA}{44}{}\protected@file@percent }
-\newlabel{appendix:ARIMA}{{.8}{44}}
+\@writefile{toc}{\contentsline {section}{\numberline {.10}Mean absolute percentage error (MAPE)}{47}{}\protected@file@percent }
+\newlabel{appendix:MAPE}{{.10}{47}}
 \bibcite{makridakis2018statistical}{1}
 \bibcite{montagnon2020deep}{2}
 \bibcite{pennington2014glove}{3}
 \bibcite{singh2019chest}{4}
 \bibcite{itwiki:123095653}{5}
 \bibcite{itwiki:119581182}{6}
-\gdef \@abspage@last{46}
+\gdef \@abspage@last{49}
