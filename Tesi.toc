@@ -22,48 +22,53 @@
 \contentsline {section}{\numberline {2.3}Analisi e conclusioni}{13}{}%
 \contentsline {subsection}{\numberline {2.3.1}I dati}{13}{}%
 \contentsline {subsection}{\numberline {2.3.2}Il modello}{14}{}%
-\contentsline {subsubsection}{Tipi di apprendimento}{16}{}%
-\contentsline {subsection}{\numberline {2.3.3}Conclusioni}{18}{}%
-\contentsline {chapter}{\numberline {3}Demand forecasting}{19}{}%
-\contentsline {section}{\numberline {3.1}Overview}{19}{}%
-\contentsline {section}{\numberline {3.2}Workflow}{20}{}%
-\contentsline {subsection}{\numberline {3.2.1}Raccolta dati}{20}{}%
-\contentsline {subsection}{\numberline {3.2.2}Comprensione e preelaborazione dei dati}{21}{}%
-\contentsline {subsubsection}{Parametri di qualità dei dati}{21}{}%
-\contentsline {subsubsection}{Preelaborazione dei dati}{21}{}%
-\contentsline {subsection}{\numberline {3.2.3}Costruzione del modello}{22}{}%
-\contentsline {subsubsection}{Perceptron multistrato (MLP)}{23}{}%
-\contentsline {subsubsection}{Rete neurale bayesiana (BNN)}{24}{}%
-\contentsline {subsubsection}{Reti neurali di regressione generalizzata (GRNN)}{25}{}%
-\contentsline {subsubsection}{Regressione K-Nearest Neighbor (KNN)}{26}{}%
-\contentsline {subsubsection}{Regressione del vettore di supporto (SVR)}{26}{}%
-\contentsline {subsubsection}{Rete Neurale Ricorrente (RNN)}{27}{}%
+\contentsline {subsubsection}{Tipi di apprendimento}{15}{}%
+\contentsline {subsection}{\numberline {2.3.3}Conclusioni}{17}{}%
+\contentsline {chapter}{\numberline {3}Demand forecasting}{18}{}%
+\contentsline {section}{\numberline {3.1}Overview}{18}{}%
+\contentsline {section}{\numberline {3.2}Workflow}{19}{}%
+\contentsline {subsection}{\numberline {3.2.1}Raccolta dati}{19}{}%
+\contentsline {subsection}{\numberline {3.2.2}Comprensione e preelaborazione dei dati}{20}{}%
+\contentsline {subsubsection}{Parametri di qualità dei dati}{20}{}%
+\contentsline {subsubsection}{Preelaborazione dei dati}{20}{}%
+\contentsline {subsection}{\numberline {3.2.3}Costruzione del modello}{21}{}%
+\contentsline {subsubsection}{Perceptron multistrato (MLP)}{22}{}%
+\contentsline {subsubsection}{Rete neurale bayesiana (BNN)}{23}{}%
+\contentsline {subsubsection}{Reti neurali di regressione generalizzata (GRNN)}{24}{}%
+\contentsline {subsubsection}{Regressione K-Nearest Neighbor (KNN)}{25}{}%
+\contentsline {subsubsection}{Regressione del vettore di supporto (SVR)}{25}{}%
+\contentsline {subsubsection}{Rete Neurale Ricorrente (RNN)}{26}{}%
 \contentsline {subsubsection}{Rete neurale di memoria a lungo termine (LSTM)}{27}{}%
-\contentsline {subsection}{\numberline {3.2.4}Formazione del modello}{28}{}%
-\contentsline {subsection}{\numberline {3.2.5}Validazione del modelllo}{28}{}%
-\contentsline {subsection}{\numberline {3.2.6}Miglioramento}{29}{}%
-\contentsline {subsection}{\numberline {3.2.7}Distribuzione}{29}{}%
-\contentsline {section}{\numberline {3.3}Analisi e conclusioni}{29}{}%
-\contentsline {subsection}{\numberline {3.3.1}I dati}{29}{}%
-\contentsline {subsection}{\numberline {3.3.2}Il modello}{31}{}%
-\contentsline {subsection}{\numberline {3.3.3}Conclusioni}{33}{}%
-\contentsline {chapter}{\numberline {4}Frameworks}{34}{}%
-\contentsline {section}{\numberline {4.1}MetaFlow}{34}{}%
-\contentsline {subsection}{\numberline {4.1.1}Vantaggi}{35}{}%
-\contentsline {section}{\numberline {4.2}ZenML}{36}{}%
-\contentsline {subsection}{\numberline {4.2.1}Problemi risolti da ZenML}{36}{}%
-\contentsline {subsection}{\numberline {4.2.2}Vantaggi}{37}{}%
-\contentsline {section}{\numberline {4.3}MLRun}{38}{}%
-\contentsline {subsection}{\numberline {4.3.1}Vantaggi}{38}{}%
-\contentsline {chapter}{\numberline {5}Conclusioni}{41}{}%
-\contentsline {chapter}{Appendices}{43}{}%
-\contentsline {section}{\numberline {.1}Recurrent neural network}{44}{}%
-\contentsline {section}{\numberline {.2}Convolutional neural network}{44}{}%
-\contentsline {section}{\numberline {.3}Long-Short Term Memory}{44}{}%
-\contentsline {section}{\numberline {.4}Power Trasformation (Box-Cox)}{45}{}%
-\contentsline {section}{\numberline {.5}Docker}{45}{}%
-\contentsline {section}{\numberline {.6}Kubernetes}{45}{}%
-\contentsline {section}{\numberline {.7}Exponential Smoothing di Holt Winter}{45}{}%
-\contentsline {section}{\numberline {.8}ARIMA/SARIMA}{46}{}%
-\contentsline {section}{\numberline {.9}Root-mean-square deviation (RMSD)}{46}{}%
-\contentsline {section}{\numberline {.10}Mean absolute percentage error (MAPE)}{47}{}%
+\contentsline {subsection}{\numberline {3.2.4}Formazione del modello}{27}{}%
+\contentsline {subsection}{\numberline {3.2.5}Validazione del modelllo}{27}{}%
+\contentsline {subsection}{\numberline {3.2.6}Miglioramento}{28}{}%
+\contentsline {subsection}{\numberline {3.2.7}Distribuzione}{28}{}%
+\contentsline {section}{\numberline {3.3}Analisi e conclusioni}{28}{}%
+\contentsline {subsection}{\numberline {3.3.1}I dati}{28}{}%
+\contentsline {subsection}{\numberline {3.3.2}Il modello}{30}{}%
+\contentsline {subsection}{\numberline {3.3.3}Conclusioni}{32}{}%
+\contentsline {chapter}{\numberline {4}Frameworks}{33}{}%
+\contentsline {section}{\numberline {4.1}MetaFlow}{33}{}%
+\contentsline {subsection}{\numberline {4.1.1}Vantaggi}{34}{}%
+\contentsline {section}{\numberline {4.2}ZenML}{35}{}%
+\contentsline {subsection}{\numberline {4.2.1}Problemi risolti da ZenML}{35}{}%
+\contentsline {subsection}{\numberline {4.2.2}Vantaggi}{36}{}%
+\contentsline {section}{\numberline {4.3}MLRun}{37}{}%
+\contentsline {subsection}{\numberline {4.3.1}Vantaggi}{37}{}%
+\contentsline {chapter}{\numberline {5}Conclusioni}{40}{}%
+\contentsline {chapter}{Appendices}{42}{}%
+\contentsline {section}{\numberline {.1}Recurrent neural network}{43}{}%
+\contentsline {section}{\numberline {.2}Convolutional neural network}{43}{}%
+\contentsline {section}{\numberline {.3}Long-Short Term Memory}{43}{}%
+\contentsline {section}{\numberline {.4}Gated Recurrent Units (GRU)}{44}{}%
+\contentsline {section}{\numberline {.5}Natural language processing (NLP)}{44}{}%
+\contentsline {section}{\numberline {.6}Neuro-linguistic programming (PNL)}{44}{}%
+\contentsline {section}{\numberline {.7}Power Trasformation (Box-Cox)}{44}{}%
+\contentsline {section}{\numberline {.8}Docker}{45}{}%
+\contentsline {section}{\numberline {.9}Kubernetes}{45}{}%
+\contentsline {section}{\numberline {.10}Exponential Smoothing di Holt Winter}{45}{}%
+\contentsline {section}{\numberline {.11}ARIMA/SARIMA}{45}{}%
+\contentsline {section}{\numberline {.12}Root-mean-square deviation (RMSD)}{46}{}%
+\contentsline {section}{\numberline {.13}Mean absolute percentage error (MAPE)}{46}{}%
+\contentsline {section}{\numberline {.14}DICOM}{47}{}%
+\contentsline {section}{\numberline {.15}PACS}{47}{}%

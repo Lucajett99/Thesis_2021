@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.9.5)  27 SEP 2021 00:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.9.5)  27 SEP 2021 11:15
 entering extended mode
 **c:/Users/dino9/Desktop/UNI/LAUREA/Thesis_2021/Tesi.tex
 (c:/Users/dino9/Desktop/UNI/LAUREA/Thesis_2021/Tesi.tex
@@ -502,7 +502,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 169--175
  []
 
 [7] [8]
-<./images//Encoder-Decoder.png, id=40, 401.70074pt x 96.96225pt>
+<./images//Encoder-Decoder.png, id=43, 401.70074pt x 96.96225pt>
 File: ./images//Encoder-Decoder.png Graphic file (type png)
 <use ./images//Encoder-Decoder.png>
 Package pdftex.def Info: ./images//Encoder-Decoder.png  used on input line 191.
@@ -531,64 +531,64 @@ Underfull \hbox (badness 10000) in paragraph at lines 258--259
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 261--283
+Underfull \hbox (badness 10000) in paragraph at lines 261--282
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 261--283
+Underfull \hbox (badness 10000) in paragraph at lines 261--282
 
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 289--290
+Underfull \hbox (badness 10000) in paragraph at lines 288--289
 
  []
 
 <./images//Data_radiology.jpg, id=64, 684.75826pt x 360.74776pt>
 File: ./images//Data_radiology.jpg Graphic file (type jpg)
 <use ./images//Data_radiology.jpg>
-Package pdftex.def Info: ./images//Data_radiology.jpg  used on input line 293.
+Package pdftex.def Info: ./images//Data_radiology.jpg  used on input line 292.
 (pdftex.def)             Requested size: 284.52463pt x 149.89467pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--307
+Underfull \hbox (badness 10000) in paragraph at lines 299--306
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--307
+Underfull \hbox (badness 10000) in paragraph at lines 299--306
 
  []
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 309--314
+Underfull \hbox (badness 10000) in paragraph at lines 308--314
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 309--314
+Underfull \hbox (badness 10000) in paragraph at lines 308--314
 
  []
 
-[15 <./images//Data_radiology.jpg>] [16]
-<./images//Type-of-learning.jpg, id=74, 682.34924pt x 260.77425pt>
+[15 <./images//Data_radiology.jpg>]
+<./images//Type-of-learning.jpg, id=71, 682.34924pt x 260.77425pt>
 File: ./images//Type-of-learning.jpg Graphic file (type jpg)
 <use ./images//Type-of-learning.jpg>
-Package pdftex.def Info: ./images//Type-of-learning.jpg  used on input line 318.
+Package pdftex.def Info: ./images//Type-of-learning.jpg  used on input line 317.
 (pdftex.def)             Requested size: 341.43408pt x 130.48627pt.
- [17 <./images//Type-of-learning.jpg>] [18]
+ [16 <./images//Type-of-learning.jpg>] [17]
 Capitolo 3.
-[19
+[18
 
-] [20] [21]
+] [19] [20]
 Overfull \hbox (4.39389pt too wide) in paragraph at lines 406--407
 []\OT1/cmr/m/n/12 Combinazione dei tre pre-ce-den-ti: i van-tag-gi del-le sin-go-le tec-ni-che di pre-elaborazione
  []
 
-<./images//Data_forecast.jpg, id=91, 541.42274pt x 281.853pt>
+<./images//Data_forecast.jpg, id=88, 541.42274pt x 281.853pt>
 File: ./images//Data_forecast.jpg Graphic file (type jpg)
 <use ./images//Data_forecast.jpg>
 Package pdftex.def Info: ./images//Data_forecast.jpg  used on input line 415.
@@ -596,11 +596,11 @@ Package pdftex.def Info: ./images//Data_forecast.jpg  used on input line 415.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[22] [23 <./images//Data_forecast.jpg>] [24] [25]
+[21] [22 <./images//Data_forecast.jpg>] [23] [24]
 
 LaTeX Warning: Command \textellipsis invalid in math mode on input line 518.
 
-[26] [27] [28]
+[25] [26] [27]
 Underfull \hbox (badness 10000) in paragraph at lines 580--582
 
  []
@@ -610,7 +610,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 584--587
 
  []
 
-[29]
+[28]
 Underfull \hbox (badness 10000) in paragraph at lines 596--597
 
  []
@@ -620,17 +620,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 607--611
 
  []
 
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 617--622
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 617--622
+
+ []
+
 [30]
-Underfull \hbox (badness 10000) in paragraph at lines 617--622
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 617--622
-
- []
-
-[31]
 Underfull \hbox (badness 10000) in paragraph at lines 645--646
 
  []
@@ -640,39 +640,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 655--657
 
  []
 
+[31]
+Underfull \hbox (badness 10000) in paragraph at lines 659--669
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 659--669
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 659--669
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 659--669
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 659--669
+
+ []
+
 [32]
-Underfull \hbox (badness 10000) in paragraph at lines 659--669
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 659--669
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 659--669
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 659--669
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 659--669
-
- []
-
-[33]
 Capitolo 4.
 
 Underfull \hbox (badness 10000) in paragraph at lines 678--681
 
  []
 
-<./images//MetaFlow.png, id=134, 1537.745pt x 891.33pt>
+<./images//MetaFlow.png, id=131, 1537.745pt x 891.33pt>
 File: ./images//MetaFlow.png Graphic file (type png)
 <use ./images//MetaFlow.png>
 Package pdftex.def Info: ./images//MetaFlow.png  used on input line 684.
@@ -685,10 +685,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 690--694
 
  []
 
-[34
+[33
 
-] [35 <./images//MetaFlow.png (PNG copy)>]
-<./images//ZenML-schema.png, id=141, 739.76375pt x 653.44125pt>
+] [34 <./images//MetaFlow.png (PNG copy)>]
+<./images//ZenML-schema.png, id=138, 739.76375pt x 653.44125pt>
 File: ./images//ZenML-schema.png Graphic file (type png)
 <use ./images//ZenML-schema.png>
 Package pdftex.def Info: ./images//ZenML-schema.png  used on input line 717.
@@ -702,56 +702,53 @@ Underfull \hbox (badness 10000) in paragraph at lines 736--739
 
  []
 
-[36] [37 <./images//ZenML-schema.png>]
+[35] [36 <./images//ZenML-schema.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 760--761
 
  []
 
-<./images//MLRun.png, id=151, 943.27406pt x 328.97906pt>
+<./images//MLRun.png, id=148, 943.27406pt x 328.97906pt>
 File: ./images//MLRun.png Graphic file (type png)
 <use ./images//MLRun.png>
 Package pdftex.def Info: ./images//MLRun.png  used on input line 764.
 (pdftex.def)             Requested size: 341.43512pt x 119.07993pt.
-[38 <./images//MLRun.png>]
-<./images//MLRun Dashbord.png, id=156, 1432.60219pt x 726.46407pt>
-File: ./images//MLRun Dashbord.png Graphic file (type png)
-<use ./images//MLRun Dashbord.png>
-Package pdftex.def Info: ./images//MLRun Dashbord.png  used on input line 808.
-(pdftex.def)             Requested size: 284.52612pt x 144.28151pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 802--813
+[37 <./images//MLRun.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 788--791
 
  []
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[39] [40 <./images//MLRun Dashbord.png>]
+[38]
+<./images//MLRun Dashbord.png, id=157, 1432.60219pt x 726.46407pt>
+File: ./images//MLRun Dashbord.png Graphic file (type png)
+<use ./images//MLRun Dashbord.png>
+Package pdftex.def Info: ./images//MLRun Dashbord.png  used on input line 809.
+(pdftex.def)             Requested size: 284.52612pt x 144.28151pt.
+ [39 <./images//MLRun Dashbord.png>]
 Capitolo 5.
-[41
+[40
 
-] [42] [43
+] [41] [42
 
 
-] [44] [45] [46] (Tesi.bbl [47]) [48
+] [43] [44] [45] [46] (Tesi.bbl [47] [48
 
-] (Tesi.aux)
+]) [49] (Tesi.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 17376 strings out of 478864
- 328444 string characters out of 2848661
- 815600 words of memory out of 3000000
- 34993 multiletter control sequences out of 15000+600000
- 414751 words of font info for 72 fonts, out of 8000000 for 9000
+ 17388 strings out of 478864
+ 328635 string characters out of 2848661
+ 814602 words of memory out of 3000000
+ 35004 multiletter control sequences out of 15000+600000
+ 414920 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,7n,108p,1178b,1186s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 102i,7n,108p,1178b,1206s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\dino9\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on Tesi.pdf (49 pages, 954600 bytes).
+Output written on Tesi.pdf (50 pages, 962611 bytes).
 PDF statistics:
- 264 PDF objects out of 1000 (max. 8388607)
+ 267 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  63 words of extra memory for PDF output out of 10000 (max. 10000000)
 

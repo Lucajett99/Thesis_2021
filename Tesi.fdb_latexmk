@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex Tesi"] 1632694402 "Tesi.aux" "Tesi.bbl" "Tesi" 1632694476
-  "Bibliography.bib" 1632694401 2195 6f77078e06a94e33e13f4d0a6d7297b3 ""
+["bibtex Tesi"] 1632734128 "Tesi.aux" "Tesi.bbl" "Tesi" 1632734157
+  "Bibliography.bib" 1632733530 3659 f8abccbb18112650d11068989cae63d6 ""
   "C:/Users/dino9/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/plain.bst" 1291868336 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "Tesi.aux" 1632694474 11440 a3c3f233950a631a2816873d280cfb2d "pdflatex"
+  "Tesi.aux" 1632734156 12640 775856563146f3e93cc01952cc8b1d9c "pdflatex"
   (generated)
   "Tesi.bbl"
   "Tesi.blg"
-["pdflatex"] 1632694469 "c:/Users/dino9/Desktop/UNI/LAUREA/Thesis_2021/Tesi.tex" "Tesi.pdf" "Tesi" 1632694476
+["pdflatex"] 1632734151 "c:/Users/dino9/Desktop/UNI/LAUREA/Thesis_2021/Tesi.tex" "Tesi.pdf" "Tesi" 1632734157
   "C:/Users/dino9/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1630926441 14064 1b26421a8f471508993adc21c393057e ""
   "C:/Users/dino9/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1630857866 9742850 dbc95b76146d8dc1bc90ce207cbc79b6 ""
   "C:/Users/dino9/AppData/Local/MiKTeX/pdftex/config/pdftex.map" 1632657443 81088 29d6fa367ac022d1b69251d68c0742e6 ""
@@ -34,6 +34,7 @@
   "C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmsy8.tfm" 1136768653 1120 8b7d695260f3cff42e636090a8002094 ""
   "C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmti12.tfm" 1136768653 1484 ed72f8f5cf654cda15ecc8e32bfcbee5 ""
   "C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmtt10.tfm" 1136768653 768 1321e9409b4137d6fb428ac9dc956269 ""
+  "C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmtt12.tfm" 1136768653 772 9a936b7f5e2ff0557fce0f62822f0bbf ""
   "C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/tfm/public/latex-fonts/lasy10.tfm" 1136768653 520 82a3d37183f34b6eb363a161dfc002c2 ""
   "C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/tfm/public/latex-fonts/lasy6.tfm" 1136768653 520 4889cce2180234b97cad636b6039c722 ""
   "C:/Users/dino9/AppData/Local/Programs/MiKTeX/fonts/tfm/public/latex-fonts/lasy8.tfm" 1136768653 520 7bb3abb160b19e0ed6ac404bb59052b7 ""
@@ -159,11 +160,11 @@
   "C:/Users/dino9/AppData/Local/Programs/MiKTeX/tex/latex/tools/xspace.sty" 1622550326 4545 d84d0b20a11b9c36c6ecf45697be591c ""
   "C:/Users/dino9/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388494052 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/dino9/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1623005660 55589 34128738f682d033422ca125f82e5d62 ""
-  "Tesi.aux" 1632694474 11440 a3c3f233950a631a2816873d280cfb2d "pdflatex"
-  "Tesi.bbl" 1632694402 1559 520dcd223dac8565c2377f8d413c9d80 "bibtex Tesi"
-  "Tesi.tex" 1632694467 95195 b2b2e7324898c78b4884d8cd013b540a ""
-  "Tesi.toc" 1632694474 4568 a7c6e7778629c223018efd3ea8381eda "pdflatex"
-  "c:/Users/dino9/Desktop/UNI/LAUREA/Thesis_2021/Tesi.tex" 1632694467 95195 b2b2e7324898c78b4884d8cd013b540a ""
+  "Tesi.aux" 1632734156 12640 775856563146f3e93cc01952cc8b1d9c "pdflatex"
+  "Tesi.bbl" 1632734128 2717 21cdfac9428c3bebfb49dca862355b7e "bibtex Tesi"
+  "Tesi.tex" 1632734149 97103 9aae8dbdbdae19f739086df76b803ee3 ""
+  "Tesi.toc" 1632734156 4921 bc12b7ed8e7c99d097919915de6ef2cf "pdflatex"
+  "c:/Users/dino9/Desktop/UNI/LAUREA/Thesis_2021/Tesi.tex" 1632734149 97103 9aae8dbdbdae19f739086df76b803ee3 ""
   "images//Data_forecast.jpg" 1632654607 38509 ab117cc0975e3b285cda6e3d0e96cdcb ""
   "images//Data_radiology.jpg" 1632577904 76771 9787de96d123a7c59a17544780b47d98 ""
   "images//Encoder-Decoder.png" 1631639731 92646 f90a1b5be26dc030887f34c8b37a9efe ""
@@ -175,7 +176,7 @@
   "images//ZenML-schema.png" 1632678683 62777 bfd99031beb1dad09e15987861db6fd7 ""
   "images//diagram_LSTM.jpg" 1632297570 36721 b27a93554c925a5f9b079051f7e8f261 ""
   (generated)
-  "Tesi.pdf"
   "Tesi.aux"
   "Tesi.log"
   "Tesi.toc"
+  "Tesi.pdf"

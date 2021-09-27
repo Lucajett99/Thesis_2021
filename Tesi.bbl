@@ -1,4 +1,24 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{banerjee2019comparative}
+Imon Banerjee, Yuan Ling, Matthew~C Chen, Sadid~A Hasan, Curtis~P Langlotz,
+  Nathaniel Moradzadeh, Brian Chapman, Timothy Amrhein, David Mong, Daniel~L
+  Rubin, et~al.
+\newblock Comparative effectiveness of convolutional neural network (cnn) and
+  recurrent neural network (rnn) architectures for radiology text report
+  classification.
+\newblock {\em Artificial intelligence in medicine}, 97:79--88, 2019.
+
+\bibitem{r.AID.ologist}
+Universidad~Politécnica de~Madrid.
+\newblock r.aid.ologist --- universidad politécnica de madrid, 2020.
+
+\bibitem{kilimci2019improved}
+Zeynep~Hilal Kilimci, A~Okay Akyuz, Mitat Uysal, Selim Akyokus, M~Ozan Uysal,
+  Berna Atak~Bulbul, and Mehmet~Ali Ekmis.
+\newblock An improved demand forecasting model using deep learning approach and
+  proposed decision integration strategy for supply chain.
+\newblock {\em Complexity}, 2019, 2019.
 
 \bibitem{makridakis2018statistical}
 Spyros Makridakis, Evangelos Spiliotis, and Vassilios Assimakopoulos.
@@ -35,5 +55,11 @@ Wikipedia.
 Wikipedia.
 \newblock Kubernetes --- wikipedia{,} l'enciclopedia libera, 2021.
 \newblock [Online; in data 25-settembre-2021].
+
+\bibitem{zhang2018learning}
+Yuhao Zhang, Daisy~Yi Ding, Tianpei Qian, Christopher~D Manning, and Curtis~P
+  Langlotz.
+\newblock Learning to summarize radiology findings.
+\newblock {\em arXiv preprint arXiv:1809.04698}, 2018.
 
 \end{thebibliography}
