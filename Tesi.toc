@@ -38,10 +38,10 @@
 \contentsline {subsubsection}{Regressione K-Nearest Neighbor (KNN)}{25}{}%
 \contentsline {subsubsection}{Regressione del vettore di supporto (SVR)}{25}{}%
 \contentsline {subsubsection}{Rete Neurale Ricorrente (RNN)}{26}{}%
-\contentsline {subsubsection}{Rete neurale di memoria a lungo termine (LSTM)}{27}{}%
+\contentsline {subsubsection}{Rete neurale di memoria a lungo termine (LSTM)}{26}{}%
 \contentsline {subsection}{\numberline {3.2.4}Formazione del modello}{27}{}%
 \contentsline {subsection}{\numberline {3.2.5}Validazione del modelllo}{27}{}%
-\contentsline {subsection}{\numberline {3.2.6}Miglioramento}{28}{}%
+\contentsline {subsection}{\numberline {3.2.6}Miglioramento}{27}{}%
 \contentsline {subsection}{\numberline {3.2.7}Distribuzione}{28}{}%
 \contentsline {section}{\numberline {3.3}Analisi e conclusioni}{28}{}%
 \contentsline {subsection}{\numberline {3.3.1}I dati}{28}{}%

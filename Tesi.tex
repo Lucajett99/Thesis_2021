@@ -15,7 +15,6 @@
 \usepackage{url}
 
 \graphicspath{ {./images/} }
-
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
@@ -50,9 +49,9 @@ Corso di Laurea in Informatica }}
 \vspace{15mm}
 
 \begin{center}
-{\LARGE{\bf Title thesis:}}\\
+{\LARGE{\bf Title}}\\
 \vspace{3mm}
-{\LARGE{\bf Subtitle thesis}}\\
+{\LARGE{\bf Generazione automatica di pipeline di Machine Learing}}\\
 \end{center}
 \vspace{40mm}
 \par
@@ -344,7 +343,7 @@ In questo studio viene analizzato il workflow della previsione della domanda con
 
 \section{Overview}
 Poiché la concorrenza aumenta di giorno in giorno tra i rivenditori sul mercato, le aziende stanno concentrando più tecniche di analisi predittiva per ridurre i costi e aumentare la produttività e il profitto.\\
-Esistono diversi tipi di previsione della domanda:
+Esistono diversi tipi di previsione della domanda: \cite{towards:demandForecast}
 \begin{itemize}
     \item A breve termine (viene effettuato per un periodo più breve da 3 mesi a 12 mesi). 
     \item Da medio a lungo termine (in genere viene effettuato da più di 12 mesi a 24 mesi in anticipo (36-48 mesi in alcune attività)).
@@ -354,7 +353,7 @@ Esistono diversi tipi di previsione della domanda:
 \end{itemize}
 
 I rivenditori in diversi settori sono alla ricerca di soluzioni automatizzate di previsione della domanda e rifornimento che utilizzino big data e tecnologie di analisi predittiva. \\
-I metodi di previsione tradizionali si basano su approcci di previsione basati su serie temporali. Questi approcci di previsione prevedono la domanda futura in base a dati di serie temporali storiche, ovvero una sequenza di punti dati misurati a intervalli successivi nel tempo. Questi metodi utilizzano un numero limitato di dati storici di serie temporali relativi alla domanda. Negli ultimi due decenni, I modelli di data mining e machine learning hanno attirato maggiore attenzione e sono stati applicati con successo alla previsione delle serie temporali.\\\
+I metodi di previsione tradizionali si basano su approcci di previsione basati su serie temporali. Questi approcci di previsione prevedono la domanda futura in base a dati di serie temporali storiche, ovvero una sequenza di punti dati misurati a intervalli successivi nel tempo. Questi metodi utilizzano un numero limitato di dati storici di serie temporali relativi alla domanda. Negli ultimi due decenni, I modelli di data mining e machine learning hanno attirato maggiore attenzione e sono stati applicati con successo alla previsione delle serie temporali.[cite]\\\
 I metodi di previsione dell'apprendimento automatico possono utilizzare una grande quantità di dati e funzionalità correlate alla domanda e prevedere la domanda e i modelli futuri utilizzando diversi algoritmi di apprendimento. Tra molti metodi di apprendimento automatico, i metodi di deep learning (DL) sono diventati molto popolari e sono stati recentemente applicati a molti campi come il riconoscimento di immagini e parole, l'elaborazione del linguaggio naturale e la traduzione automatica.
 I metodi DL hanno prodotto previsioni e risultati migliori, rispetto ai tradizionali algoritmi di apprendimento automatico in molte ricerche. 
 
@@ -362,7 +361,7 @@ I metodi DL hanno prodotto previsioni e risultati migliori, rispetto ai tradizio
 In questo caso ho utilizzato un approccio differente dal precedente. Qui non ho analizzato un caso specifico, ma sono riuscito a catturare le possibili generalità del caso.
 
 \subsection{Raccolta dati}
-Questo primo processo include i seguenti passaggi:
+Questo primo processo include i seguenti passaggi: \cite{mobidev:demandForecast}
 \begin{enumerate}
     \item Raccogliere i dati disponibili
     \item Esaminare brevemente la struttura dei dati, l'accuratezza e la coerenza
@@ -370,7 +369,7 @@ Questo primo processo include i seguenti passaggi:
     \item Guardare attraverso un riepilogo statistico
 \end{enumerate}
 
-In questo caso studio il tipo di dato può essere molto differente in base all'obiettivo aziendale. Distinguiamo i dati in:
+In questo caso studio il tipo di dato può essere molto differente in base all'obiettivo aziendale. Distinguiamo i dati in: \cite{mobidev:demandForecast}
 \begin{itemize}
     \item Strutturati
     \item Non strutturati
@@ -402,8 +401,8 @@ La preelaborazione può essere applicata in tre forme: adeguamenti stagionali, l
     \item Dati originali: non viene applicata alcuna preelaborazione.
     \item Trasformazione dei dati: Ai dati originali viene applicato il log o la trasformazione di potenza $Box-Cox^{[\ref{appendix:Box-Cox}]}$ per ottenere la stazionarietà nella varianza.
     \item Destagionalizzazione dei dati: i dati sono considerati stagionali se esiste un coefficiente di autocorrelazione significativo al lag 12. In tal caso i dati vengono destagionalizzati utilizzando il classico approccio di decomposizione moltiplicativa. L'addestramento dei pesi ML, o l'ottimizzazione dei metodi statistici, viene successivamente effettuato sui dati destagionalizzati. I pronostici ottenuti vengono poi ristagionali per determinare i pronostici finali. Ciò non avviene nel caso dei metodi $ETS^{[\ref{appendix:ETS}]}$ e $ARIMA^{[\ref{appendix:ARIMA}]}$ poiché includono modelli stagionali, selezionati utilizzando test relativi e criteri informativi che si occupano direttamente della stagionalità e della complessità del modello.
-    \item Detrending dei dati: viene eseguito un test di Cox-Stuart per stabilire se sia necessario utilizzare un trend lineare deterministico, o in alternativa un primo differenziamento, per eliminare il trend dai dati e ottenere la stazionarietà nella media.
-    \item Combinazione dei tre precedenti: i vantaggi delle singole tecniche di pre-elaborazione vengono applicati simultaneamente per regolare i dati originali. Al fine di accelerare i calcoli, prima determiniamo la migliore alternativa di pre-elaborazione per migliorare le prestazioni di previsione post-campione in un passo avanti del metodo MLP (il più popolare tra quelli ML) e poi applichiamo quella ai restanti modelli ML.
+    \item Detrending dei dati: viene eseguito un test di Cox-Stuart \cite{cox1955some} per stabilire se sia necessario utilizzare un trend lineare deterministico, o in alternativa un primo differenziamento, per eliminare il trend dai dati e ottenere la stazionarietà nella media.
+    \item Combinazione dei tre precedenti: i vantaggi delle singole tecniche di pre-elaborazione vengono applicati simultaneamente per regolare i dati originali.
 \end{itemize}
 
 Una volta che i dati sono stati puliti, generati e verificati per pertinenza, vengono strutturati in un modulo completo.\\
@@ -595,7 +594,7 @@ Come visto in precedenza le modalità di pretrattamento dei dati sono molteplici
 
 Si è evidenziata inoltre la necessità non solo di considerare l'uso attento dei metodi di preparazione dei dati, ma di testare attivamente più combinazioni diverse di schemi di preparazione dei dati per un dato problema al fine di scoprire cosa funziona meglio, anche nel caso dei metodi classici.\\
 
-\paragraph*{Estrazione delle caratteristiche:}
+\paragraph*{Estrazione delle caratteristiche:} [cite]
 Potrebbero esserci alcuni problemi a causa dell'enorme quantità di dati. Quando si prova ad utilizzare tutte le funzionalità di tutti i dati (es: i prodotti in ogni negozio con 155 funzionalità e 875 milioni di record), l'algoritmo di deep learning può impiegare persino giorni per completare il suo lavoro a causa della potenza di calcolo limitata. \cite{kilimci2019improved}\\
 Quindi per ogni algoritmo è necessario ridurre il numero di caratteristiche e il tempo di calcolo. Per superare questo problema e accelerare le fasi di clustering e modellazione, potrebbe essere utilizzato PCA (Principal Component Analysis) come algoritmo di estrazione delle caratteristiche.\\
 PCA è un algoritmo di riduzione delle dimensioni comunemente utilizzato che presenta le caratteristiche più significative. PCA trasforma ogni istanza del dato insieme di dati dallo spazio d dimensionale a un sottospazio dimensionale k in cui il nuovo insieme generato di k dimensioni è chiamato Componenti Principali (PC). Ciascuna componente principale è indirizzata a una varianza massima esclusa la varianza, contabilizzata in tutte le sue componenti precedenti. Di conseguenza, il primo componente copre la massima varianza e così via.\\
@@ -613,7 +612,7 @@ Quando si parla di stagionalità, essa può essere implementata nell'algoritmo i
     \item Identificare e separare diversi modelli nei dati e utilizzare ciascuno di essi come set di dati indipendenti. Questo è noto come clustering e può essere ottenuto utilizzando algoritmi di apprendimento automatico.
 \end{enumerate}
 
-\paragraph*{Clustering dei dati:}
+\paragraph*{Clustering dei dati:} [cite]
 Nell'apprendimento non supervisionato, un problema comune è identificare e classificare correttamente un certo numero di classi identiche (cluster) presenti nei dati (Bishop 2006). All'inizio, il numero di cluster, k, è solitamente sconosciuto. Trovarlo può essere ottenuto eseguendo l'algoritmo di clustering per diversi valori di k e valutando i risultati per ciascun valore.\\
 Il numero ottimale di cluster è quello che ottimizza un determinato criterio, come la varianza tra osservazioni nello stesso cluster.
 Complessivamente, il numero di cluster e il modo in cui vengono trovati, la formulazione della distanza e l'implementazione dell'algoritmo di clustering stesso sono reciprocamente influenzati e diverse combinazioni di essi produrranno risultati diversi.\\
@@ -637,7 +636,7 @@ Inoltre i vantaggi di ciascuna tecnica possono essere combinati attraverso una s
 
 \paragraph*{Ensemble Learning:}
 Oltre a questi modelli discussi in precedenza c'è anche l'Ensemble Learning (EL), che è un'altra metodologia per aumentare le prestazioni del sistema.\\
-Un sistema di insieme è composto da due parti:
+Un sistema di insieme è composto da due parti: \cite{towards:demandForecast}
 \begin{itemize}
     \item generazione di insieme
     \item integrazione di insieme.
@@ -675,7 +674,7 @@ Gli strumenti di orchestrazione rendono il processo di machine learning più sem
 Cerchiamo, quindi, quali sono quei framework che meglio si adattano ai nostri case study.
 
 \section{MetaFlow}
-Metaflow è una libreria Python di facile utilizzo che aiuta scienziati e ingegneri a creare e gestire progetti di data science reali. Metaflow è stato originariamente sviluppato da Netflix per aumentare la produttività dei data scientist che lavorano su un'ampia varietà di progetti, dalle statistiche classiche al deep learning all'avanguardia.
+Metaflow è una libreria Python di facile utilizzo che aiuta scienziati e ingegneri a creare e gestire progetti di data science reali. Metaflow è stato originariamente sviluppato da Netflix per aumentare la produttività dei data scientist che lavorano su un'ampia varietà di progetti, dalle statistiche classiche al deep learning all'avanguardia. \cite{MetaFLow}
 Metaflow fornisce un'API unificata allo stack dell'infrastruttura necessario per eseguire progetti di data science, dal prototipo alla produzione, ma non presenta un'interfaccia grafica per visualizzare e gestire i flussi di lavoro.
 Purtoppo però MetaFlow non offre una UI per visualizzare e gestire il workflow.\\
 
@@ -694,7 +693,7 @@ Metaflow è ricco di dettagli incentrati sull'uomo come questo, che mirano tutti
 
 \subsection{Vantaggi}
 Metaflow segue il dataflow paradigm che modella un programma come un grafo diretto di operazioni. Questo è un paradigma naturale per esprimere le pipeline di elaborazione dei dati, in particolare l'apprendimento automatico.\\
-I vantaggi principali di questo framework sono:
+I vantaggi principali di questo framework sono: \cite{MetaFLow}
 \begin{itemize}
     \item Fornisce un'API altamente utilizzabile per strutturare il codice come flusso di lavoro, ovvero come grafico diretto dei passaggi (usabilità).
     \item Mantiene un'istantanea immutabile di dati, codice e dipendenze esterne necessarie per eseguire ogni passaggio (riproducibilità).
@@ -704,7 +703,7 @@ I vantaggi principali di questo framework sono:
 
 
 \section{ZenML}
-ZenML è un framework MLOps estensibile e open source per l'utilizzo di pipeline di Machine Learning pronte per la produzione, in modo semplice. Al suo interno, ZenML organizzerà le pipeline dei tuoi esperimenti dall'acquisizione dei dati alla suddivisione, pre-elaborazione, formazione, fino alla valutazione dei risultati e persino alla pubblicazione, tutto grazie anche ad una UI che permette la visualizzazione e la gestione del workflow.
+ZenML è un framework MLOps estensibile e open source per l'utilizzo di pipeline di Machine Learning pronte per la produzione, in modo semplice. Al suo interno, ZenML organizzerà le pipeline dei tuoi esperimenti dall'acquisizione dei dati alla suddivisione, pre-elaborazione, formazione, fino alla valutazione dei risultati e persino alla pubblicazione, tutto grazie anche ad una UI che permette la visualizzazione e la gestione del workflow. \cite{ZenML}
 Sebbene esistano altre soluzioni di pipeline per gli esperimenti di Machine Learning, ZenML si concentra su quanto segue:
 \begin{itemize}
     \item Semplicità.
@@ -721,7 +720,7 @@ Sebbene esistano altre soluzioni di pipeline per gli esperimenti di Machine Lear
 \end{figure}
 
 \subsection{Problemi risolti da ZenML}
-ZenML risolve il problema di portare in produzione l'apprendimento automatico nei modelli. è conveniente usare ZenML se si lotta con:
+ZenML risolve il problema di portare in produzione l'apprendimento automatico nei modelli. è conveniente usare ZenML se si lotta con: \cite{ZenML}
 \begin{itemize}
     \item Riproduzione dei risultati della formazione in produzione.
     \item Gestione dei metadati ML, inclusi dati, codice e versionamento del modello.
@@ -757,8 +756,8 @@ Elenco di seguito i vantaggi, di ZenML, a cui siamo interessati:
 
 
 \section{MLRun}
-MLRun è un framework MLOps open source che offre un approccio integrativo alla gestione delle pipeline di machine learning dallo sviluppo iniziale allo sviluppo del modello fino alla distribuzione completa della pipeline in produzione. MLRun offre un comodo livello di astrazione per un'ampia varietà di stack tecnologici, consentendo ai data engineer e ai data scientist di definire la funzionalità e i modelli.\\
-
+MLRun è un framework MLOps open source che offre un approccio integrativo alla gestione delle pipeline di machine learning dallo sviluppo iniziale allo sviluppo del modello fino alla distribuzione completa della pipeline in produzione. MLRun offre un comodo livello di astrazione per un'ampia varietà di stack tecnologici, consentendo ai data engineer e ai data scientist di definire la funzionalità e i modelli.\cite{MLRun}
+\\
 \begin{figure}[h!]
     \begin{center}
         \includegraphics[width=12cm,height=12cm,keepaspectratio]{MLRun}
@@ -778,7 +777,7 @@ MLRun offre i seguenti vantaggi chiave:
 \end{itemize}
 
 
-Per garantire efficienza e scalabilità, è necessario implementare il parallelismo quando possibile. MLRun supporta questo utilizzando due meccanismi:
+Per garantire efficienza e scalabilità, è necessario implementare il parallelismo quando possibile. MLRun supporta questo utilizzando due meccanismi: \cite{MLRun}
 
 \begin{enumerate}
     \item Clustering: eseguire il codice su un motore di elaborazione distribuito (come Dask, Spark o Horovod).
@@ -799,17 +798,18 @@ task = NewTask(handler=xgb_train, out_path='/User/mlrun/data').with_hyper_params
 run = run_local(task)
 \end{lstlisting}
 
-Questo codice (\ref{code:MLRun-code}) mostra come indicare a MLRun di eseguire la stessa attività mentre si scelgono i parametri da più elenchi (ricerca a griglia). MLRun quindi registra tutte le esecuzioni, ma contrassegna solo l'esecuzione con perdita minima come risultato selezionato.\\
+Questo codice (\ref{code:MLRun-code}) mostra come indicare a MLRun di eseguire la stessa attività mentre si scelgono i parametri da più elenchi (ricerca a griglia). MLRun quindi registra tutte le esecuzioni, ma contrassegna solo l'esecuzione con perdita minima come risultato selezionato \cite{MLRun}.
+\\
 Ed è proprio per questo che è un ottimo candidato per il nostro scopo. Data la mole di dati, per quanto riguarda il demand forecasting, il parallelismo rappresenta un ottima soluzione al problema di allenare una rete con tantissimi dati, altrimenti ci potrebbero volere addiritura giorni.
 \newpage
 
 MLRun ha anche un'interfaccia utente grafica (MLRun Dashbord) per lavorare e visualizzare i dati
 \begin{figure}[h!]
     \begin{center}
-        \includegraphics[width=10cm,height=10cm,keepaspectratio]{MLRun Dashbord}
+        \includegraphics[width=13cm,height=13cm,keepaspectratio]{MLRun Dashbord}
     \end{center}
     \caption{MLRun Dashbord}
-    \label{fig:MLRun}
+    \label{fig:MLRun-dashbord}
 \end{figure}
 
 \chapter{Conclusioni}
@@ -912,29 +912,7 @@ PACS è l'acronimo anglosassone di Picture archiving and communication system (s
 
 \end{appendices}
 
-
 \bibliographystyle{plain}
 \bibliography{Bibliography}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 \end{document}
