@@ -51,7 +51,7 @@ Corso di Laurea in Informatica }}
 \begin{center}
 {\LARGE{\bf Title}}\\
 \vspace{3mm}
-{\LARGE{\bf Generazione automatica di pipeline di Machine Learing}}\\
+{\LARGE{\bf Automazione delle pipeline di Machine Learing}}\\
 \end{center}
 \vspace{40mm}
 \par
@@ -62,9 +62,8 @@ Chiar.mo Prof.\\
 Maurizio Gabbrielli\\
 \\
 Correlatori:\\
-Dott.\\
-Stefano Pio Zingaro\\
-Saverio Giallorenzo\\
+Dott. Stefano Pio Zingaro\\
+Dott. Saverio Giallorenzo\\
 }}
 \end{minipage}
 \hfill
@@ -86,13 +85,18 @@ Anno Accademico 2020/2021}}%inserire l'anno accademico a cui si è iscritti
 Il Machine Learning è un sottoinsieme dell'intelligenza artificiale (AI) che si occupa di creare sistemi che apprendono o migliorano le performance in base ai dati che utilizzano. Intelligenza artificiale è un termine generico e si riferisce a sistemi o macchine che imitano l'intelligenza umana.\\
 Definire in maniera semplice le caratteristiche e le applicazioni del machine learning non è sempre possibile, visto che questo ramo è molto vasto e prevede differenti modalità, tecniche e strumenti per essere realizzato. Inoltre, le differenti tecniche di apprendimento e sviluppo degli algoritmi danno vita ad altrettante possibilità di utilizzo che allargano il campo di applicazione dell’apprendimento automatico rendendone difficile una definizione specifica. Si può tuttavia dire che quando si parla di machine learning si parla di differenti meccanismi che permettono a una macchina intelligente di migliorare le proprie capacità e prestazioni nel tempo. La macchina, quindi, sarà in grado di imparare a svolgere determinati compiti migliorando, tramite l’esperienza, le proprie capacità, le proprie risposte e funzioni.\\
 Alla base dell’apprendimento automatico ci sono una serie di differenti algoritmi che, partendo da nozioni primitive, sapranno prendere una specifica decisione piuttosto che un’altra o effettuare azioni apprese nel tempo.\\
-L'obiettivo di questa tesi è analizzare due case study per cercare quali possano essere le invarianti e le differenze, per ogni caso, presenti nei diversi tipi di modelli trovabili in letteratura al fine di valutare la possibilità di generazione automatica di pipeline di Machine Learing.\\
-Infatti è stata applicato un approccio bottom-up, analizzando, quindi, i due casi studio, al fine di tirare fuori i relativi workflow per eseguire l'analisi.\\
-I casi studio in questione sono:
+L'obiettivo di questa tesi è cercare di automatizzare delle pipeline di machine learning al fine di trovare qualcosa che possa essere integrabile con una piattaforma che gestisce risorse/progetti di Machine Learning, come AI4EU.\\
+Non è stato possibile eseguire un lavoro molto estesto e per questo mi sono ricondotto a particolari casi di studio. 
+Infatti è stata applicato un approccio bottom-up, cercando in letteratura vari approcci a due casi studio specifici al fine di tirare fuori i relativi workflow per eseguire l'analisi e cercare una soluzione che comprenda tutte quante le diverse proprietà e i diversi attributi dei casi specifici.\\
+L'analisi dei casi di studio è stata eseguita per arrivare alla generalizzazione, e per fare ciò sono andato alla ricerca di quali potessero essere le invarianti tra i diversi approcci trovati in letteratura. Una volta trovate le invarianti, si è cercato di definire i/il criteri/o per cui un framework ci permetta di implemetare il workflow che è stato trovato, ovvero cercare i framework più fruibili da integrare in una piattaforma.\\
+I due casi studio in questione sono:
 \begin{itemize}
     \item AI in radiology
     \item Demand forecasting
 \end{itemize}
+
+È stato eseguito tutto questo lavoro poiché è mia convinzione che creare delle pipeline di AI e/o ML, dopo tutto ciò, sia più automatico (qualche forma di automatizzazzione per queste pipeline). Senza un adeguata analisi dei casi di studio, avere tantissime risorse di AI e/o ML non servirebbe a molto, dato che tutte quelle risorse sarebbero inutilizzabili se non si producessero delle automazioni per permetterne l'uso. Invece se si vogliono trovare delle astrazioni che generalizzano rispetto al caso di studio è necessario studiare la capacità di automatizzare quei processi.\\
+Senza la pretesa di essere completi riportiamo il risultato dell'analisi che è stata fatta.
 
 \chapter{AI in Radiology}
 Interpretare immagini mediche e riassumerle sotto forma di referti radiologici è un compito impegnativo, noioso e complesso. Un radiologo fornisce una descrizione completa di un'immagine medica sotto forma di referto radiologico descrivendo reperti normali o anormali e fornendo un riepilogo per il processo decisionale. La ricerca mostra che la pratica della radiologia è soggetta a errori a causa del numero limitato di esperti, dell'aumento del volume dei pazienti e della natura soggettiva della percezione umana. Per ridurre il numero di errori diagnostici e per alleviare il compito dei radiologi, è necessario un sistema di generazione di referti computerizzato in grado di generare automaticamente un referto radiologico per una determinata immagine medica.
@@ -358,7 +362,7 @@ I metodi di previsione dell'apprendimento automatico possono utilizzare una gran
 I metodi DL hanno prodotto previsioni e risultati migliori, rispetto ai tradizionali algoritmi di apprendimento automatico in molte ricerche. 
 
 \section{Workflow}
-In questo caso ho utilizzato un approccio differente dal precedente. Qui non ho analizzato un caso specifico, ma sono riuscito a catturare le possibili generalità del caso.
+In questo caso ho utilizzato un approccio differente dal precedente. Qui non ho analizzato un caso specifico, ma sono riuscito a catturare le possibili generalità del caso. Siccome sono stati trovati più dettagli nella parte di modello utilizzato, la parte dei modelli verrà descritta con maggiore dettaglio.
 
 \subsection{Raccolta dati}
 Questo primo processo include i seguenti passaggi: \cite{mobidev:demandForecast}
@@ -655,7 +659,7 @@ Il meta-modello è addestrato sulle previsioni fatte dai modelli di base su dati
 La regressione a stack è una tecnica di apprendimento di insieme per combinare più modelli di regressione tramite un meta-regressore. I singoli modelli di regressione vengono addestrati in base al training set completo; quindi, il meta-regressore viene adattato in base agli output - meta-caratteristiche - dei singoli modelli di regressione nell'insieme.\\
 
 \subsection{Conclusioni}
-Dopo aver esaminato molti articoli in lettatura, gli studi fatti precedentemente forniscono importanti prove a sostegno del fatto che i metodi classici possono dominare la previsione di serie temporali, almeno sui tipi di problemi di previsione valutati.\\
+Dopo aver esaminato molti articoli in lettatura, gli studi fatti precedentemente forniscono importanti prove a sostegno del fatto che i metodi classici possono dominare la previsione di serie temporali, almeno sui tipi di problemi di previsione valutati.[cite]\\
 La domanda più interessante e la sfida più grande è trovare le ragioni delle loro scarse prestazioni con l'obiettivo di migliorarne la precisione e sfruttarne l'enorme potenziale. Gli algoritmi di apprendimento dell'intelligenza artificiale hanno rivoluzionato un'ampia gamma di applicazioni in diversi campi e non c'è motivo per cui lo stesso non possa essere ottenuto con i metodi ML nella previsione. Quindi, si dovrebbe trovare come essere applicati per migliorare la loro capacità di prevedere in modo più accurato.
 Gli autori di alcuni articoli fanno commenti su LSTM e RNN, che sono generalmente ritenuti l'approccio di deep learning per problemi di previsione di sequenza in generale, e in questo caso le loro prestazioni chiaramente scarse nella pratica.\\
 \\
@@ -665,13 +669,20 @@ Dicendo anche che gli LSTM sembrano essere più adatti a adattare o sovradimensi
 \\
 \emph{Another interesting example could be the case of LSTM that compared to simpler NNs like RNN and MLP, report better model fitting but worse forecasting accuracy.} \cite{makridakis2018statistical}\\
 \\
+Come già detto precedentemente, la letteratura analizzata si concentra molto di più sulla parte di analisi dei modelli, ed è per questo che vengono forniti più dettagli al riguardo rispetto al pretrattamento dei dati, che come si è visto può anche essere assente.
+Quindi evidentemente, in questi casi di studio, le persone che praticano sono molto più interessate alla parte di modellazione che a quella di preprocessamento.
+
+
 
 
 
 \chapter{Frameworks}
 Gli strumenti di orchestrazione del machine learning vengono utilizzati per automatizzare e gestire i workflows e l'infrastruttura della pipeline, con un'interfaccia semplice e collaborativa. Insieme alla gestione e alla creazione di workflows personalizzati e delle relative pipeline, questi strumenti ci aiutano anche a tracciare e monitorare i modelli per ulteriori analisi.
 Gli strumenti di orchestrazione rendono il processo di machine learning più semplice, più efficiente e aiutano i data scientist e i team di machine learning a concentrarsi su ciò che è necessario, piuttosto che sprecare risorse cercando di identificare i problemi prioritari.\\
-Cerchiamo, quindi, quali sono quei framework che meglio si adattano ai nostri case study.
+Come abbiamo detto precedentemente, il nostro scopo è quello di cercare quei framework che meglio si integrano con una piattaforma esistente di gestione di risorse di AI/ML, come AI4EU. La selezione dei framework è data principalmente da questo fattore, ovvero se un framework dovesse essere messo in un ambiente di produzione, come quello di AI4EU, quelli selezionati sono i candidati più sensati, scartando invece quelli utilizzati in ambito di ricerca/accademico.\\
+Senza la pretesa di essere completi riportiamo il risultato dell'analisi che abbiamo fatto.
+È stata eseugita un'analisi astratta, ovvero non sono stati selezionati determinati framework implementandoli, ma solo vedendo quali sono le loro capacità e verificare che siano compatibili con le nostre necessità.\\
+La lista di tool che si occupano di framework è molto vasta. Quelli che hanno un utilizzo ampio da parte dei pratictioners e quelli che meglio si adattano ai nostri casi studio sono illustrati di seguito.
 
 \section{MetaFlow}
 Metaflow è una libreria Python di facile utilizzo che aiuta scienziati e ingegneri a creare e gestire progetti di data science reali. Metaflow è stato originariamente sviluppato da Netflix per aumentare la produttività dei data scientist che lavorano su un'ampia varietà di progetti, dalle statistiche classiche al deep learning all'avanguardia. \cite{MetaFLow}
@@ -701,6 +712,7 @@ I vantaggi principali di questo framework sono: \cite{MetaFLow}
     \item Registra i metadati sulle precedenti esecuzioni e rendili facilmente accessibili (usabilità, riproducibilità).
 \end{itemize}
 
+E come si può vedere la prontezza della produzione è uno degli aspetti che ci interessa.
 
 \section{ZenML}
 ZenML è un framework MLOps estensibile e open source per l'utilizzo di pipeline di Machine Learning pronte per la produzione, in modo semplice. Al suo interno, ZenML organizzerà le pipeline dei tuoi esperimenti dall'acquisizione dei dati alla suddivisione, pre-elaborazione, formazione, fino alla valutazione dei risultati e persino alla pubblicazione, tutto grazie anche ad una UI che permette la visualizzazione e la gestione del workflow. \cite{ZenML}
@@ -720,7 +732,7 @@ Sebbene esistano altre soluzioni di pipeline per gli esperimenti di Machine Lear
 \end{figure}
 
 \subsection{Problemi risolti da ZenML}
-ZenML risolve il problema di portare in produzione l'apprendimento automatico nei modelli. è conveniente usare ZenML se si lotta con: \cite{ZenML}
+ZenML risolve il problema di portare in produzione l'apprendimento automatico nei modelli. È conveniente usare ZenML se si lotta con: \cite{ZenML}
 \begin{itemize}
     \item Riproduzione dei risultati della formazione in produzione.
     \item Gestione dei metadati ML, inclusi dati, codice e versionamento del modello.
@@ -732,8 +744,9 @@ ZenML risolve il problema di portare in produzione l'apprendimento automatico ne
     \item Tenere il passo con il panorama degli strumenti ML in modo coerente.
 \end{itemize}
 
-Molto importante per noi è la riutilizzazione del codice e il ridimensionamento del set di dati.\\
+Molto importante per noi è il ridimensionamento del set di dati e, appunto, la facilità del portare i modelli in produzione.\\
 Nel caso del demand forecasting, come già detto in precedenza, potrebbe esserci la possibilità di ridurre il set di dati al fine di ridurre anche il tempo di addestramento.\\
+\\
 Nel caso dell'AI in radiology, il riutilizzo del codice è fondamentale. Come abbiamo visto precedentemente per estrarre le caratteristiche da un immagine viene sempre utilizzata una CNN, a questo punto quel modulo potrà essere quasi sempre riutilizzato in tutti i casi di estrazione delle caratteristiche da un immagine.\\
 
 \subsection{Vantaggi}
@@ -753,7 +766,8 @@ Elenco di seguito i vantaggi, di ZenML, a cui siamo interessati:
         \item Servizio modello
     \end{itemize}
 \end{itemize}
-
+Nel caso dell'AI in radiology, come già detto, è necessario definire se la soluzione sviluppata è destinata ad essere integrata in un'infrastruttura esistente o utilizzata come applicazione standalone. Durante la prima fase di implementazione, è possibile adottare un approccio containerizzato come quello proposto da $Docker^{[\ref{appendix:Docker}]}$ o $Kubernetes^{[\ref{appendix:Kubernetes}]}$ e applicazioni web-based (REST-API) per l'implementazione successiva.\\
+Quindi la possibilità che da ZenML di passare rapidamente da un ambiente locale a quello cloud come kubernetes gioca a suo vantaggio.
 
 \section{MLRun}
 MLRun è un framework MLOps open source che offre un approccio integrativo alla gestione delle pipeline di machine learning dallo sviluppo iniziale allo sviluppo del modello fino alla distribuzione completa della pipeline in produzione. MLRun offre un comodo livello di astrazione per un'ampia varietà di stack tecnologici, consentendo ai data engineer e ai data scientist di definire la funzionalità e i modelli.\cite{MLRun}
@@ -785,7 +799,7 @@ Per garantire efficienza e scalabilità, è necessario implementare il paralleli
 \end{enumerate}
 
 Le funzioni e le attività MLRun possono accettare iperparametri o elenchi di parametri, distribuire molti worker paralleli e suddividere il lavoro tra i worker distribuiti. L'implementazione del parallelismo è lasciata al runtime. Ogni runtime può avere il proprio metodo di esecuzione delle attività simultanee.\\
-MLRun supporta il parallelismo. Ad esempio, il codice seguente mostra come utilizzare gli iperparametri per eseguire l'attività di addestramento del modello XGBoost dall'esempio nella sezione precedente (xgb\_train) con diverse combinazioni di parametri:
+MLRun, quindi, supporta il parallelismo. Ad esempio, il codice seguente mostra come utilizzare gli iperparametri per eseguire l'attività di addestramento del modello XGBoost con diverse combinazioni di parametri:
 \\
 \begin{lstlisting}[caption={Esempio di codice},captionpos=b, label={code:MLRun-code}]
 parameters = {
@@ -800,7 +814,7 @@ run = run_local(task)
 
 Questo codice (\ref{code:MLRun-code}) mostra come indicare a MLRun di eseguire la stessa attività mentre si scelgono i parametri da più elenchi (ricerca a griglia). MLRun quindi registra tutte le esecuzioni, ma contrassegna solo l'esecuzione con perdita minima come risultato selezionato \cite{MLRun}.
 \\
-Ed è proprio per questo che è un ottimo candidato per il nostro scopo. Data la mole di dati, per quanto riguarda il demand forecasting, il parallelismo rappresenta un ottima soluzione al problema di allenare una rete con tantissimi dati, altrimenti ci potrebbero volere addiritura giorni.
+Oltre alla implementazione rapida del codice nelle pipeline di produzione, è anche per il parallelismo che MLRun è un ottimo candidato per il nostro scopo. Per quanto riguarda il demand forecasting, data la mole di dati, il parallelismo rappresenta un ottima soluzione al problema di allenare una rete con tantissimi dati.
 \newpage
 
 MLRun ha anche un'interfaccia utente grafica (MLRun Dashbord) per lavorare e visualizzare i dati
@@ -813,12 +827,14 @@ MLRun ha anche un'interfaccia utente grafica (MLRun Dashbord) per lavorare e vis
 \end{figure}
 
 \chapter{Conclusioni}
-In questo lavoro di tesi abbiamo cercato di capire se fosse possibile la generazione automatica di pipeline di Machine Learing.\\
-Abbiamo utilizzato un approccio bottom-up, cercando due case study a piacimento. Dopo aver visionato differenti articoli ed estrapolato un workflow per ogni caso, siamo andati ad analizzare le versatilità e le invarianti tra i vari approcci proposti in letteratura.
-Abbiamo notato come il focus dei diversi modelli trovati può essere differente. Ci sono modelli che si focalizzano sui dati, ovvero raccolta e pretrattamento, ce ne altri invece che si focalizzano sulla parte del modello, ovvero costruzione, addestramento e testing.
+In questo lavoro di tesi abbiamo cercato di capire se fosse possibile l'automazione di pipeline di Machine Learing al fine di trovare qualcosa che possa essere integrabile con una piattaforma che gestisce risorse/progetti di Machine Learning, come AI4EU.\\
+Abbiamo utilizzato un approccio bottom-up, analizzando due casi studio a piacimento. Dopo aver visionato differenti articoli ed estrapolato un workflow per ogni caso, siamo andati ad analizzare le versatilità tra i vari approcci proposti in letteratura.\\
+Abbiamo notato come il focus dei diversi approcci trovati può essere differente. Alcuni si focalizzano sui dati, ovvero raccolta e pretrattamento, altri invece si focalizzano sulla parte del modello, ovvero costruzione, addestramento e testing.\\
 Nel primo caso (AI in radiology) i dati hanno sempre la stessa struttura e c'è anche la possibilità che venga eseguito un aumento del set di dati per la poca disponibilità, ma c'è un grande lavoro di pretrattamento da fare, dato che la qualità delle immagini è fondamentale in questo campo. Il modello è poco versatile, abbiamo sempre trovato una CNN per l'estrazione delle caratteristiche da un immagine e quasi sempre l'utilizzo di un RNN (preferibilmente una LSTM) per l'estrazione delle parole dalle caratteristiche.\\
-Nel secondo caso (Demand forecasting) i dati sono principalmente dati storici e possono avere strutture totalmente differenti (anche strutturati e non), soprattutto in base all'obiettivo della predizione e al tipo di modello utilizzato, con pochissimo pretrattamento dei dati se non riduzione del set di dati. Il modello è molto versatile, come abbiamo già visto ci sono svariati modelli che possono essere utilizzati, nell'ultimo periodo il deep learning sta prendendo sempre più piede.\\
-Siamo andati poi alla ricerca di qualche framework per capire se era possibile implementare la nostra pipeline, per caso study, con tutte le invarianti e versatilità dei vari modelli.\\
+Nel secondo caso (Demand forecasting) i dati sono principalmente dati storici e possono avere strutture totalmente differenti, soprattutto in base all'obiettivo della predizione e al tipo di modello utilizzato, con pochissimo pretrattamento dei dati se non riduzione del set di dati. Il modello è molto versatile, come abbiamo già visto ci sono svariati modelli che possono essere utilizzati e nell'ultimo periodo le reti neurali stanno prendendo sempre più piede.\\
+Anche facendo una piccola analisi da un punto di vista cronologico, in generale, il focus si sta spostando sempre di più sull'analisi dei modelli (sul confronto dei modelli) che si utilizzano e sempre meno sul preprocessamento dei dati, ed è proprio per questo che si stanno utilizzando sempre di più le reti neurali, per la loro capacità di integrare informazioni che ho nel data set all'interno del modello.
+
+Siamo andati poi alla ricerca di qualche framework per capire se era possibile implementare la nostra pipeline e quindi cercare una soluzione che comprenda tutte quante le diverse proprietà e i diversi attributi dei casi specifici.\\
 Abbiamo selezionato tre framework molto simili tra loro ma con qualche piccola differenza:
 \begin{itemize}
     \item MetaFlow
@@ -826,8 +842,8 @@ Abbiamo selezionato tre framework molto simili tra loro ma con qualche piccola d
     \item MLRun
 \end{itemize}
 
-Abbiamo selezionato questi invece che altri perché rispecchiavano di più quelli che erano i punti chiave delle pipeline, ovvero: riutilizzo del codice, ridimensionamento dell'addestramento/inferenza ML a set di dati di grandi dimensioni e parallelismo.
-
+Sono stati selezionati questi invece che altri soprattutto per la facilità della messa in produzione e perché rispecchiavano di più quelli che erano i punti chiave delle pipeline.\\
+In conclusione, tutte le risorse di AI/ML devono essere automatizzate per permetterne l'uso altrimenti sarebbero inutilizzabili e grazie a framework come quelli sopra citati, la loro integrazione con una piattaforma già esistente (es: AI4EU) che gestisce risorse/progetti di Machine Learning è possibile.
 
 \begin{appendices}
 \section{Recurrent neural network}
@@ -912,6 +928,7 @@ PACS è l'acronimo anglosassone di Picture archiving and communication system (s
 
 \end{appendices}
 
+\nocite{*}
 \bibliographystyle{plain}
 \bibliography{Bibliography}
 
