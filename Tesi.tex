@@ -301,8 +301,7 @@ Tuttavia, il primo (Figura \ref{fig:data-sampling-radiology}) è quello più uti
 \end{figure}
 
 \subsection{Il modello}
-Per estrarre le caratteristiche dall’immagine viene sempre utilizzata un CNN per le sue elevate prestazioni nel riconoscimento delle immagini. La capacità delle CNN di apprendere complesse relazioni spaziali e
-imparare modelli basati su pixel sottili e intricati li rendono perfetti strumenti per apprendere dalle immagini radiologiche. \\
+Per estrarre le caratteristiche dall’immagine viene sempre utilizzata un CNN per le sue elevate prestazioni nel riconoscimento delle immagini. La capacità delle CNN di apprendere complesse relazioni spaziali e imparare modelli basati su pixel sottili e intricati li rendono perfetti strumenti per apprendere dalle immagini radiologiche. \\
 \\
 Per quanto riguarda l'estrazione del testo, invece, le tecniche di elaborazione del linguaggio naturale (NLP) possono essere una chiave per analizzare con successo i referti radiologici per estrarre risultati e raccomandazioni clinicamente importanti. La programmazione neuro-linguistica (PNL) ha già mostrato il potenziale per automatizzare il compito di classificare i report di imaging in un modo che potrebbe informare le decisioni relative all'utilizzo e all'adeguatezza dell'imaging medico \cite{banerjee2019comparative}.\\
 Una classe di architetture di reti neurali, le reti neurali ricorrenti (RNN), ha recentemente attirato molta attenzione da parte dei ricercatori per la modellazione di sequenze e ha dimostrato di funzionare bene nella risoluzione di vari compiti di PNL grazie alla loro capacità di gestire input di lunghezza variabile e uscita.\\
@@ -651,7 +650,6 @@ RBF è una rete feed-forward con un livello nascosto ed è simile al metodo MLP 
 CART è un modello di classificazione o regressione basato su una partizione gerarchica ad albero dello spazio di input.
 Nello specifico, lo spazio di input è suddiviso in regioni locali identificate in una sequenza di scissioni ricorsive. L'albero è costituito da nodi decisionali interni e foglie terminali. Dato un punto dati di test, una sequenza di test lungo i nodi decisionali a partire dal nodo radice determinerà il percorso lungo l'albero fino a raggiungere un nodo foglia. Al nodo foglia, viene effettuata una previsione in base al modello locale associato a quel nodo. Per costruire un albero utilizzando il training set, si inizia dal nodo radice. Si seleziona la variabile (e la sua soglia di suddivisione) la cui suddivisione porterà alla maggiore riduzione dell'errore quadratico medio. Si continuano queste divisioni in modo ricorsivo, fino a quando l'errore quadratico medio raggiunge una soglia accettabile.\\
 Una pratica tipica è quella di eseguire una sorta di potatura per l'albero, una volta progettato. Ciò eliminerà i nodi inefficaci e manterrà sotto controllo la complessità del modello. 
-
 
 \paragraph*{Gaussian Processes (GP):}
 Secondo GP, ogni variabile target può essere associata ad una o più variabili casuali normalmente distribuite che formano una distribuzione normale multivariata, emergente combinando le singole distribuzioni di quelle indipendenti. A questo proposito, i processi gaussiani possono fungere da metodo di regressione non parametrico che assume una distribuzione a priori per le variabili di input fornite durante l'addestramento e quindi le combina in modo appropriato utilizzando una misura di somiglianza tra punti (la funzione kernel) per prevedere il valore futuro della variabile di interesse.\\
